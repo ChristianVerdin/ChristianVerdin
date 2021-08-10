@@ -17,5 +17,5 @@
 src='https://img.icons8.com/color/2x/medium-logo.png' alt='Medium' height='40'>](https://medium.com/@cver123/about)
 
 
-# Certifications and Online Learning 
-[<img src='https://www.datacamp.com/statement-of-accomplishment/track/61aa7927835f4d6785b185f2b9b3959293ba3345' alt='Microsoft'  width="200" height="200">]
+# Certifications and Online Learning
+Visit the Licenses & certifications portion of my linkedin page: https://www.linkedin.com/in/christian-verdin/
