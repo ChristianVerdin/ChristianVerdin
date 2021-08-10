@@ -13,9 +13,15 @@
 📫 How to reach me: christiandverdin@gmail.com
 
 # Contact me
-[<img src='https://img.icons8.com/color/2x/github--v1.png' alt='github' height='40'>](https://github.com/https://github.com/karkranikhil) [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/dev-dot-to.svg' alt='dev' height='40'>](https://dev.to/https://dev.to/karkranikhil) [<img src='https://img.icons8.com/color/2x/linkedin.png' alt='linkedin' height='40'>](https://www.linkedin.com/in/christian-verdin/) [<img src='https://img.icons8.com/color/2x/twitter.png' alt='twitter' height='40'>](https://twitter.com/https://twitter.com/karkra_nikhil) [<img  
-src='https://img.icons8.com/color/2x/medium-logo.png' alt='Medium' height='40'>](https://medium.com/@cver123/about)
+[<img src='https://img.icons8.com/color/2x/github--v1.png' alt='github' height='40'>](https://github.com/ChristianVerdin) 
+[<img src='https://img.icons8.com/color/2x/linkedin.png' alt='linkedin' height='40'>](https://www.linkedin.com/in/christian-verdin/) 
+[<img src='https://img.icons8.com/color/50/000000/instagram-new--v2.png' alt='instagram' height='40'>](https://www.instagram.com/christian__verdin/) 
+[<img src='https://img.icons8.com/color/2x/medium-logo.png' alt='Medium' height='40'>](https://medium.com/@cver123/about)
+[<img src='https://img.icons8.com/plumpy/24/000000/stackoverflow.png' alt='Stack Overflow' height='40'>](https://stackoverflow.com/)
+
 
 
 # Certifications and Online Learning
 Visit the Licenses & certifications portion of my linkedin page: https://www.linkedin.com/in/christian-verdin/
+
+* Fun fact: I run an NFL Fan blog generating over 10 Million impressions across Twitter, Instagram, YouTube, TikTok
