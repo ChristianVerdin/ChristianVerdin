@@ -1,6 +1,6 @@
 # Hi there 👋, I am Christian Verdin
 
-* I am a Data Scientist 
+* Data Scientist 
 * I have 3+ years of experience designing, developing, and managing complex data science solutions and internal frameworks. 
 * Proficient in SQL, R, Python, Dashboards, Cloud Computing (AWS/GCP/Azure); plus modern libraries and frameworks.
 * Experienced in decision-making areas beyond programming such as strategy, product management, development, budget management, etc.
