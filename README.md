@@ -1,4 +1,4 @@
-### Hi there 👋, I am Christian Verdin
+# Hi there 👋, I am Christian Verdin
 
 * I am a Data Scientist 
 * I have 3+ years of experience designing, developing, and managing complex data science solutions and internal frameworks. 
@@ -23,6 +23,5 @@
 
 
 # Certifications and Online Learning
-Visit the Licenses & certifications portion of my linkedin page: https://www.linkedin.com/in/christian-verdin/
-
+Visit the Licenses & certifications portion of my [linkedin profile](https://www.linkedin.com/in/christian-verdin/)
 * Fun fact: I run an NFL Fan blog generating over 10 Million impressions across Twitter, Instagram, YouTube, TikTok
