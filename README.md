@@ -24,4 +24,4 @@
 
 # Certifications and Online Learning
 Visit the Licenses & certifications portion of my [linkedin profile](https://www.linkedin.com/in/christian-verdin/)
-* Fun fact: I run an NFL Fan blog generating over 10 Million impressions across Twitter, Instagram, YouTube, TikTok
+* Fun fact: I run an NFL Fan blog generating over 20 Million+ impressions across Twitter, Instagram, YouTube, TikTok
