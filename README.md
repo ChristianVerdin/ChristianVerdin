@@ -25,3 +25,7 @@
 # Certifications and Online Learning
 Visit the Licenses & certifications portion of my [linkedin profile](https://www.linkedin.com/in/christian-verdin/)
 * Fun fact: I run an NFL Fan blog generating over 20 Million+ impressions across Twitter, Instagram, YouTube, TikTok
+
+![header image](https://github.com/ChristianVerdin/DataCamp/blob/master/datacamp.png)
+![header image](https://github.com/ChristianVerdin/DataCamp/blob/master/Coursera.PNG)
+![header image](https://github.com/ChristianVerdin/DataCamp/blob/master/AWS-ML.PNG)
