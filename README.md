@@ -27,5 +27,5 @@ Visit the Licenses & certifications portion of my [linkedin profile](https://www
 * Fun fact: I run an NFL Fan blog generating over 20 Million+ impressions across Twitter, Instagram, YouTube, TikTok
 
 ![header image](https://github.com/ChristianVerdin/DataCamp/blob/master/datacamp.png)
-![header image](https://github.com/ChristianVerdin/DataCamp/blob/master/Coursera.PNG)
+![header image](https://github.com/ChristianVerdin/Online-Learning/blob/master/Google-Data-Analytics-Certification.PNG)
 ![header image](https://github.com/ChristianVerdin/DataCamp/blob/master/AWS-ML.PNG)
