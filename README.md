@@ -6,7 +6,7 @@
 * Experienced in decision-making areas beyond programming such as strategy, product management, development, budget management, etc.
 
 
-🌱 I’m currently studying for the CAPM Certification Exam and AWS Certified Cloud Practitioner Exam. Target Completion Date: 12/31/2021
+🌱 I’m currently studying for the CAPM Certification Exam and AWS Certified Cloud Practitioner Exam. Target Completion Date: 06/31/2022
 
 👯 I’m looking to collaborate on a project dealing with web scraping/web development and another with NFL data analysis.
 
