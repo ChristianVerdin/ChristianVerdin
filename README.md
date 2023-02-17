@@ -1,12 +1,10 @@
 # Hi there 👋, I am Christian Verdin
 
 * Data Scientist 
-* I have 4+ years of experience designing, developing, and managing complex data science solutions and internal frameworks. 
+* I have 5+ years of experience designing, developing, and managing complex data science solutions and internal frameworks. 
 * Proficient in SQL, R, Python, PySpark, creating dashboards, Cloud Computing (AWS/Azure); plus modern libraries and frameworks.
 * Experienced in decision-making areas beyond programming such as strategy, product management, development, budget management, etc.
 
-
-🌱 I’m currently studying for the CAPM Certification Exam and AWS Certified Cloud Practitioner Exam. Target Completion Date: 12/31/2022
 
 👯 I’m looking to collaborate on a project dealing with web scraping/web development and another with NFL data analysis.
 
