@@ -1,13 +1,13 @@
 # Hi there 👋, I am Christian Verdin
 
 * Data Scientist 
-* I have 5+ years of experience designing, developing, and delivering data science & ML solutions that provide real impact.
+* I have 6+ years of experience designing, developing, and delivering data science & ML solutions that provide real impact.
 * Proficient in SQL, R, Python, PySpark, creating dashboards, Cloud Computing (AWS/Azure); plus modern libraries and frameworks.
 * Experienced in strategic decision-making, product management, KPI development, budget oversight, and other critical business areas.
 * Strong communicator adept at presenting technical concepts to non-technical stakeholders to influence data-driven cultures.
 
 
-👯 I’m looking to collaborate on a project dealing with web scraping/web development and another with NFL data analysis. Feel free to reach out if you are interested
+👯 I’m looking to collaborate on a project dealing with web scraping/web development and another with NFL data analysis. Feel free to reach out if you are interested.
 
 📫 How to reach me: christiandverdin@gmail.com
 
@@ -22,8 +22,4 @@
 
 # Certifications and Online Learning
 Visit the Licenses & certifications portion of my [linkedin profile](https://www.linkedin.com/in/christian-verdin/)
-* Fun fact: I operate a NFL Fan "blog" that has attracted millions of views across Twitter, Instagram and TikTok
-
-![header image](https://github.com/ChristianVerdin/DataCamp/blob/master/datacamp.png)
-![header image](https://github.com/ChristianVerdin/Online-Learning/blob/master/Google-Data-Analytics-Certification.PNG)
-![header image](https://github.com/ChristianVerdin/DataCamp/blob/master/AWS-ML.PNG)
+* Fun fact: I operate a NFL Fan social media account that has garnered hundreds of millions of views across Twitter, Instagram and TikTok over the last few years.
