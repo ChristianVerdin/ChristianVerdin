@@ -1,10 +1,10 @@
 # Hi there 👋, I am Christian Verdin
 
 <div align="center">
-  
+
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=ChristianVerdin&show_icons=true&theme=radical&hide_border=true&count_private=true)
 
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=ChristianVerdin&theme=radical&hide_border=true)
+![GitHub Streak](https://streak-stats.demolab.com/?user=ChristianVerdin&theme=radical&hide_border=true)
 
 </div>
 
