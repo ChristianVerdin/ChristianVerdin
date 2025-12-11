@@ -1,13 +1,21 @@
 # Hi there 👋, I am Christian Verdin
 
 * Data Scientist 
-* I have 6+ years of experience designing, developing, and delivering **end-to-end** data science & ML solutions that provide **real impact**.
-* Proficient in SQL, R, Python, PySpark, creating dashboards, Cloud Computing (AWS/Azure); plus modern libraries and frameworks.
+* I have 7+ years of experience designing, developing, and delivering **end-to-end** data science, ML, and AI solutions that provide **real impact**.
+* Proficient in SQL, R, Python, PySpark
 * Experienced in strategic decision-making, product management, KPI development, budget oversight, and other critical business areas.
 * Strong communicator adept at presenting technical concepts to non-technical stakeholders to influence data-driven cultures.
 
 
-👯 I’m looking to collaborate on a project dealing with web scraping/web development and another with NFL data analysis. Feel free to reach out if you are interested.
+
+
+👯 I’m always open to collaborating on projects together so feel free to reach out!!
+
+
+
+
+
+
 
 📫 How to reach me: christiandverdin@gmail.com
 
