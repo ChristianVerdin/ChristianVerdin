@@ -91,6 +91,8 @@ A comprehensive analytics system processing 100,000+ NFL plays across 4 seasons 
 - Automated report generation with CSV/PDF/SVG exports
 - Risk-reward analysis for playoff matchup scenarios
 
+**Sample Output:** [Divisional Round 2026 Analysis (PDF)](./assets/nfl_analytics/outputs/2026_nfl_divisional_round_analysis/nfl_divisional_round_complete_analysis.pdf)
+
 **Technical Highlights:**
 - **Data Pipeline:** R-based ETL processing 500+ metrics per game via nflreadr API
 - **Statistical Modeling:** EPA calculations, efficiency matrices, regression analysis
