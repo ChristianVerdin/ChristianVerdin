@@ -1,0 +1,95 @@
+======================================================================
+NFL DIVISIONAL ROUND 2026 - ANALYTICS SUMMARY
+======================================================================
+
+Generated: 2026-01-12 23:35:18
+Data Source: nflfastR play-by-play (2025 Season, Weeks 1-19)
+
+----------------------------------------------------------------------
+DIVISIONAL ROUND MATCHUPS
+----------------------------------------------------------------------
+
+AFC Bracket:
+  #1 DEN (BYE) vs #6 BUF
+  #2 NE vs #5 HOU
+
+NFC Bracket:
+  #1 SEA (BYE) vs #6 SF
+  #2 CHI vs #5 LA
+
+----------------------------------------------------------------------
+TOP PERFORMERS BY METRIC
+----------------------------------------------------------------------
+
+Best Net EPA:       SEA (+0.17) - Elite two-way team
+Best 3rd Down:      SF (47.1%) - Sustains drives efficiently
+Best Red Zone TD:   LA (16.5%) - Finishes in the end zone
+Most Explosive:     NE (8.8 plays/game) - Big play threat
+Best Ball Security: HOU (0.76 TO/game) - Protects the football
+Best Ball Security: CHI (0.76 TO/game) - Protects the football
+
+----------------------------------------------------------------------
+PLAYOFF FAVORITES (BY ANALYTICS)
+----------------------------------------------------------------------
+
+DEN (#1 AFC, 14-3): explosive plays, ball security
+NE (#2 AFC, 14-3): elite offense, elite defense, explosive plays
+HOU (#5 AFC, 12-5): elite defense, explosive plays, ball security
+BUF (#6 AFC, 12-5): elite offense, red zone finisher, explosive plays
+SEA (#1 NFC, 14-3): elite defense, explosive plays
+CHI (#2 NFC, 11-6): explosive plays, ball security
+LA (#5 NFC, 12-5): elite offense, elite defense, red zone finisher, explosive plays
+SF (#6 NFC, 12-5): elite offense, efficient on 3rd down, red zone finisher, explosive plays
+
+----------------------------------------------------------------------
+KEY MATCHUP INSIGHTS
+----------------------------------------------------------------------
+
+AFC #1 DEN vs #6 BUF:
+  DEN: Net EPA 0.07 | 3rd Down 38.5% | RZ TD 13.3%
+  BUF: Net EPA 0.09 | 3rd Down 41.1% | RZ TD 16.1%
+  Edge: BUF (0.02 net EPA advantage)
+
+AFC #2 NE vs #5 HOU:
+  NE:  Net EPA 0.15 | 3rd Down 37.2% | RZ TD 13.2%
+  HOU: Net EPA 0.11 | 3rd Down 34.7% | RZ TD 10.3%
+  Edge: NE (0.04 net EPA advantage)
+
+NFC #1 SEA vs #6 SF:
+  SEA: Net EPA 0.17 | 3rd Down 36.8% | RZ TD 12.3%
+  SF:  Net EPA 0.06 | 3rd Down 47.1% | RZ TD 15.4%
+  Edge: SEA (0.11 net EPA advantage)
+
+NFC #2 CHI vs #5 LA:
+  CHI: Net EPA 0.03 | 3rd Down 39.6% | RZ TD 12.6%
+  LA:  Net EPA 0.14 | 3rd Down 35.0% | RZ TD 16.5%
+  Edge: LA (0.11 net EPA advantage)
+
+----------------------------------------------------------------------
+DATA QUALITY SUMMARY
+----------------------------------------------------------------------
+
+Total plays analyzed:     47,333
+Games included:           278 (2025 season Weeks 1-19)
+Teams analyzed:           8 (all divisional round participants)
+Missing data:             None - all 8 teams complete
+Data freshness:           Updated through Week 19
+
+----------------------------------------------------------------------
+RANKINGS SUMMARY
+----------------------------------------------------------------------
+
+Team    Off Rank  Def Rank  3rd Rank  RZ Rank  Overall
+-------------------------------------------------------
+DEN       #16       #9        #8       #16       65%
+NE        #2        #6        #10      #17       76%
+HOU       #23       #2        #20      #31       44%
+BUF       #1        #20       #4       #4        81%
+SEA       #11       #1        #13      #24       65%
+CHI       #9        #23       #6       #22       56%
+LA        #3        #7        #19      #2        79%
+SF        #6        #17       #1       #6        80%
+
+======================================================================
+END OF REPORT
+======================================================================

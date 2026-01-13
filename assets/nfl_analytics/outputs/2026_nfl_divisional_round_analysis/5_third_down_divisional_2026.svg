@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1152.00pt' height='648.00pt' viewBox='0 0 1152.00 648.00'>
+<g class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHwxMTUyLjAwfDAuMDB8NjQ4LjAw'>
+    <rect x='0.00' y='0.00' width='1152.00' height='648.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHwxMTUyLjAwfDAuMDB8NjQ4LjAw)'>
+<rect x='0.00' y='0.00' width='1152.00' height='648.00' style='stroke-width: 1.16; stroke: none; fill: #FFFFFF;' />
+</g>
+<defs>
+  <clipPath id='cpNjUuOTR8MTE0Ni4wMnw0NC44MHw1NDQuODg='>
+    <rect x='65.94' y='44.80' width='1080.09' height='500.08' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNjUuOTR8MTE0Ni4wMnw0NC44MHw1NDQuODg=)'>
+<rect x='65.94' y='44.80' width='1080.09' height='500.08' style='stroke-width: 1.16; stroke: none; fill: #FFFFFF;' />
+<polyline points='65.94,508.29 1146.02,508.29 ' style='stroke-width: 1.16; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='65.94,447.30 1146.02,447.30 ' style='stroke-width: 1.16; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='65.94,386.32 1146.02,386.32 ' style='stroke-width: 1.16; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='65.94,325.33 1146.02,325.33 ' style='stroke-width: 1.16; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='65.94,264.35 1146.02,264.35 ' style='stroke-width: 1.16; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='65.94,203.36 1146.02,203.36 ' style='stroke-width: 1.16; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='65.94,142.38 1146.02,142.38 ' style='stroke-width: 1.16; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='65.94,81.39 1146.02,81.39 ' style='stroke-width: 1.16; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='115.03,544.88 115.03,44.80 ' style='stroke-width: 1.16; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='472.08,544.88 472.08,44.80 ' style='stroke-width: 1.16; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='829.14,544.88 829.14,44.80 ' style='stroke-width: 1.16; stroke: #EBEBEB; stroke-linecap: butt;' />
+<line x1='829.14' y1='544.88' x2='829.14' y2='44.80' style='stroke-width: 1.16; stroke: #7F8C8D; stroke-dasharray: 6.21,6.21; stroke-linecap: butt;' />
+<line x1='955.16' y1='81.39' x2='115.03' y2='81.39' style='stroke-width: 8.54; stroke: #013369;' />
+<line x1='848.01' y1='142.38' x2='115.03' y2='142.38' style='stroke-width: 8.54; stroke: #D50A0A;' />
+<line x1='822.53' y1='203.36' x2='115.03' y2='203.36' style='stroke-width: 8.54; stroke: #013369;' />
+<line x1='803.33' y1='264.35' x2='115.03' y2='264.35' style='stroke-width: 8.54; stroke: #D50A0A;' />
+<line x1='779.84' y1='325.33' x2='115.03' y2='325.33' style='stroke-width: 8.54; stroke: #D50A0A;' />
+<line x1='771.50' y1='386.32' x2='115.03' y2='386.32' style='stroke-width: 8.54; stroke: #013369;' />
+<line x1='739.08' y1='447.30' x2='115.03' y2='447.30' style='stroke-width: 8.54; stroke: #013369;' />
+<line x1='734.12' y1='508.29' x2='115.03' y2='508.29' style='stroke-width: 8.54; stroke: #D50A0A;' />
+<circle cx='955.16' cy='81.39' r='9.95' style='stroke-width: 2.83; stroke: #FFFFFF; fill: #013369;' />
+<circle cx='848.01' cy='142.38' r='9.95' style='stroke-width: 2.83; stroke: #FFFFFF; fill: #D50A0A;' />
+<circle cx='822.53' cy='203.36' r='9.95' style='stroke-width: 2.83; stroke: #FFFFFF; fill: #013369;' />
+<circle cx='803.33' cy='264.35' r='9.95' style='stroke-width: 2.83; stroke: #FFFFFF; fill: #D50A0A;' />
+<circle cx='779.84' cy='325.33' r='9.95' style='stroke-width: 2.83; stroke: #FFFFFF; fill: #D50A0A;' />
+<circle cx='771.50' cy='386.32' r='9.95' style='stroke-width: 2.83; stroke: #FFFFFF; fill: #013369;' />
+<circle cx='739.08' cy='447.30' r='9.95' style='stroke-width: 2.83; stroke: #FFFFFF; fill: #013369;' />
+<circle cx='734.12' cy='508.29' r='9.95' style='stroke-width: 2.83; stroke: #FFFFFF; fill: #D50A0A;' />
+<text x='963.62' y='84.82' style='font-size: 9.96px; font-weight: bold; font-family: "Liberation Sans";' textLength='28.20px' lengthAdjust='spacingAndGlyphs'>47.1%</text>
+<text x='856.47' y='145.80' style='font-size: 9.96px; font-weight: bold; font-family: "Liberation Sans";' textLength='28.20px' lengthAdjust='spacingAndGlyphs'>41.1%</text>
+<text x='830.99' y='206.79' style='font-size: 9.96px; font-weight: bold; font-family: "Liberation Sans";' textLength='28.20px' lengthAdjust='spacingAndGlyphs'>39.6%</text>
+<text x='811.79' y='267.77' style='font-size: 9.96px; font-weight: bold; font-family: "Liberation Sans";' textLength='28.20px' lengthAdjust='spacingAndGlyphs'>38.6%</text>
+<text x='788.30' y='328.76' style='font-size: 9.96px; font-weight: bold; font-family: "Liberation Sans";' textLength='28.20px' lengthAdjust='spacingAndGlyphs'>37.2%</text>
+<text x='779.96' y='389.74' style='font-size: 9.96px; font-weight: bold; font-family: "Liberation Sans";' textLength='28.20px' lengthAdjust='spacingAndGlyphs'>36.8%</text>
+<text x='747.55' y='450.73' style='font-size: 9.96px; font-weight: bold; font-family: "Liberation Sans";' textLength='28.20px' lengthAdjust='spacingAndGlyphs'>35.0%</text>
+<text x='742.58' y='511.71' style='font-size: 9.96px; font-weight: bold; font-family: "Liberation Sans";' textLength='28.20px' lengthAdjust='spacingAndGlyphs'>34.7%</text>
+<text x='846.99' y='505.08' text-anchor='middle' style='font-size: 8.54px; font-style: italic;fill: #7F8C8D; font-family: "Liberation Sans";' textLength='32.58px' lengthAdjust='spacingAndGlyphs'>NFL Avg</text>
+<text x='846.99' y='517.37' text-anchor='middle' style='font-size: 8.54px; font-style: italic;fill: #7F8C8D; font-family: "Liberation Sans";' textLength='22.77px' lengthAdjust='spacingAndGlyphs'>(40%)</text>
+</g>
+<g clip-path='url(#cpMC4wMHwxMTUyLjAwfDAuMDB8NjQ4LjAw)'>
+<text x='60.56' y='511.59' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='41.02px' lengthAdjust='spacingAndGlyphs'>HOU (#5)</text>
+<text x='60.56' y='450.60' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='30.91px' lengthAdjust='spacingAndGlyphs'>LA (#5)</text>
+<text x='60.56' y='389.62' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='53.02px' lengthAdjust='spacingAndGlyphs'>SEA (#1) ⭐</text>
+<text x='60.56' y='328.63' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='33.03px' lengthAdjust='spacingAndGlyphs'>NE (#2)</text>
+<text x='60.56' y='267.65' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='54.58px' lengthAdjust='spacingAndGlyphs'>DEN (#1) ⭐</text>
+<text x='60.56' y='206.66' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='36.22px' lengthAdjust='spacingAndGlyphs'>CHI (#2)</text>
+<text x='60.56' y='145.68' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='38.89px' lengthAdjust='spacingAndGlyphs'>BUF (#6)</text>
+<text x='60.56' y='84.69' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='31.97px' lengthAdjust='spacingAndGlyphs'>SF (#6)</text>
+<text x='115.03' y='556.85' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='13.86px' lengthAdjust='spacingAndGlyphs'>0%</text>
+<text x='472.08' y='556.85' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='19.19px' lengthAdjust='spacingAndGlyphs'>20%</text>
+<text x='829.14' y='556.85' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='19.19px' lengthAdjust='spacingAndGlyphs'>40%</text>
+<text x='605.98' y='569.40' text-anchor='middle' style='font-size: 11.00px; font-weight: bold; font-family: "Liberation Sans";' textLength='107.59px' lengthAdjust='spacingAndGlyphs'>Conversion Rate (%)</text>
+<text x='524.39' y='604.39' style='font-size: 10.00px; font-weight: bold; font-family: "Liberation Sans";' textLength='55.02px' lengthAdjust='spacingAndGlyphs'>Conference</text>
+<circle cx='596.73' cy='600.95' r='9.95' style='stroke-width: 2.83; stroke: #FFFFFF; fill: #D50A0A;' />
+<circle cx='650.55' cy='600.95' r='9.95' style='stroke-width: 2.83; stroke: #FFFFFF; fill: #013369;' />
+<text x='614.04' y='604.25' style='font-size: 9.60px; font-family: "Liberation Sans";' textLength='19.19px' lengthAdjust='spacingAndGlyphs'>AFC</text>
+<text x='667.86' y='604.25' style='font-size: 9.60px; font-family: "Liberation Sans";' textLength='19.70px' lengthAdjust='spacingAndGlyphs'>NFC</text>
+<text x='65.94' y='36.33' style='font-size: 12.00px;fill: #7F8C8D; font-family: "Liberation Sans";' textLength='203.98px' lengthAdjust='spacingAndGlyphs'>Critical playoff metric | ⭐ = Bye Week</text>
+<text x='65.94' y='18.36' style='font-size: 18.00px; font-weight: bold;fill: #2C3E50; font-family: "Liberation Sans";' textLength='410.16px' lengthAdjust='spacingAndGlyphs'>Third Down Conversion Rate: Sustaining Drives</text>
+<text x='65.94' y='630.44' style='font-size: 9.00px;fill: #7F8C8D; font-family: "Liberation Sans";' textLength='274.86px' lengthAdjust='spacingAndGlyphs'>Data: 2025 NFL Season (Weeks 1-19) | Source: nflfastR play-by-play</text>
+<text x='65.94' y='640.16' style='font-size: 9.00px;fill: #7F8C8D; font-family: "Liberation Sans";' textLength='269.02px' lengthAdjust='spacingAndGlyphs'>Analysis Date: January 12, 2026 | NFL Divisional Round (Jan 2026)</text>
+</g>
+</g>
+</svg>

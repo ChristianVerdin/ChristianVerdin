@@ -61,6 +61,92 @@ A full-stack application featuring agentic AI that processes natural language qu
 
 ---
 
+### NFL Analytics Engine
+**Sports Performance Analytics & Data Engineering Platform**
+
+A comprehensive analytics system processing 100,000+ NFL plays across 4 seasons (997 games), featuring automated ETL pipelines, EPA efficiency modeling, and statistical analysis for playoff scenario comparison.
+
+<p align="center">
+  <img src="./assets/nfl_analytics/2_efficiency_matrix.png" width="800" alt="NFL Analytics - Team Efficiency Matrix">
+</p>
+
+<details>
+<summary><b>View More Screenshots</b></summary>
+<br>
+<p align="center">
+  <img src="./assets/nfl_analytics/1_playoff_epa_comparison.png" width="800" alt="NFL Analytics - EPA Comparison Analysis">
+</p>
+<p align="center">
+  <img src="./assets/nfl_analytics/3_quarter_scoring_heatmap.png" width="800" alt="NFL Analytics - Quarter Scoring Heatmap">
+</p>
+<p align="center">
+  <img src="./assets/nfl_analytics/6_red_zone_breakdown.png" width="800" alt="NFL Analytics - Red Zone Efficiency Analysis">
+</p>
+</details>
+
+**Key Capabilities:**
+- EPA (Expected Points Added) efficiency modeling across 997 games
+- Quarter-by-quarter scoring pattern analysis with heatmap visualization
+- Red zone and third-down conversion efficiency breakdowns
+- Automated report generation with CSV/PDF/SVG exports
+- Risk-reward analysis for playoff matchup scenarios
+
+**Technical Highlights:**
+- **Data Pipeline:** R-based ETL processing 500+ metrics per game via nflreadr API
+- **Statistical Modeling:** EPA calculations, efficiency matrices, regression analysis
+- **Visualization:** ggplot2 with custom themes, multi-format exports (PNG/SVG/PDF)
+- **Database:** SQLite with optimized aggregation queries across 4 seasons
+- **Automation:** Scheduled analysis generating weekly intelligence reports
+
+**Built With:**
+
+`R` `tidyverse` `ggplot2` `SQLite` `nflreadr` `Cairo` `Markdown`
+
+---
+
+### AI Real Estate System
+**Multi-Platform Property Aggregation & Analysis**
+
+A full-stack application that aggregates real estate listings from 5 major platforms (Zillow, Redfin, Trulia, Realtor.com, Homes.com), applying AI-powered extraction to deliver unified property data with interactive mapping and investment analytics.
+
+<p align="center">
+  <img src="./assets/ai_real_estate/search_interface.png" width="800" alt="AI Real Estate - Search Interface">
+</p>
+
+<details>
+<summary><b>View More Screenshots</b></summary>
+<br>
+<p align="center">
+  <img src="./assets/ai_real_estate/property_results.png" width="800" alt="AI Real Estate - Property Results">
+</p>
+<p align="center">
+  <img src="./assets/ai_real_estate/map_view.png" width="800" alt="AI Real Estate - Interactive Map">
+</p>
+<p align="center">
+  <img src="./assets/ai_real_estate/analytics_dashboard.png" width="800" alt="AI Real Estate - Analytics Dashboard">
+</p>
+</details>
+
+**Key Features:**
+- Multi-platform data aggregation from 5 real estate websites
+- AI-powered property extraction using Firecrawl + OpenAI GPT
+- Three-tier caching system (Memory -> Redis -> SQLite)
+- Interactive mapping with geocoded property locations
+- Investment analytics with ROI and cap rate calculations
+
+**Technical Highlights:**
+- **Frontend:** Streamlit with custom components, Plotly visualizations
+- **Backend:** Python with async HTTP clients, circuit breaker pattern
+- **AI/ML:** OpenAI GPT for intelligent data extraction and normalization
+- **Caching:** Multi-tier LRU cache with 65-70% hit rate optimization
+- **Data:** Pydantic schemas, pandas processing, multi-format exports
+
+**Built With:**
+
+`Python` `Streamlit` `OpenAI API` `Firecrawl` `Redis` `SQLite` `Pandas` `Folium` `Plotly`
+
+---
+
 ## Technical Skills
 
 <table>
