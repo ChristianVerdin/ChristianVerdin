@@ -13,54 +13,6 @@ I build production-grade applications that integrate LLMs, real-time data pipeli
 
 ## Featured Project
 
-### Daily Locks AI
-**Production SaaS Platform with LLM-Powered Analytics**
-
-A full-stack application featuring agentic AI that processes natural language queries against 15,000+ historical records, delivering structured insights with confidence scoring and real-time streaming responses.
-
-**Live:** [dailylocks.ai](https://dailylocks.ai)
-
-<p align="center">
-  <img src="./assets/dailylocks/chat_interface.png" width="800" alt="Daily Locks AI - Chat Interface">
-</p>
-
-<details>
-<summary><b>View More Screenshots</b></summary>
-<br>
-<p align="center">
-  <img src="./assets/dailylocks/ai_response.png" width="800" alt="Daily Locks AI - Analysis Response">
-</p>
-<p align="center">
-  <img src="./assets/dailylocks/games_dashboard.png" width="800" alt="Daily Locks AI - Games Dashboard">
-</p>
-<p align="center">
-  <img src="./assets/dailylocks/settings_page.png" width="800" alt="Daily Locks AI - Settings & Billing">
-</p>
-</details>
-
-**Key Features:**
-- Natural language interface with context-aware prompt engineering
-- Multi-model LLM routing (Claude Haiku/Sonnet/Opus) based on user tier
-- Real-time streaming responses with Server-Sent Events
-- Subscription management with Stripe Checkout & Customer Portal
-- Persistent conversation history with full-text search
-
-**Architecture & Technical Highlights:**
-- **Frontend:** Next.js 15 App Router, React 19, TypeScript, Zustand state management
-- **Backend:** FastAPI with async endpoints, intelligent agent routing system
-- **AI/ML:** Anthropic Claude API, dynamic prompt construction, context windowing
-- **Database:** Supabase (PostgreSQL) with Row-Level Security, real-time subscriptions
-- **Auth:** JWT-based authentication with protected API routes
-- **Payments:** Stripe integration (checkout sessions, webhooks, customer portal)
-- **Data Pipeline:** Automated ETL processing 500+ records weekly via Playwright
-- **Testing:** 116 automated tests with pytest
-
-**Built With:**
-
-`Next.js 15` `React 19` `TypeScript` `FastAPI` `Python` `Claude API` `Supabase` `Stripe` `Tailwind CSS` `Zustand` `Playwright`
-
----
-
 ### NFL Analytics Engine
 **Sports Performance Analytics & Data Engineering Platform**
 
@@ -146,6 +98,54 @@ A full-stack application that aggregates real estate listings from 5 major platf
 **Built With:**
 
 `Python` `Streamlit` `OpenAI API` `Firecrawl` `Redis` `SQLite` `Pandas` `Folium` `Plotly`
+
+---
+
+### Daily Locks AI
+**Production SaaS Platform with LLM-Powered Analytics**
+
+A full-stack application featuring agentic AI that processes natural language queries against 15,000+ historical records, delivering structured insights with confidence scoring and real-time streaming responses.
+
+**Live:** [dailylocks.ai](https://dailylocks.ai)
+
+<p align="center">
+  <img src="./assets/dailylocks/chat_interface.png" width="800" alt="Daily Locks AI - Chat Interface">
+</p>
+
+<details>
+<summary><b>View More Screenshots</b></summary>
+<br>
+<p align="center">
+  <img src="./assets/dailylocks/ai_response.png" width="800" alt="Daily Locks AI - Analysis Response">
+</p>
+<p align="center">
+  <img src="./assets/dailylocks/games_dashboard.png" width="800" alt="Daily Locks AI - Games Dashboard">
+</p>
+<p align="center">
+  <img src="./assets/dailylocks/settings_page.png" width="800" alt="Daily Locks AI - Settings & Billing">
+</p>
+</details>
+
+**Key Features:**
+- Natural language interface with context-aware prompt engineering
+- Multi-model LLM routing (Claude Haiku/Sonnet/Opus) based on user tier
+- Real-time streaming responses with Server-Sent Events
+- Subscription management with Stripe Checkout & Customer Portal
+- Persistent conversation history with full-text search
+
+**Architecture & Technical Highlights:**
+- **Frontend:** Next.js 15 App Router, React 19, TypeScript, Zustand state management
+- **Backend:** FastAPI with async endpoints, intelligent agent routing system
+- **AI/ML:** Anthropic Claude API, dynamic prompt construction, context windowing
+- **Database:** Supabase (PostgreSQL) with Row-Level Security, real-time subscriptions
+- **Auth:** JWT-based authentication with protected API routes
+- **Payments:** Stripe integration (checkout sessions, webhooks, customer portal)
+- **Data Pipeline:** Automated ETL processing 500+ records weekly via Playwright
+- **Testing:** 116 automated tests with pytest
+
+**Built With:**
+
+`Next.js 15` `React 19` `TypeScript` `FastAPI` `Python` `Claude API` `Supabase` `Stripe` `Tailwind CSS` `Zustand` `Playwright`
 
 ---
 
