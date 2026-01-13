@@ -1,8 +1,8 @@
 # Hi there, I'm Christian Verdin
 
-**Data Scientist & Full-Stack Engineer** with 7+ years of experience designing, developing, and delivering end-to-end data science, ML, and AI solutions that provide real impact.
+**Data Scientist & Full-Stack Engineer** with 7+ years of experience designing, developing, and delivering end-to-end data science, ML, and AI solutions that drive real business impact.
 
-I build production-ready tools that combine modern web frameworks with machine learning to solve complex problems in sports analytics and data visualization.
+I build production-grade applications that integrate LLMs, real-time data pipelines, and modern web frameworks to solve complex analytical problems.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/christian-verdin/)
 [![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:christiandverdin@gmail.com)
@@ -14,9 +14,9 @@ I build production-ready tools that combine modern web frameworks with machine l
 ## Featured Project
 
 ### Daily Locks AI
-**AI-Powered NFL Betting Intelligence Platform**
+**Production SaaS Platform with LLM-Powered Analytics**
 
-A production SaaS application that analyzes 15,000+ historical winning bets to provide data-driven betting recommendations through natural language queries.
+A full-stack application featuring agentic AI that processes natural language queries against 15,000+ historical records, delivering structured insights with confidence scoring and real-time streaming responses.
 
 **Live:** [dailylocks.ai](https://dailylocks.ai)
 
@@ -39,22 +39,25 @@ A production SaaS application that analyzes 15,000+ historical winning bets to p
 </details>
 
 **Key Features:**
-- Natural language queries against historical betting data
-- Multi-model AI selection (fast, balanced, premium tiers)
-- Real-time odds analysis with confidence scoring
-- Subscription billing with Stripe integration
-- Conversation history with search and management
+- Natural language interface with context-aware prompt engineering
+- Multi-model LLM routing (Claude Haiku/Sonnet/Opus) based on user tier
+- Real-time streaming responses with Server-Sent Events
+- Subscription management with Stripe Checkout & Customer Portal
+- Persistent conversation history with full-text search
 
-**Technical Highlights:**
-- Full-stack Next.js 15 / React 19 frontend with TypeScript
-- FastAPI backend with intelligent agent routing
-- Claude API integration with tier-based model access
-- Supabase for auth, database, and real-time subscriptions
-- Stripe checkout and customer portal integration
+**Architecture & Technical Highlights:**
+- **Frontend:** Next.js 15 App Router, React 19, TypeScript, Zustand state management
+- **Backend:** FastAPI with async endpoints, intelligent agent routing system
+- **AI/ML:** Anthropic Claude API, dynamic prompt construction, context windowing
+- **Database:** Supabase (PostgreSQL) with Row-Level Security, real-time subscriptions
+- **Auth:** JWT-based authentication with protected API routes
+- **Payments:** Stripe integration (checkout sessions, webhooks, customer portal)
+- **Data Pipeline:** Automated ETL processing 500+ records weekly via Playwright
+- **Testing:** 116 automated tests with pytest
 
 **Built With:**
 
-`Next.js 15` `React 19` `TypeScript` `FastAPI` `Python` `Claude API` `Supabase` `Stripe` `Tailwind CSS`
+`Next.js 15` `React 19` `TypeScript` `FastAPI` `Python` `Claude API` `Supabase` `Stripe` `Tailwind CSS` `Zustand` `Playwright`
 
 ---
 
@@ -86,8 +89,8 @@ A production SaaS application that analyzes 15,000+ historical winning bets to p
 ### Backend & Data
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
 ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white)
-![PySpark](https://img.shields.io/badge/PySpark-E25A1C?style=flat-square&logo=apachespark&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
 
 </td>
@@ -98,7 +101,7 @@ A production SaaS application that analyzes 15,000+ historical winning bets to p
 ### AI & ML
 ![Claude](https://img.shields.io/badge/Claude_API-191919?style=flat-square&logo=anthropic&logoColor=white)
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white)
-![Gemini](https://img.shields.io/badge/Gemini-4285F4?style=flat-square&logo=google&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-121212?style=flat-square&logo=chainlink&logoColor=white)
 
 </td>
 <td valign="top" width="33%">
@@ -139,7 +142,3 @@ I'm always open to collaborating on projects together so feel free to reach out!
 <p align="center">
   <a href="mailto:christiandverdin@gmail.com">christiandverdin@gmail.com</a>
 </p>
-
----
-
-**Fun fact**: I operate an NFL Fan social media account that has garnered hundreds of millions of views across Twitter, Instagram, and TikTok over the last few years!
