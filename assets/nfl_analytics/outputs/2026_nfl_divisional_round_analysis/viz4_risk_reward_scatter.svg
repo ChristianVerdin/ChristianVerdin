@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1008.00pt' height='720.00pt' viewBox='0 0 1008.00 720.00'>
+<g class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHwxMDA4LjAwfDAuMDB8NzIwLjAw'>
+    <rect x='0.00' y='0.00' width='1008.00' height='720.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHwxMDA4LjAwfDAuMDB8NzIwLjAw)'>
+<rect x='-0.00000000000013' y='0.00000000000011' width='1008.00' height='720.00' style='stroke-width: 1.26; stroke: none; fill: #FFFFFF;' />
+</g>
+<defs>
+  <clipPath id='cpNTQuODB8OTgzLjA5fDEzNC41Nnw2NTEuOTY='>
+    <rect x='54.80' y='134.56' width='928.29' height='517.40' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNTQuODB8OTgzLjA5fDEzNC41Nnw2NTEuOTY=)'>
+<rect x='54.80' y='134.56' width='928.29' height='517.40' style='stroke-width: 1.26; stroke: none; fill: #F7F7F7;' />
+<polyline points='54.80,203.40 983.09,203.40 ' style='stroke-width: 0.64; stroke: #E0E0E0; stroke-linecap: butt;' />
+<polyline points='54.80,319.94 983.09,319.94 ' style='stroke-width: 0.64; stroke: #E0E0E0; stroke-linecap: butt;' />
+<polyline points='54.80,436.48 983.09,436.48 ' style='stroke-width: 0.64; stroke: #E0E0E0; stroke-linecap: butt;' />
+<polyline points='54.80,553.03 983.09,553.03 ' style='stroke-width: 0.64; stroke: #E0E0E0; stroke-linecap: butt;' />
+<polyline points='81.53,651.96 81.53,134.56 ' style='stroke-width: 0.64; stroke: #E0E0E0; stroke-linecap: butt;' />
+<polyline points='260.82,651.96 260.82,134.56 ' style='stroke-width: 0.64; stroke: #E0E0E0; stroke-linecap: butt;' />
+<polyline points='440.11,651.96 440.11,134.56 ' style='stroke-width: 0.64; stroke: #E0E0E0; stroke-linecap: butt;' />
+<polyline points='619.40,651.96 619.40,134.56 ' style='stroke-width: 0.64; stroke: #E0E0E0; stroke-linecap: butt;' />
+<polyline points='798.69,651.96 798.69,134.56 ' style='stroke-width: 0.64; stroke: #E0E0E0; stroke-linecap: butt;' />
+<polyline points='977.98,651.96 977.98,134.56 ' style='stroke-width: 0.64; stroke: #E0E0E0; stroke-linecap: butt;' />
+<line x1='54.80' y1='349.93' x2='983.09' y2='349.93' style='stroke-width: 1.71; stroke: #7F8C8D; stroke-dasharray: 9.10,9.10; stroke-linecap: butt;' />
+<line x1='494.05' y1='651.96' x2='494.05' y2='134.56' style='stroke-width: 1.71; stroke: #7F8C8D; stroke-dasharray: 9.10,9.10; stroke-linecap: butt;' />
+<rect x='494.05' y='134.56' width='489.04' height='215.38' style='stroke-width: 1.26; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #2ECC71; fill-opacity: 0.10;' />
+<text x='905.04' y='177.85' text-anchor='end' style='font-size: 8.54px; font-weight: bold;fill: #2ECC71; font-family: "Liberation Sans";' textLength='25.59px' lengthAdjust='spacingAndGlyphs'>IDEAL</text>
+<text x='905.04' y='190.14' text-anchor='end' style='font-size: 8.54px; font-weight: bold;fill: #2ECC71; font-family: "Liberation Sans";' textLength='65.97px' lengthAdjust='spacingAndGlyphs'>High Explosives</text>
+<text x='905.04' y='202.44' text-anchor='end' style='font-size: 8.54px; font-weight: bold;fill: #2ECC71; font-family: "Liberation Sans";' textLength='60.56px' lengthAdjust='spacingAndGlyphs'>Low Turnovers</text>
+<circle cx='141.30' cy='251.39' r='16.36' style='stroke-width: 2.83; stroke: #FFFFFF; fill: #D50A0A;' />
+<circle cx='940.90' cy='319.94' r='16.36' style='stroke-width: 2.83; stroke: #FFFFFF; fill: #D50A0A;' />
+<circle cx='97.00' cy='255.19' r='16.36' style='stroke-width: 2.83; stroke: #FFFFFF; fill: #D50A0A;' />
+<circle cx='642.09' cy='352.31' r='16.36' style='stroke-width: 2.83; stroke: #FFFFFF; fill: #D50A0A;' />
+<circle cx='703.29' cy='628.44' r='16.36' style='stroke-width: 2.83; stroke: #FFFFFF; fill: #013369;' />
+<circle cx='545.72' cy='158.07' r='16.36' style='stroke-width: 2.83; stroke: #FFFFFF; fill: #013369;' />
+<circle cx='745.03' cy='287.57' r='16.36' style='stroke-width: 2.83; stroke: #FFFFFF; fill: #013369;' />
+<circle cx='137.09' cy='546.55' r='16.36' style='stroke-width: 2.83; stroke: #FFFFFF; fill: #013369;' />
+<line x1='153.46' y1='243.55' x2='144.62' y2='249.25' style='stroke-width: 1.07; stroke: #7F8C8D;' />
+<line x1='934.26' y1='331.30' x2='939.33' y2='322.63' style='stroke-width: 1.07; stroke: #7F8C8D;' />
+<line x1='87.48' y1='263.01' x2='94.15' y2='257.53' style='stroke-width: 1.07; stroke: #7F8C8D;' />
+<line x1='645.05' y1='341.07' x2='642.83' y2='349.52' style='stroke-width: 1.07; stroke: #7F8C8D;' />
+<line x1='694.80' y1='637.03' x2='700.84' y2='630.92' style='stroke-width: 1.07; stroke: #7F8C8D;' />
+<line x1='554.31' y1='149.48' x2='548.18' y2='155.60' style='stroke-width: 1.07; stroke: #7F8C8D;' />
+<line x1='737.84' y1='298.90' x2='743.34' y2='290.23' style='stroke-width: 1.07; stroke: #7F8C8D;' />
+<line x1='144.41' y1='535.20' x2='138.80' y2='543.89' style='stroke-width: 1.07; stroke: #7F8C8D;' />
+<text x='165.56' y='241.75' text-anchor='middle' style='font-size: 11.38px; font-weight: bold; font-family: "Liberation Sans";' textLength='73.97px' lengthAdjust='spacingAndGlyphs'>DEN #1 (BYE)</text>
+<text x='916.65' y='337.40' text-anchor='middle' style='font-size: 11.38px; font-weight: bold; font-family: "Liberation Sans";' textLength='31.62px' lengthAdjust='spacingAndGlyphs'>NE #2</text>
+<text x='84.04' y='272.63' text-anchor='middle' style='font-size: 11.38px; font-weight: bold; font-family: "Liberation Sans";' textLength='41.09px' lengthAdjust='spacingAndGlyphs'>HOU #5</text>
+<text x='666.46' y='342.63' text-anchor='middle' style='font-size: 11.38px; font-weight: bold; font-family: "Liberation Sans";' textLength='39.20px' lengthAdjust='spacingAndGlyphs'>BUF #6</text>
+<text x='656.54' y='643.28' text-anchor='middle' style='font-size: 11.38px; font-weight: bold; font-family: "Liberation Sans";' textLength='72.92px' lengthAdjust='spacingAndGlyphs'>SEA #1 (BYE)</text>
+<text x='573.81' y='151.07' text-anchor='middle' style='font-size: 11.38px; font-weight: bold; font-family: "Liberation Sans";' textLength='35.41px' lengthAdjust='spacingAndGlyphs'>CHI #2</text>
+<text x='720.76' y='304.98' text-anchor='middle' style='font-size: 11.38px; font-weight: bold; font-family: "Liberation Sans";' textLength='30.56px' lengthAdjust='spacingAndGlyphs'>LA #5</text>
+<text x='161.39' y='536.96' text-anchor='middle' style='font-size: 11.38px; font-weight: bold; font-family: "Liberation Sans";' textLength='30.36px' lengthAdjust='spacingAndGlyphs'>SF #6</text>
+</g>
+<g clip-path='url(#cpMC4wMHwxMDA4LjAwfDAuMDB8NzIwLjAw)'>
+<text x='48.98' y='207.19' text-anchor='end' style='font-size: 11.05px; font-weight: bold;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='15.34px' lengthAdjust='spacingAndGlyphs'>0.8</text>
+<text x='48.98' y='323.74' text-anchor='end' style='font-size: 11.05px; font-weight: bold;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='15.34px' lengthAdjust='spacingAndGlyphs'>1.0</text>
+<text x='48.98' y='440.28' text-anchor='end' style='font-size: 11.05px; font-weight: bold;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='15.34px' lengthAdjust='spacingAndGlyphs'>1.2</text>
+<text x='48.98' y='556.83' text-anchor='end' style='font-size: 11.05px; font-weight: bold;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='15.34px' lengthAdjust='spacingAndGlyphs'>1.4</text>
+<text x='81.53' y='665.38' text-anchor='middle' style='font-size: 11.05px; font-weight: bold;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='15.97px' lengthAdjust='spacingAndGlyphs'>4%</text>
+<text x='260.82' y='665.38' text-anchor='middle' style='font-size: 11.05px; font-weight: bold;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='25.17px' lengthAdjust='spacingAndGlyphs'>4.5%</text>
+<text x='440.11' y='665.38' text-anchor='middle' style='font-size: 11.05px; font-weight: bold;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='15.97px' lengthAdjust='spacingAndGlyphs'>5%</text>
+<text x='619.40' y='665.38' text-anchor='middle' style='font-size: 11.05px; font-weight: bold;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='25.17px' lengthAdjust='spacingAndGlyphs'>5.5%</text>
+<text x='798.69' y='665.38' text-anchor='middle' style='font-size: 11.05px; font-weight: bold;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='15.97px' lengthAdjust='spacingAndGlyphs'>6%</text>
+<text x='977.98' y='665.38' text-anchor='middle' style='font-size: 11.05px; font-weight: bold;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='25.17px' lengthAdjust='spacingAndGlyphs'>6.5%</text>
+<text x='518.95' y='678.95' text-anchor='middle' style='font-size: 11.70px; font-weight: bold;fill: #2C3E50; font-family: "Liberation Sans";' textLength='236.81px' lengthAdjust='spacingAndGlyphs'>Explosive Play Rate (% of plays 20+ yards)</text>
+<text transform='translate(27.97,393.26) rotate(-90)' text-anchor='middle' style='font-size: 11.70px; font-weight: bold;fill: #2C3E50; font-family: "Liberation Sans";' textLength='206.66px' lengthAdjust='spacingAndGlyphs'>Turnovers Per Game (Lower = Better)</text>
+<rect x='405.27' y='68.97' width='227.35' height='52.64' style='stroke-width: 1.26; stroke: none; fill: #FFFFFF;' />
+<text x='411.75' y='99.31' style='font-size: 11.70px; font-weight: bold;fill: #2C3E50; font-family: "Liberation Sans";' textLength='64.30px' lengthAdjust='spacingAndGlyphs'>Conference</text>
+<circle cx='502.36' cy='95.29' r='16.36' style='stroke-width: 2.83; stroke: #FFFFFF; fill: #D50A0A;' />
+<circle cx='577.11' cy='95.29' r='16.36' style='stroke-width: 2.83; stroke: #FFFFFF; fill: #013369;' />
+<text x='528.68' y='99.08' style='font-size: 11.05px;fill: #2C3E50; font-family: "Liberation Sans";' textLength='22.11px' lengthAdjust='spacingAndGlyphs'>AFC</text>
+<text x='603.43' y='99.08' style='font-size: 11.05px;fill: #2C3E50; font-family: "Liberation Sans";' textLength='22.72px' lengthAdjust='spacingAndGlyphs'>NFC</text>
+<text x='19.93' y='51.32' style='font-size: 13.00px;fill: #7F8C8D; font-family: "Liberation Sans";' textLength='517.97px' lengthAdjust='spacingAndGlyphs'>Explosive plays (20+ yards) vs turnovers per game | Lower right quadrant = optimal profile</text>
+<text x='19.93' y='33.35' style='font-size: 19.50px; font-weight: bold;fill: #2C3E50; font-family: "Liberation Sans";' textLength='522.33px' lengthAdjust='spacingAndGlyphs'>New England Balances Explosiveness with Ball Security</text>
+<text x='983.09' y='703.03' text-anchor='end' style='font-size: 9.75px;fill: #7F8C8D; font-family: "Liberation Sans";' textLength='288.45px' lengthAdjust='spacingAndGlyphs'>Data: nflfastR 2025 Season (Weeks 1-19) | Analysis: January 2026</text>
+</g>
+</g>
+</svg>
