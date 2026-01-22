@@ -11,7 +11,70 @@ I build production-grade applications that integrate LLMs, real-time data pipeli
 
 ---
 
-## Featured Project
+## Projects at a Glance
+
+<table>
+<tr>
+<td align="center" width="25%">
+<a href="#nfl-analytics-engine">
+<img src="https://img.shields.io/badge/NFL_Analytics-276DC3?style=for-the-badge&logo=r&logoColor=white" alt="NFL Analytics"/>
+</a>
+<br/>
+<sub><b>Sports Betting Intelligence</b></sub>
+<br/>
+<sub>282+ games • 21 visualizations</sub>
+<br/>
+<code>R</code> <code>ggplot2</code> <code>SQLite</code>
+</td>
+<td align="center" width="25%">
+<a href="#ncaab-analytics">
+<img src="https://img.shields.io/badge/NCAAB_Analytics-FF6B00?style=for-the-badge&logo=espn&logoColor=white" alt="NCAAB Analytics"/>
+</a>
+<br/>
+<sub><b>Prediction System</b></sub>
+<br/>
+<sub>76.3% accuracy • 5,900+ games</sub>
+<br/>
+<code>R</code> <code>Python</code> <code>Statistics</code>
+</td>
+<td align="center" width="25%">
+<a href="#ai-real-estate-system">
+<img src="https://img.shields.io/badge/AI_Real_Estate-10B981?style=for-the-badge&logo=openai&logoColor=white" alt="AI Real Estate"/>
+</a>
+<br/>
+<sub><b>Property Aggregation</b></sub>
+<br/>
+<sub>5 platforms • AI extraction</sub>
+<br/>
+<code>Python</code> <code>OpenAI</code> <code>Streamlit</code>
+</td>
+<td align="center" width="25%">
+<a href="#daily-locks-ai">
+<img src="https://img.shields.io/badge/Daily_Locks_AI-7C3AED?style=for-the-badge&logo=anthropic&logoColor=white" alt="Daily Locks AI"/>
+</a>
+<br/>
+<sub><b>Production SaaS</b></sub>
+<br/>
+<sub>Live at dailylocks.ai</sub>
+<br/>
+<code>Next.js</code> <code>Claude</code> <code>Stripe</code>
+</td>
+</tr>
+</table>
+
+<p align="center">
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
+<img src="https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white"/>
+<img src="https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white"/>
+<img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white"/>
+<img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white"/>
+<img src="https://img.shields.io/badge/Claude_API-191919?style=flat-square&logo=anthropic&logoColor=white"/>
+<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white"/>
+</p>
+
+---
+
+## Featured Projects
 
 ### NFL Analytics Engine
 **Sports Betting Analytics & Visualization Platform**
