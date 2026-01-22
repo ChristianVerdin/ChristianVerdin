@@ -58,6 +58,78 @@ A comprehensive analytics system processing 100,000+ NFL plays across 4 seasons 
 
 ---
 
+### NCAAB Analytics
+**College Basketball Prediction System** | *76.3% prediction accuracy*
+
+A production-grade analytics pipeline for NCAA Men's Basketball that combines possession-based efficiency metrics with real-time betting market data to generate daily game predictions and value opportunities.
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Accuracy-76.3%25-brightgreen?style=for-the-badge" alt="Model Accuracy"/>
+  <img src="https://img.shields.io/badge/Games%20Analyzed-5,900+-blue?style=for-the-badge" alt="Games Analyzed"/>
+  <img src="https://img.shields.io/badge/Teams-728-purple?style=for-the-badge" alt="Teams"/>
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ChristianVerdin/ChristianVerdin/master/images/ncaab_architecture.svg" width="800" alt="NCAAB Analytics Architecture"/>
+</p>
+
+<details>
+<summary><b>View Sample Output</b></summary>
+<br>
+
+```
+══════════════════════════════════════════════════════════════════════
+ STRONG BET PICKS (70%+ Confidence)
+══════════════════════════════════════════════════════════════════════
+
+  1. Louisiana Ragin' Cajuns @ App State Mountaineers
+     Pick: App State Mountaineers (95% confidence)
+     Bet Type: MONEYLINE → TAKE_MONEYLINE
+
+  2. Niagara Purple Eagles @ Fairfield Stags
+     Pick: Fairfield Stags (95% confidence)
+     Vegas: Spread -10.5 | ML: -800/490
+     Bet Type: MONEYLINE_JUICED → SMALL_ML_BET
+
+══════════════════════════════════════════════════════════════════════
+ UNDERDOG VALUE PLAYS
+══════════════════════════════════════════════════════════════════════
+
+  → South Alabama Jaguars (77%)
+    vs James Madison Dukes
+    Vegas: +4.5 spread | ML +160
+```
+
+</details>
+
+**Key Capabilities:**
+- Possession-based efficiency metrics (KenPom-style) normalized per 100 possessions
+- Iterative strength of schedule using Colley-like algorithm (10 iterations)
+- Volatility detection identifying high-variance matchups for live betting
+- Confidence calibration achieving 0.1801 Brier score (excellent)
+- Real-time Vegas odds integration with spread value detection
+
+**Technical Highlights:**
+- **Data Pipeline:** R-based ETL processing 728 teams and 5,900+ games with incremental updates
+- **Statistical Modeling:** Four-factor analysis, adaptive recency weighting (14-day half-life)
+- **Prediction Engine:** Win probability calibration validated against historical performance
+- **Database:** SQLite with optimized schema for analytical queries
+- **Agent Integration:** Python interface syncing daily predictions to conversational AI
+
+**Performance Metrics:**
+
+| Metric | Result |
+|--------|--------|
+| Overall Accuracy | 76.3% (971/1,273 games) |
+| STRONG_BET Picks | 80.8% accuracy |
+| VERY_HIGH Tier | 82.4% accuracy |
+
+**Built With:**
+
+`R` `Python` `SQLite` `Pandas` `Statistical Modeling` `The Odds API`
+
+---
+
 ### AI Real Estate System
 **Multi-Platform Property Aggregation & Analysis**
 
