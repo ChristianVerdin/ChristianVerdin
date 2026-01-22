@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1e3a5f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d5a87;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="dataGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="processGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="modelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6d28d9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="outputGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="600" fill="#0f172a"/>
+
+  <!-- Header -->
+  <rect x="20" y="20" width="860" height="50" rx="8" fill="url(#headerGrad)" filter="url(#shadow)"/>
+  <text x="450" y="52" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="20" font-weight="bold">NCAAB Analytics System Architecture</text>
+
+  <!-- Data Sources Section -->
+  <text x="120" y="105" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="12" font-weight="bold">DATA SOURCES</text>
+
+  <!-- ESPN Box -->
+  <rect x="40" y="120" width="160" height="80" rx="8" fill="url(#dataGrad)" filter="url(#shadow)"/>
+  <text x="120" y="155" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">ESPN / hoopR</text>
+  <text x="120" y="175" text-anchor="middle" fill="#bfdbfe" font-family="Arial, sans-serif" font-size="11">Games, Players, Stats</text>
+  <text x="120" y="190" text-anchor="middle" fill="#bfdbfe" font-family="Arial, sans-serif" font-size="11">728 Teams | 5,900 Games</text>
+
+  <!-- The Odds API Box -->
+  <rect x="40" y="220" width="160" height="80" rx="8" fill="url(#dataGrad)" filter="url(#shadow)"/>
+  <text x="120" y="255" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">The Odds API</text>
+  <text x="120" y="275" text-anchor="middle" fill="#bfdbfe" font-family="Arial, sans-serif" font-size="11">Vegas Lines (Live)</text>
+  <text x="120" y="290" text-anchor="middle" fill="#bfdbfe" font-family="Arial, sans-serif" font-size="11">Spreads, Totals, ML</text>
+
+  <!-- Arrow from ESPN to Database -->
+  <path d="M200 160 L280 160 L280 280 L320 280" stroke="#3b82f6" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+
+  <!-- Arrow from Odds API to Database -->
+  <path d="M200 260 L260 260 L260 300 L320 300" stroke="#3b82f6" stroke-width="2" fill="none"/>
+
+  <!-- Processing Section -->
+  <text x="400" y="105" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="12" font-weight="bold">PROCESSING (R)</text>
+
+  <!-- SQLite Database -->
+  <rect x="320" y="120" width="160" height="100" rx="8" fill="url(#processGrad)" filter="url(#shadow)"/>
+  <text x="400" y="155" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">SQLite Database</text>
+  <text x="400" y="175" text-anchor="middle" fill="#a7f3d0" font-family="Arial, sans-serif" font-size="10">teams, games, player_stats</text>
+  <text x="400" y="190" text-anchor="middle" fill="#a7f3d0" font-family="Arial, sans-serif" font-size="10">odds, consensus_odds</text>
+  <text x="400" y="205" text-anchor="middle" fill="#a7f3d0" font-family="Arial, sans-serif" font-size="10">prediction_history</text>
+
+  <!-- Consensus Calculator -->
+  <rect x="320" y="240" width="160" height="70" rx="8" fill="url(#processGrad)" filter="url(#shadow)"/>
+  <text x="400" y="270" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Consensus Calc</text>
+  <text x="400" y="290" text-anchor="middle" fill="#a7f3d0" font-family="Arial, sans-serif" font-size="10">FanDuel, DraftKings, BetMGM</text>
+
+  <!-- Model Section -->
+  <text x="640" y="105" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="12" font-weight="bold">v2.0 PREDICTION MODEL</text>
+
+  <!-- Model Box -->
+  <rect x="560" y="120" width="160" height="200" rx="8" fill="url(#modelGrad)" filter="url(#shadow)"/>
+  <text x="640" y="150" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Model Pipeline</text>
+
+  <text x="640" y="175" text-anchor="middle" fill="#ddd6fe" font-family="Arial, sans-serif" font-size="11">Efficiency Metrics</text>
+  <text x="640" y="190" text-anchor="middle" fill="#c4b5fd" font-family="Arial, sans-serif" font-size="9">(KenPom-style)</text>
+
+  <text x="640" y="215" text-anchor="middle" fill="#ddd6fe" font-family="Arial, sans-serif" font-size="11">Strength of Schedule</text>
+  <text x="640" y="230" text-anchor="middle" fill="#c4b5fd" font-family="Arial, sans-serif" font-size="9">(Iterative Colley)</text>
+
+  <text x="640" y="255" text-anchor="middle" fill="#ddd6fe" font-family="Arial, sans-serif" font-size="11">Volatility Detection</text>
+  <text x="640" y="270" text-anchor="middle" fill="#c4b5fd" font-family="Arial, sans-serif" font-size="9">(Risk Factors)</text>
+
+  <text x="640" y="295" text-anchor="middle" fill="#ddd6fe" font-family="Arial, sans-serif" font-size="11">Confidence Calibration</text>
+  <text x="640" y="310" text-anchor="middle" fill="#c4b5fd" font-family="Arial, sans-serif" font-size="9">(Backtested)</text>
+
+  <!-- Arrow from DB to Model -->
+  <path d="M480 170 L560 170" stroke="#10b981" stroke-width="2" fill="none"/>
+  <polygon points="555,165 565,170 555,175" fill="#10b981"/>
+
+  <!-- Arrow from Consensus to Model -->
+  <path d="M480 275 L520 275 L520 220 L560 220" stroke="#10b981" stroke-width="2" fill="none"/>
+
+  <!-- Output Section -->
+  <text x="790" y="105" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="12" font-weight="bold">OUTPUT</text>
+
+  <!-- Daily Predictions -->
+  <rect x="740" y="120" width="140" height="70" rx="8" fill="url(#outputGrad)" filter="url(#shadow)"/>
+  <text x="810" y="150" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Daily Predictions</text>
+  <text x="810" y="170" text-anchor="middle" fill="#fef3c7" font-family="Arial, sans-serif" font-size="10">68+ columns</text>
+  <text x="810" y="182" text-anchor="middle" fill="#fef3c7" font-family="Arial, sans-serif" font-size="10">Vegas Comparison</text>
+
+  <!-- Arrow from Model to Predictions -->
+  <path d="M720 170 L740 170" stroke="#8b5cf6" stroke-width="2" fill="none"/>
+  <polygon points="735,165 745,170 735,175" fill="#8b5cf6"/>
+
+  <!-- Live Watchlist -->
+  <rect x="740" y="210" width="140" height="60" rx="8" fill="url(#outputGrad)" filter="url(#shadow)"/>
+  <text x="810" y="235" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Live Watchlist</text>
+  <text x="810" y="255" text-anchor="middle" fill="#fef3c7" font-family="Arial, sans-serif" font-size="10">High Volatility Games</text>
+
+  <!-- Arrow from Model to Watchlist -->
+  <path d="M720 240 L740 240" stroke="#8b5cf6" stroke-width="2" fill="none"/>
+  <polygon points="735,235 745,240 735,245" fill="#8b5cf6"/>
+
+  <!-- Agent Integration Section -->
+  <text x="450" y="365" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="12" font-weight="bold">AGENT INTEGRATION (Python)</text>
+
+  <!-- FanDuel Agent -->
+  <rect x="280" y="380" width="340" height="100" rx="8" fill="#1e293b" stroke="#3b82f6" stroke-width="2" filter="url(#shadow)"/>
+  <text x="450" y="410" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">FanDuel Scraping Agent</text>
+
+  <rect x="300" y="425" width="90" height="40" rx="4" fill="#334155"/>
+  <text x="345" y="445" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">NCAABPredictor</text>
+  <text x="345" y="458" text-anchor="middle" fill="#64748b" font-family="Arial, sans-serif" font-size="9">Bet Types</text>
+
+  <rect x="405" y="425" width="90" height="40" rx="4" fill="#334155"/>
+  <text x="450" y="445" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">Value Finder</text>
+  <text x="450" y="458" text-anchor="middle" fill="#64748b" font-family="Arial, sans-serif" font-size="9">Edge Detection</text>
+
+  <rect x="510" y="425" width="90" height="40" rx="4" fill="#334155"/>
+  <text x="555" y="445" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">Query Handler</text>
+  <text x="555" y="458" text-anchor="middle" fill="#64748b" font-family="Arial, sans-serif" font-size="9">Natural Language</text>
+
+  <!-- Arrow from Predictions to Agent -->
+  <path d="M810 190 L810 350 L620 350 L620 380" stroke="#f59e0b" stroke-width="2" fill="none"/>
+  <polygon points="615,375 620,385 625,375" fill="#f59e0b"/>
+
+  <!-- Stats Box -->
+  <rect x="40" y="340" width="200" height="140" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="2" filter="url(#shadow)"/>
+  <text x="140" y="370" text-anchor="middle" fill="#10b981" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Model Performance</text>
+  <text x="140" y="400" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">76.3%</text>
+  <text x="140" y="420" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="11">Overall Accuracy</text>
+  <text x="140" y="445" text-anchor="middle" fill="#6ee7b7" font-family="Arial, sans-serif" font-size="11">80.8% STRONG_BET</text>
+  <text x="140" y="465" text-anchor="middle" fill="#6ee7b7" font-family="Arial, sans-serif" font-size="11">0.1801 Brier Score</text>
+
+  <!-- Tech Stack -->
+  <rect x="660" y="380" width="220" height="100" rx="8" fill="#1e293b" stroke="#8b5cf6" stroke-width="2" filter="url(#shadow)"/>
+  <text x="770" y="405" text-anchor="middle" fill="#8b5cf6" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Tech Stack</text>
+  <text x="770" y="430" text-anchor="middle" fill="#c4b5fd" font-family="Arial, sans-serif" font-size="11">R | Python | SQLite</text>
+  <text x="770" y="450" text-anchor="middle" fill="#c4b5fd" font-family="Arial, sans-serif" font-size="11">hoopR | The Odds API</text>
+  <text x="770" y="470" text-anchor="middle" fill="#c4b5fd" font-family="Arial, sans-serif" font-size="11">Pandas | Statistical Modeling</text>
+
+  <!-- Footer -->
+  <rect x="20" y="510" width="860" height="70" rx="8" fill="#1e293b" filter="url(#shadow)"/>
+  <text x="450" y="540" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Bet Type Recommendations</text>
+  <text x="170" y="565" text-anchor="middle" fill="#6ee7b7" font-family="Arial, sans-serif" font-size="10">MONEYLINE: ML &lt; -250</text>
+  <text x="350" y="565" text-anchor="middle" fill="#fcd34d" font-family="Arial, sans-serif" font-size="10">SMALL_ML: ML &gt;= -250 (juiced)</text>
+  <text x="550" y="565" text-anchor="middle" fill="#93c5fd" font-family="Arial, sans-serif" font-size="10">UNDERDOG: Spread value plays</text>
+  <text x="750" y="565" text-anchor="middle" fill="#f87171" font-family="Arial, sans-serif" font-size="10">CAUTION: Spread &gt;= 25 pts</text>
+</svg>
