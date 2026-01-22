@@ -14,17 +14,20 @@ I build production-grade applications that integrate LLMs, real-time data pipeli
 ## Featured Project
 
 ### NFL Analytics Engine
-**Sports Performance Analytics & Data Engineering Platform**
+**Sports Betting Analytics & Visualization Platform**
 
-A comprehensive analytics system processing 100,000+ NFL plays across 4 seasons (997 games), featuring automated ETL pipelines, EPA efficiency modeling, and statistical analysis for playoff scenario comparison.
+A comprehensive analytics system for NFL betting intelligence, processing **282+ games**, **14,800+ player-quarter records**, and **1,446 TD events** for the 2025 season. Features automated matchup reports, real-time visualization generation, and multi-tier betting edge detection through the Conference Championship round.
 
 <p align="center">
-  <img src="./assets/nfl_analytics/2_efficiency_matrix.png" width="800" alt="NFL Analytics - Team Efficiency Matrix">
+  <img src="./assets/nfl_analytics/20_skill_position_matchups.png" width="800" alt="NFL Analytics - Skill Position Matchups Dashboard">
 </p>
 
 <details>
 <summary><b>View More Screenshots</b></summary>
 <br>
+<p align="center">
+  <img src="./assets/nfl_analytics/2_efficiency_matrix.png" width="800" alt="NFL Analytics - Team Efficiency Matrix">
+</p>
 <p align="center">
   <img src="./assets/nfl_analytics/1_playoff_epa_comparison.png" width="800" alt="NFL Analytics - EPA Comparison Analysis">
 </p>
@@ -37,24 +40,29 @@ A comprehensive analytics system processing 100,000+ NFL plays across 4 seasons 
 </details>
 
 **Key Capabilities:**
-- EPA (Expected Points Added) efficiency modeling across 997 games
-- Quarter-by-quarter scoring pattern analysis with heatmap visualization
-- Red zone and third-down conversion efficiency breakdowns
-- Automated report generation with CSV/PDF/SVG exports
-- Risk-reward analysis for playoff matchup scenarios
+- **Matchup Intelligence System** — Generates 14-page reports per game with player trends, red zone efficiency, and situational analysis across 116 matchup reports
+- **Quarter-by-Quarter Tracking** — 1,446 TD events and 14,847 player stat records with Q1-Q4 breakdowns for live betting insights
+- **Visualization Engine** — 21 custom playoff visualizations including skill position dashboards, TD probability gauges, and clutch performer analysis
+- **Playoff Scenario Simulator** — Win/loss impact modeling for seeding scenarios with elimination risk detection
+- **Injury Context Analysis** — Distinguishes "injury beneficiaries" from "organic risers" for sustainable prop betting
 
-**Sample Output:** [Divisional Round 2026 Analysis (PDF)](./assets/nfl_analytics/outputs/2026_nfl_divisional_round_analysis/nfl_divisional_round_complete_analysis.pdf)
+**Sample Outputs:**
+- [Skill Position Matchups Dashboard](./assets/nfl_analytics/20_skill_position_matchups.png) — 6-panel analysis: TD leaders, quarter scoring patterns, RB comparisons, clutch performers, receiving threats, and scoring consistency
+- [Conference Championship Visualizations](https://github.com/ChristianVerdin/nfl_analytics/tree/main/outputs/reports/conference_championship_2025) — 21 betting-focused graphics for AFC/NFC title games
+- [Weekly Matchup Reports](https://github.com/ChristianVerdin/nfl_analytics/tree/main/outputs/reports/matchups) — 8 weeks of detailed game intelligence (Wild Card through Conference Championship)
 
 **Technical Highlights:**
-- **Data Pipeline:** R-based ETL processing 500+ metrics per game via nflreadr API
-- **Statistical Modeling:** EPA calculations, efficiency matrices, regression analysis
-- **Visualization:** ggplot2 with custom themes, multi-format exports (PNG/SVG/PDF)
-- **Database:** SQLite with optimized aggregation queries across 4 seasons
-- **Automation:** Scheduled analysis generating weekly intelligence reports
+- **Data Pipeline:** R-based ETL processing 500+ metrics per game via nflreadr API with SQLite persistence
+- **Statistical Modeling:** EPA calculations, efficiency matrices, player trend detection (20%+ usage changes)
+- **Visualization:** ggplot2 with custom `theme_nfl_playoff()`, multi-panel dashboards via gridExtra
+- **Database:** 9 core tables + 5 quarter-level tracking tables with parameterized query wrappers
+- **Automation:** Batch game analysis processing 14 games in parallel with `analyze_week_matchups.sh`
 
 **Built With:**
 
-`R` `tidyverse` `ggplot2` `SQLite` `nflreadr` `Cairo` `Markdown`
+`R` `tidyverse` `ggplot2` `SQLite` `nflreadr` `gridExtra` `Cairo`
+
+[View Repository →](https://github.com/ChristianVerdin/nfl_analytics)
 
 ---
 
@@ -302,3 +310,5 @@ I'm always open to collaborating on projects together so feel free to reach out!
 <p align="center">
   <a href="mailto:christiandverdin@gmail.com">christiandverdin@gmail.com</a>
 </p>
+
+---
