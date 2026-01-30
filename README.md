@@ -82,6 +82,10 @@ I build production-grade applications that integrate LLMs, real-time data pipeli
 A comprehensive analytics system for NFL betting intelligence, processing **282+ games**, **14,800+ player-quarter records**, and **1,446 TD events** for the 2025 season. Features automated matchup reports, real-time visualization generation, and multi-tier betting edge detection through the Conference Championship round.
 
 <p align="center">
+  <img src="./assets/nfl_analytics/02_quarter_predictions.png" width="800" alt="NFL Analytics - Conference Championship Quarter-by-Quarter Score Predictions">
+</p>
+
+<p align="center">
   <img src="./assets/nfl_analytics/20_skill_position_matchups.png" width="800" alt="NFL Analytics - Skill Position Matchups Dashboard">
 </p>
 
