@@ -16,28 +16,6 @@ I build production-grade applications that integrate LLMs, real-time data pipeli
 <table>
 <tr>
 <td align="center" width="25%">
-<a href="#nfl-analytics-engine">
-<img src="https://img.shields.io/badge/NFL_Analytics-276DC3?style=for-the-badge&logo=r&logoColor=white" alt="NFL Analytics"/>
-</a>
-<br/>
-<sub><b>Sports Betting Intelligence</b></sub>
-<br/>
-<sub>282+ games • 21 visualizations</sub>
-<br/>
-<code>R</code> <code>ggplot2</code> <code>SQLite</code>
-</td>
-<td align="center" width="25%">
-<a href="#ncaab-analytics">
-<img src="https://img.shields.io/badge/NCAAB_Analytics-FF6B00?style=for-the-badge&logo=espn&logoColor=white" alt="NCAAB Analytics"/>
-</a>
-<br/>
-<sub><b>Prediction System</b></sub>
-<br/>
-<sub>76.3% accuracy • 5,900+ games</sub>
-<br/>
-<code>R</code> <code>Python</code> <code>Statistics</code>
-</td>
-<td align="center" width="25%">
 <a href="#illinois-real-estate-intelligence">
 <img src="https://img.shields.io/badge/IL_Real_Estate-0EA5E9?style=for-the-badge&logo=homeadvisor&logoColor=white" alt="IL Real Estate"/>
 </a>
@@ -49,6 +27,17 @@ I build production-grade applications that integrate LLMs, real-time data pipeli
 <code>Next.js</code> <code>FastAPI</code> <code>Supabase</code>
 </td>
 <td align="center" width="25%">
+<a href="#nfl-analytics-engine">
+<img src="https://img.shields.io/badge/NFL_Analytics-276DC3?style=for-the-badge&logo=r&logoColor=white" alt="NFL Analytics"/>
+</a>
+<br/>
+<sub><b>Sports Betting Intelligence</b></sub>
+<br/>
+<sub>282+ games • 21 visualizations</sub>
+<br/>
+<code>R</code> <code>ggplot2</code> <code>SQLite</code>
+</td>
+<td align="center" width="25%">
 <a href="#daily-locks-ai">
 <img src="https://img.shields.io/badge/Daily_Locks_AI-7C3AED?style=for-the-badge&logo=anthropic&logoColor=white" alt="Daily Locks AI"/>
 </a>
@@ -58,6 +47,17 @@ I build production-grade applications that integrate LLMs, real-time data pipeli
 <sub>Live at dailylocks.ai</sub>
 <br/>
 <code>Next.js</code> <code>Claude</code> <code>Stripe</code>
+</td>
+<td align="center" width="25%">
+<a href="#ncaab-analytics">
+<img src="https://img.shields.io/badge/NCAAB_Analytics-FF6B00?style=for-the-badge&logo=espn&logoColor=white" alt="NCAAB Analytics"/>
+</a>
+<br/>
+<sub><b>Prediction System</b></sub>
+<br/>
+<sub>76.3% accuracy • 5,900+ games</sub>
+<br/>
+<code>R</code> <code>Python</code> <code>Statistics</code>
 </td>
 </tr>
 </table>
@@ -75,6 +75,77 @@ I build production-grade applications that integrate LLMs, real-time data pipeli
 ---
 
 ## Featured Projects
+
+### Illinois Real Estate Intelligence
+**Full-Stack Property Search, Valuation & Market Analysis Platform**
+
+A production SaaS application aggregating **10 real-time data sources** to deliver property search, automated valuations, market analysis, and neighborhood intelligence across Illinois. Integrates census demographics, school quality ratings, crime statistics, development activity tracking, and economic indicators into a unified property analysis experience.
+
+**Live:** [illinois-real-estate.vercel.app](https://illinois-real-estate.vercel.app)
+
+<p align="center">
+  <img src="./assets/illinois_real_estate/search_results.png" width="800" alt="Illinois Real Estate - Property Search with Street View">
+</p>
+
+<details>
+<summary><b>View More Screenshots</b></summary>
+<br>
+<p align="center">
+  <img src="./assets/illinois_real_estate/property_details.png" width="800" alt="Illinois Real Estate - Neighborhood Intelligence">
+</p>
+<p align="center">
+  <img src="./assets/illinois_real_estate/amenity_drilldown.png" width="800" alt="Illinois Real Estate - Amenity Drilldown with Nearby Bars">
+</p>
+<p align="center">
+  <img src="./assets/illinois_real_estate/crime_safety.png" width="800" alt="Illinois Real Estate - Crime & Safety Analysis">
+</p>
+<p align="center">
+  <img src="./assets/illinois_real_estate/market_analysis.png" width="800" alt="Illinois Real Estate - Market Analysis Dashboard">
+</p>
+<p align="center">
+  <img src="./assets/illinois_real_estate/market_comparison.png" width="800" alt="Illinois Real Estate - ZIP Code Market Comparison">
+</p>
+<p align="center">
+  <img src="./assets/illinois_real_estate/valuation_calculator.png" width="800" alt="Illinois Real Estate - Valuation & Investment Calculator">
+</p>
+<p align="center">
+  <img src="./assets/illinois_real_estate/neighborhoods_explorer.png" width="800" alt="Illinois Real Estate - Neighborhoods Explorer">
+</p>
+<p align="center">
+  <img src="./assets/illinois_real_estate/school_ratings.png" width="800" alt="Illinois Real Estate - School Ratings & Economic Indicators">
+</p>
+</details>
+
+**Key Capabilities:**
+- **Property Search Engine** — Filters by county, city, 50+ Chicago neighborhoods, property type, price, beds/baths, sqft, year built, and days on market with Street View imagery and listing photos
+- **Automated Valuations** — RentCast AVM with confidence scoring, rent estimates with comparable analysis, and a full investment calculator (cash flow, cap rate, cash-on-cash return, 5-year ROI projection)
+- **Market Analysis** — ZIP-level sale and rental metrics with 2BR rental stats computed from active listings; side-by-side comparison of up to 5 ZIP codes
+- **Neighborhood Intelligence** — 28-category amenity scoring via OpenStreetMap, walkability proxy, and drilldown into specific amenity types within configurable radius
+- **Crime & Safety Analysis** — Chicago crime data with safety scoring (0-100), violent/property breakdown, arrest rates, and 6-month trend detection (Chicago only, Socrata API)
+- **Development Activity Tracking** — Building permits, business licenses, and liquor licenses scored into a development activity index with investment breakdowns (Chicago only)
+- **School Quality Ratings** — 5,112 Illinois schools with ISBE Report Card data, geocoded locations, proficiency trends, and quality scoring by designation
+- **Economic Indicators** — County unemployment rates and Chicago metro home price index via FRED API with year-over-year trend analysis
+- **Census Demographics** — ZIP-level population, income, housing, employment, and education data from the U.S. Census Bureau
+- **SaaS Monetization** — Three-tier subscription model (Free/Starter/Pro) with Stripe Checkout, usage metering, and feature gating
+
+**Architecture & Technical Highlights:**
+- **Frontend:** Next.js 15 App Router, React 19, TypeScript, Tailwind CSS, shadcn/ui, Zustand, Recharts
+- **Backend:** FastAPI with async endpoints, 10 service modules, Redis caching (Upstash), Pydantic validation
+- **Database:** Supabase (PostgreSQL) with Row-Level Security, plus SQLite for ISBE school data (5,112 schools, 94% geocoded)
+- **Auth:** Supabase Auth with JWT validation, protected API routes, email verification
+- **Payments:** Stripe integration (checkout sessions, webhooks, customer portal, usage enforcement)
+- **Data Sources:** RentCast API, U.S. Census Bureau, OpenStreetMap Overpass, Chicago Open Data Portal (3 datasets), FRED API, ISBE Report Card, Google Street View, Google Analytics 4
+- **Geocoding:** Census Batch Geocoder (primary) + Nominatim fallback for school location resolution
+- **Caching Strategy:** Redis with tiered TTLs — 1hr (property), 1 day (crime/permits), 7 days (amenities/FRED), 30 days (schools), 1 year (census)
+- **Deployment:** Vercel (frontend, auto-deploy from main) + Railway (backend) with environment-based configuration
+
+**Built With:**
+
+`Next.js 15` `React 19` `TypeScript` `FastAPI` `Python` `Supabase` `PostgreSQL` `Redis` `Stripe` `Tailwind CSS` `shadcn/ui` `Zustand` `Recharts` `SQLite` `Google Street View API`
+
+[View Repository →](https://github.com/ChristianVerdin/illinois-real-estate)
+
+---
 
 ### NFL Analytics Engine
 **Sports Betting Analytics & Visualization Platform**
@@ -130,6 +201,54 @@ A comprehensive analytics system for NFL betting intelligence, processing **282+
 `R` `tidyverse` `ggplot2` `SQLite` `nflreadr` `gridExtra` `Cairo`
 
 [View Repository →](https://github.com/ChristianVerdin/nfl_analytics)
+
+---
+
+### Daily Locks AI
+**Production SaaS Platform with LLM-Powered Analytics**
+
+A full-stack application featuring agentic AI that processes natural language queries against 15,000+ historical records, delivering structured insights with confidence scoring and real-time streaming responses.
+
+**Live:** [dailylocks.ai](https://dailylocks.ai)
+
+<p align="center">
+  <img src="./assets/dailylocks/chat_interface.png" width="800" alt="Daily Locks AI - Chat Interface">
+</p>
+
+<details>
+<summary><b>View More Screenshots</b></summary>
+<br>
+<p align="center">
+  <img src="./assets/dailylocks/ai_response.png" width="800" alt="Daily Locks AI - Analysis Response">
+</p>
+<p align="center">
+  <img src="./assets/dailylocks/games_dashboard.png" width="800" alt="Daily Locks AI - Games Dashboard">
+</p>
+<p align="center">
+  <img src="./assets/dailylocks/settings_page.png" width="800" alt="Daily Locks AI - Settings & Billing">
+</p>
+</details>
+
+**Key Features:**
+- Natural language interface with context-aware prompt engineering
+- Multi-model LLM routing (Claude Haiku/Sonnet/Opus) based on user tier
+- Real-time streaming responses with Server-Sent Events
+- Subscription management with Stripe Checkout & Customer Portal
+- Persistent conversation history with full-text search
+
+**Architecture & Technical Highlights:**
+- **Frontend:** Next.js 15 App Router, React 19, TypeScript, Zustand state management
+- **Backend:** FastAPI with async endpoints, intelligent agent routing system
+- **AI/ML:** Anthropic Claude API, dynamic prompt construction, context windowing
+- **Database:** Supabase (PostgreSQL) with Row-Level Security, real-time subscriptions
+- **Auth:** JWT-based authentication with protected API routes
+- **Payments:** Stripe integration (checkout sessions, webhooks, customer portal)
+- **Data Pipeline:** Automated ETL processing 500+ records weekly via Playwright
+- **Testing:** 116 automated tests with pytest
+
+**Built With:**
+
+`Next.js 15` `React 19` `TypeScript` `FastAPI` `Python` `Claude API` `Supabase` `Stripe` `Tailwind CSS` `Zustand` `Playwright`
 
 ---
 
@@ -202,122 +321,6 @@ A production-grade analytics pipeline for NCAA Men's Basketball that combines po
 **Built With:**
 
 `R` `Python` `SQLite` `Pandas` `Statistical Modeling` `The Odds API`
-
----
-
-### Illinois Real Estate Intelligence
-**Full-Stack Property Search, Valuation & Market Analysis Platform**
-
-A production SaaS application aggregating **10 real-time data sources** to deliver property search, automated valuations, market analysis, and neighborhood intelligence across Illinois. Integrates census demographics, school quality ratings, crime statistics, development activity tracking, and economic indicators into a unified property analysis experience.
-
-**Live:** [illinois-real-estate.vercel.app](https://illinois-real-estate.vercel.app)
-
-<p align="center">
-  <img src="./assets/illinois_real_estate/search_results.png" width="800" alt="Illinois Real Estate - Property Search with Street View">
-</p>
-
-<details>
-<summary><b>View More Screenshots</b></summary>
-<br>
-<p align="center">
-  <img src="./assets/illinois_real_estate/property_details.png" width="800" alt="Illinois Real Estate - Neighborhood Intelligence">
-</p>
-<p align="center">
-  <img src="./assets/illinois_real_estate/amenity_drilldown.png" width="800" alt="Illinois Real Estate - Amenity Drilldown with Nearby Bars">
-</p>
-<p align="center">
-  <img src="./assets/illinois_real_estate/crime_safety.png" width="800" alt="Illinois Real Estate - Crime & Safety Analysis">
-</p>
-<p align="center">
-  <img src="./assets/illinois_real_estate/market_analysis.png" width="800" alt="Illinois Real Estate - Market Analysis Dashboard">
-</p>
-<p align="center">
-  <img src="./assets/illinois_real_estate/market_comparison.png" width="800" alt="Illinois Real Estate - ZIP Code Market Comparison">
-</p>
-<p align="center">
-  <img src="./assets/illinois_real_estate/valuation_calculator.png" width="800" alt="Illinois Real Estate - Valuation & Investment Calculator">
-</p>
-<p align="center">
-  <img src="./assets/illinois_real_estate/school_ratings.png" width="800" alt="Illinois Real Estate - School Ratings & Economic Indicators">
-</p>
-</details>
-
-**Key Capabilities:**
-- **Property Search Engine** — Filters by county, city, 50+ Chicago neighborhoods, property type, price, beds/baths, sqft, year built, and days on market with Street View imagery and listing photos
-- **Automated Valuations** — RentCast AVM with confidence scoring, rent estimates with comparable analysis, and a full investment calculator (cash flow, cap rate, cash-on-cash return, 5-year ROI projection)
-- **Market Analysis** — ZIP-level sale and rental metrics with 2BR rental stats computed from active listings; side-by-side comparison of up to 5 ZIP codes
-- **Neighborhood Intelligence** — 28-category amenity scoring via OpenStreetMap, walkability proxy, and drilldown into specific amenity types within configurable radius
-- **Crime & Safety Analysis** — Chicago crime data with safety scoring (0-100), violent/property breakdown, arrest rates, and 6-month trend detection (Chicago only, Socrata API)
-- **Development Activity Tracking** — Building permits, business licenses, and liquor licenses scored into a development activity index with investment breakdowns (Chicago only)
-- **School Quality Ratings** — 5,112 Illinois schools with ISBE Report Card data, geocoded locations, proficiency trends, and quality scoring by designation
-- **Economic Indicators** — County unemployment rates and Chicago metro home price index via FRED API with year-over-year trend analysis
-- **Census Demographics** — ZIP-level population, income, housing, employment, and education data from the U.S. Census Bureau
-- **SaaS Monetization** — Three-tier subscription model (Free/Starter/Pro) with Stripe Checkout, usage metering, and feature gating
-
-**Architecture & Technical Highlights:**
-- **Frontend:** Next.js 15 App Router, React 19, TypeScript, Tailwind CSS, shadcn/ui, Zustand, Recharts
-- **Backend:** FastAPI with async endpoints, 10 service modules, Redis caching (Upstash), Pydantic validation
-- **Database:** Supabase (PostgreSQL) with Row-Level Security, plus SQLite for ISBE school data (5,112 schools, 94% geocoded)
-- **Auth:** Supabase Auth with JWT validation, protected API routes, email verification
-- **Payments:** Stripe integration (checkout sessions, webhooks, customer portal, usage enforcement)
-- **Data Sources:** RentCast API, U.S. Census Bureau, OpenStreetMap Overpass, Chicago Open Data Portal (3 datasets), FRED API, ISBE Report Card, Google Street View, Google Analytics 4
-- **Geocoding:** Census Batch Geocoder (primary) + Nominatim fallback for school location resolution
-- **Caching Strategy:** Redis with tiered TTLs — 1hr (property), 1 day (crime/permits), 7 days (amenities/FRED), 30 days (schools), 1 year (census)
-- **Deployment:** Vercel (frontend, auto-deploy from main) + Railway (backend) with environment-based configuration
-
-**Built With:**
-
-`Next.js 15` `React 19` `TypeScript` `FastAPI` `Python` `Supabase` `PostgreSQL` `Redis` `Stripe` `Tailwind CSS` `shadcn/ui` `Zustand` `Recharts` `SQLite` `Google Street View API`
-
-[View Repository →](https://github.com/ChristianVerdin/illinois-real-estate)
-
----
-
-### Daily Locks AI
-**Production SaaS Platform with LLM-Powered Analytics**
-
-A full-stack application featuring agentic AI that processes natural language queries against 15,000+ historical records, delivering structured insights with confidence scoring and real-time streaming responses.
-
-**Live:** [dailylocks.ai](https://dailylocks.ai)
-
-<p align="center">
-  <img src="./assets/dailylocks/chat_interface.png" width="800" alt="Daily Locks AI - Chat Interface">
-</p>
-
-<details>
-<summary><b>View More Screenshots</b></summary>
-<br>
-<p align="center">
-  <img src="./assets/dailylocks/ai_response.png" width="800" alt="Daily Locks AI - Analysis Response">
-</p>
-<p align="center">
-  <img src="./assets/dailylocks/games_dashboard.png" width="800" alt="Daily Locks AI - Games Dashboard">
-</p>
-<p align="center">
-  <img src="./assets/dailylocks/settings_page.png" width="800" alt="Daily Locks AI - Settings & Billing">
-</p>
-</details>
-
-**Key Features:**
-- Natural language interface with context-aware prompt engineering
-- Multi-model LLM routing (Claude Haiku/Sonnet/Opus) based on user tier
-- Real-time streaming responses with Server-Sent Events
-- Subscription management with Stripe Checkout & Customer Portal
-- Persistent conversation history with full-text search
-
-**Architecture & Technical Highlights:**
-- **Frontend:** Next.js 15 App Router, React 19, TypeScript, Zustand state management
-- **Backend:** FastAPI with async endpoints, intelligent agent routing system
-- **AI/ML:** Anthropic Claude API, dynamic prompt construction, context windowing
-- **Database:** Supabase (PostgreSQL) with Row-Level Security, real-time subscriptions
-- **Auth:** JWT-based authentication with protected API routes
-- **Payments:** Stripe integration (checkout sessions, webhooks, customer portal)
-- **Data Pipeline:** Automated ETL processing 500+ records weekly via Playwright
-- **Testing:** 116 automated tests with pytest
-
-**Built With:**
-
-`Next.js 15` `React 19` `TypeScript` `FastAPI` `Python` `Claude API` `Supabase` `Stripe` `Tailwind CSS` `Zustand` `Playwright`
 
 ---
 
