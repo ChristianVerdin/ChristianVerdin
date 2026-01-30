@@ -219,6 +219,9 @@ A production SaaS application aggregating **10 real-time data sources** to deliv
   <img src="./assets/illinois_real_estate/property_details.png" width="800" alt="Illinois Real Estate - Neighborhood Intelligence">
 </p>
 <p align="center">
+  <img src="./assets/illinois_real_estate/amenity_drilldown.png" width="800" alt="Illinois Real Estate - Amenity Drilldown with Nearby Bars">
+</p>
+<p align="center">
   <img src="./assets/illinois_real_estate/crime_safety.png" width="800" alt="Illinois Real Estate - Crime & Safety Analysis">
 </p>
 <p align="center">
