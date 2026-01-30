@@ -38,15 +38,15 @@ I build production-grade applications that integrate LLMs, real-time data pipeli
 <code>R</code> <code>Python</code> <code>Statistics</code>
 </td>
 <td align="center" width="25%">
-<a href="#ai-real-estate-system">
-<img src="https://img.shields.io/badge/AI_Real_Estate-10B981?style=for-the-badge&logo=openai&logoColor=white" alt="AI Real Estate"/>
+<a href="#illinois-real-estate-intelligence">
+<img src="https://img.shields.io/badge/IL_Real_Estate-0EA5E9?style=for-the-badge&logo=homeadvisor&logoColor=white" alt="IL Real Estate"/>
 </a>
 <br/>
-<sub><b>Property Aggregation</b></sub>
+<sub><b>Property Intelligence Platform</b></sub>
 <br/>
-<sub>5 platforms • AI extraction</sub>
+<sub>10 data sources • Live SaaS</sub>
 <br/>
-<code>Python</code> <code>OpenAI</code> <code>Streamlit</code>
+<code>Next.js</code> <code>FastAPI</code> <code>Supabase</code>
 </td>
 <td align="center" width="25%">
 <a href="#daily-locks-ai">
@@ -201,46 +201,68 @@ A production-grade analytics pipeline for NCAA Men's Basketball that combines po
 
 ---
 
-### AI Real Estate System
-**Multi-Platform Property Aggregation & Analysis**
+### Illinois Real Estate Intelligence
+**Full-Stack Property Search, Valuation & Market Analysis Platform**
 
-A full-stack application that aggregates real estate listings from 5 major platforms (Zillow, Redfin, Trulia, Realtor.com, Homes.com), applying AI-powered extraction to deliver unified property data with interactive mapping and investment analytics.
+A production SaaS application aggregating **10 real-time data sources** to deliver property search, automated valuations, market analysis, and neighborhood intelligence across Illinois. Integrates census demographics, school quality ratings, crime statistics, development activity tracking, and economic indicators into a unified property analysis experience.
+
+**Live:** [illinois-real-estate.vercel.app](https://illinois-real-estate.vercel.app)
 
 <p align="center">
-  <img src="./assets/ai_real_estate/search_interface.png" width="800" alt="AI Real Estate - Search Interface">
+  <img src="./assets/illinois_real_estate/search_results.png" width="800" alt="Illinois Real Estate - Property Search with Street View">
 </p>
 
 <details>
 <summary><b>View More Screenshots</b></summary>
 <br>
 <p align="center">
-  <img src="./assets/ai_real_estate/property_results.png" width="800" alt="AI Real Estate - Property Results">
+  <img src="./assets/illinois_real_estate/property_details.png" width="800" alt="Illinois Real Estate - Neighborhood Intelligence">
 </p>
 <p align="center">
-  <img src="./assets/ai_real_estate/map_view.png" width="800" alt="AI Real Estate - Interactive Map">
+  <img src="./assets/illinois_real_estate/crime_safety.png" width="800" alt="Illinois Real Estate - Crime & Safety Analysis">
 </p>
 <p align="center">
-  <img src="./assets/ai_real_estate/analytics_dashboard.png" width="800" alt="AI Real Estate - Analytics Dashboard">
+  <img src="./assets/illinois_real_estate/market_analysis.png" width="800" alt="Illinois Real Estate - Market Analysis Dashboard">
+</p>
+<p align="center">
+  <img src="./assets/illinois_real_estate/market_comparison.png" width="800" alt="Illinois Real Estate - ZIP Code Market Comparison">
+</p>
+<p align="center">
+  <img src="./assets/illinois_real_estate/valuation_calculator.png" width="800" alt="Illinois Real Estate - Valuation & Investment Calculator">
+</p>
+<p align="center">
+  <img src="./assets/illinois_real_estate/school_ratings.png" width="800" alt="Illinois Real Estate - School Ratings & Economic Indicators">
 </p>
 </details>
 
-**Key Features:**
-- Multi-platform data aggregation from 5 real estate websites
-- AI-powered property extraction using Firecrawl + OpenAI GPT
-- Three-tier caching system (Memory -> Redis -> SQLite)
-- Interactive mapping with geocoded property locations
-- Investment analytics with ROI and cap rate calculations
+**Key Capabilities:**
+- **Property Search Engine** — Filters by county, city, 50+ Chicago neighborhoods, property type, price, beds/baths, sqft, year built, and days on market with Street View imagery and listing photos
+- **Automated Valuations** — RentCast AVM with confidence scoring, rent estimates with comparable analysis, and a full investment calculator (cash flow, cap rate, cash-on-cash return, 5-year ROI projection)
+- **Market Analysis** — ZIP-level sale and rental metrics with 2BR rental stats computed from active listings; side-by-side comparison of up to 5 ZIP codes
+- **Neighborhood Intelligence** — 28-category amenity scoring via OpenStreetMap, walkability proxy, and drilldown into specific amenity types within configurable radius
+- **Crime & Safety Analysis** — Chicago crime data with safety scoring (0-100), violent/property breakdown, arrest rates, and 6-month trend detection (Chicago only, Socrata API)
+- **Development Activity Tracking** — Building permits, business licenses, and liquor licenses scored into a development activity index with investment breakdowns (Chicago only)
+- **School Quality Ratings** — 5,112 Illinois schools with ISBE Report Card data, geocoded locations, proficiency trends, and quality scoring by designation
+- **Economic Indicators** — County unemployment rates and Chicago metro home price index via FRED API with year-over-year trend analysis
+- **Census Demographics** — ZIP-level population, income, housing, employment, and education data from the U.S. Census Bureau
+- **SaaS Monetization** — Three-tier subscription model (Free/Starter/Pro) with Stripe Checkout, usage metering, and feature gating
 
-**Technical Highlights:**
-- **Frontend:** Streamlit with custom components, Plotly visualizations
-- **Backend:** Python with async HTTP clients, circuit breaker pattern
-- **AI/ML:** OpenAI GPT for intelligent data extraction and normalization
-- **Caching:** Multi-tier LRU cache with 65-70% hit rate optimization
-- **Data:** Pydantic schemas, pandas processing, multi-format exports
+**Architecture & Technical Highlights:**
+- **Frontend:** Next.js 15 App Router, React 19, TypeScript, Tailwind CSS, shadcn/ui, Zustand, Recharts
+- **Backend:** FastAPI with async endpoints, 10 service modules, Redis caching (Upstash), Pydantic validation
+- **Database:** Supabase (PostgreSQL) with Row-Level Security, plus SQLite for ISBE school data (5,112 schools, 94% geocoded)
+- **Auth:** Supabase Auth with JWT validation, protected API routes, email verification
+- **Payments:** Stripe integration (checkout sessions, webhooks, customer portal, usage enforcement)
+- **Data Sources:** RentCast API, U.S. Census Bureau, OpenStreetMap Overpass, Chicago Open Data Portal (3 datasets), FRED API, ISBE Report Card, Google Street View, Google Analytics 4
+- **Geocoding:** Census Batch Geocoder (primary) + Nominatim fallback for school location resolution
+- **Caching Strategy:** Redis with tiered TTLs — 1hr (property), 1 day (crime/permits), 7 days (amenities/FRED), 30 days (schools), 1 year (census)
+- **Deployment:** Vercel (frontend, auto-deploy from main) + Railway (backend) with environment-based configuration
 
 **Built With:**
 
-`Python` `Streamlit` `OpenAI API` `Firecrawl` `Redis` `SQLite` `Pandas` `Folium` `Plotly`
+`Next.js 15` `React 19` `TypeScript` `FastAPI` `Python` `Supabase` `PostgreSQL` `Redis` `Stripe` `Tailwind CSS` `shadcn/ui` `Zustand` `Recharts` `SQLite` `Google Street View API`
+
+[View Repository →](https://github.com/ChristianVerdin/illinois-real-estate)
 
 ---
 
@@ -322,6 +344,7 @@ A full-stack application featuring agentic AI that processes natural language qu
 ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
 
 </td>
