@@ -16,8 +16,8 @@ I build production-grade applications that integrate LLMs, real-time data pipeli
 <table>
 <tr>
 <td align="center" width="25%">
-<a href="#illinois-real-estate-intelligence">
-<img src="https://img.shields.io/badge/IL_Real_Estate-0EA5E9?style=for-the-badge&logo=homeadvisor&logoColor=white" alt="IL Real Estate"/>
+<a href="#lakeshoreiq---illinois-real-estate-intelligence">
+<img src="https://img.shields.io/badge/LakeshoreIQ-0EA5E9?style=for-the-badge&logo=homeadvisor&logoColor=white" alt="LakeshoreIQ"/>
 </a>
 <br/>
 <sub><b>Property Intelligence Platform</b></sub>
@@ -31,9 +31,9 @@ I build production-grade applications that integrate LLMs, real-time data pipeli
 <img src="https://img.shields.io/badge/NFL_Analytics-276DC3?style=for-the-badge&logo=r&logoColor=white" alt="NFL Analytics"/>
 </a>
 <br/>
-<sub><b>Sports Betting Intelligence</b></sub>
+<sub><b>Statistical Intelligence</b></sub>
 <br/>
-<sub>282+ games • 21 visualizations</sub>
+<sub>285 games • Super Bowl LX</sub>
 <br/>
 <code>R</code> <code>ggplot2</code> <code>SQLite</code>
 </td>
@@ -42,7 +42,7 @@ I build production-grade applications that integrate LLMs, real-time data pipeli
 <img src="https://img.shields.io/badge/Daily_Locks_AI-7C3AED?style=for-the-badge&logo=anthropic&logoColor=white" alt="Daily Locks AI"/>
 </a>
 <br/>
-<sub><b>Production SaaS</b></sub>
+<sub><b>Multi-Sport AI Agent</b></sub>
 <br/>
 <sub>Live at dailylocks.ai</sub>
 <br/>
@@ -55,7 +55,7 @@ I build production-grade applications that integrate LLMs, real-time data pipeli
 <br/>
 <sub><b>Prediction System</b></sub>
 <br/>
-<sub>76.3% accuracy • 5,900+ games</sub>
+<sub>76.3% accuracy • 6,100+ games</sub>
 <br/>
 <code>R</code> <code>Python</code> <code>Statistics</code>
 </td>
@@ -76,43 +76,43 @@ I build production-grade applications that integrate LLMs, real-time data pipeli
 
 ## Featured Projects
 
-### Illinois Real Estate Intelligence
+### LakeshoreIQ - Illinois Real Estate Intelligence
 **Full-Stack Property Search, Valuation & Market Analysis Platform**
 
 A production SaaS application aggregating **10 real-time data sources** to deliver property search, automated valuations, market analysis, and neighborhood intelligence across Illinois. Integrates census demographics, school quality ratings, crime statistics, development activity tracking, and economic indicators into a unified property analysis experience.
 
-**Live:** [illinois-real-estate.vercel.app](https://illinois-real-estate.vercel.app)
+**Live:** [lakeshoreiq.com](https://lakeshoreiq.com)
 
 <p align="center">
-  <img src="./assets/illinois_real_estate/search_results.png" width="800" alt="Illinois Real Estate - Property Search with Street View">
+  <img src="./assets/illinois_real_estate/search_results.png" width="800" alt="LakeshoreIQ - Property Search with Street View">
 </p>
 
 <details>
 <summary><b>View More Screenshots</b></summary>
 <br>
 <p align="center">
-  <img src="./assets/illinois_real_estate/property_details.png" width="800" alt="Illinois Real Estate - Neighborhood Intelligence">
+  <img src="./assets/illinois_real_estate/property_details.png" width="800" alt="LakeshoreIQ - Neighborhood Intelligence">
 </p>
 <p align="center">
-  <img src="./assets/illinois_real_estate/amenity_drilldown.png" width="800" alt="Illinois Real Estate - Amenity Drilldown with Nearby Bars">
+  <img src="./assets/illinois_real_estate/amenity_drilldown.png" width="800" alt="LakeshoreIQ - Amenity Drilldown with Nearby Bars">
 </p>
 <p align="center">
-  <img src="./assets/illinois_real_estate/crime_safety.png" width="800" alt="Illinois Real Estate - Crime & Safety Analysis">
+  <img src="./assets/illinois_real_estate/crime_safety.png" width="800" alt="LakeshoreIQ - Crime & Safety Analysis">
 </p>
 <p align="center">
-  <img src="./assets/illinois_real_estate/market_analysis.png" width="800" alt="Illinois Real Estate - Market Analysis Dashboard">
+  <img src="./assets/illinois_real_estate/market_analysis.png" width="800" alt="LakeshoreIQ - Market Analysis Dashboard">
 </p>
 <p align="center">
-  <img src="./assets/illinois_real_estate/market_comparison.png" width="800" alt="Illinois Real Estate - ZIP Code Market Comparison">
+  <img src="./assets/illinois_real_estate/market_comparison.png" width="800" alt="LakeshoreIQ - ZIP Code Market Comparison">
 </p>
 <p align="center">
-  <img src="./assets/illinois_real_estate/valuation_calculator.png" width="800" alt="Illinois Real Estate - Valuation & Investment Calculator">
+  <img src="./assets/illinois_real_estate/valuation_calculator.png" width="800" alt="LakeshoreIQ - Valuation & Investment Calculator">
 </p>
 <p align="center">
-  <img src="./assets/illinois_real_estate/neighborhoods_explorer.png" width="800" alt="Illinois Real Estate - Neighborhoods Explorer">
+  <img src="./assets/illinois_real_estate/neighborhoods_explorer.png" width="800" alt="LakeshoreIQ - Neighborhoods Explorer">
 </p>
 <p align="center">
-  <img src="./assets/illinois_real_estate/school_ratings.png" width="800" alt="Illinois Real Estate - School Ratings & Economic Indicators">
+  <img src="./assets/illinois_real_estate/school_ratings.png" width="800" alt="LakeshoreIQ - School Ratings & Economic Indicators">
 </p>
 </details>
 
@@ -148,12 +148,12 @@ A production SaaS application aggregating **10 real-time data sources** to deliv
 ---
 
 ### NFL Analytics Engine
-**Sports Betting Analytics & Visualization Platform**
+**Statistical Intelligence & Visualization Platform**
 
-A comprehensive analytics system for NFL betting intelligence, processing **282+ games**, **14,800+ player-quarter records**, and **1,446 TD events** for the 2025 season. Features automated matchup reports, real-time visualization generation, and multi-tier betting edge detection through the Conference Championship round.
+A comprehensive analytics system for NFL game prediction, processing **285 games**, **14,900+ player-quarter records**, **22,700+ snap counts**, and **1,455 TD events** through Super Bowl LX. Features automated matchup reports, real-time visualization generation, and predictive pattern recognition with **18,900+ historical game outcomes** analyzed.
 
 <p align="center">
-  <img src="./assets/nfl_analytics/02_quarter_predictions.png" width="800" alt="NFL Analytics - Conference Championship Quarter-by-Quarter Score Predictions">
+  <img src="./assets/nfl_analytics/02_quarter_predictions.png" width="800" alt="NFL Analytics - Quarter-by-Quarter Score Predictions">
 </p>
 
 <p align="center">
@@ -178,16 +178,16 @@ A comprehensive analytics system for NFL betting intelligence, processing **282+
 </details>
 
 **Key Capabilities:**
-- **Matchup Intelligence System** — Generates 14-page reports per game with player trends, red zone efficiency, and situational analysis across 116 matchup reports
-- **Quarter-by-Quarter Tracking** — 1,446 TD events and 14,847 player stat records with Q1-Q4 breakdowns for live betting insights
+- **Matchup Intelligence System** — Generates 14-page reports per game with player trends, red zone efficiency, and situational analysis across 116+ matchup reports
+- **Quarter-by-Quarter Tracking** — 1,455 TD events and 14,900+ player stat records with Q1-Q4 breakdowns for granular performance analysis
 - **Visualization Engine** — 21 custom playoff visualizations including skill position dashboards, TD probability gauges, and clutch performer analysis
 - **Playoff Scenario Simulator** — Win/loss impact modeling for seeding scenarios with elimination risk detection
-- **Injury Context Analysis** — Distinguishes "injury beneficiaries" from "organic risers" for sustainable prop betting
+- **Player Trend Analysis** — Distinguishes usage pattern changes and identifies breakout performers with 20%+ usage increases
 
 **Sample Outputs:**
 - [Skill Position Matchups Dashboard](./assets/nfl_analytics/20_skill_position_matchups.png) — 6-panel analysis: TD leaders, quarter scoring patterns, RB comparisons, clutch performers, receiving threats, and scoring consistency
-- [Conference Championship Visualizations](https://github.com/ChristianVerdin/nfl_analytics/tree/main/outputs/reports/conference_championship_2025) — 21 betting-focused graphics for AFC/NFC title games
-- [Weekly Matchup Reports](https://github.com/ChristianVerdin/nfl_analytics/tree/main/outputs/reports/matchups) — 8 weeks of detailed game intelligence (Wild Card through Conference Championship)
+- [Super Bowl LX Visualizations](https://github.com/ChristianVerdin/nfl_analytics/tree/main/outputs/reports) — Complete playoff graphics from Wild Card through Super Bowl
+- [Weekly Matchup Reports](https://github.com/ChristianVerdin/nfl_analytics/tree/main/outputs/reports/matchups) — Detailed game intelligence for every playoff round
 
 **Technical Highlights:**
 - **Data Pipeline:** R-based ETL processing 500+ metrics per game via nflreadr API with SQLite persistence
@@ -205,9 +205,9 @@ A comprehensive analytics system for NFL betting intelligence, processing **282+
 ---
 
 ### Daily Locks AI
-**Production SaaS Platform with LLM-Powered Analytics**
+**Multi-Sport AI Agent with LLM-Powered Analytics**
 
-A full-stack application featuring agentic AI that processes natural language queries against 15,000+ historical records, delivering structured insights with confidence scoring and real-time streaming responses.
+A full-stack application featuring an agentic AI that processes natural language queries against **18,900+ historical game outcomes** for NFL and **728 teams / 6,100+ games** for NCAAB. Delivers structured insights with confidence-calibrated predictions, adaptive learning, and real-time streaming responses.
 
 **Live:** [dailylocks.ai](https://dailylocks.ai)
 
@@ -230,36 +230,38 @@ A full-stack application featuring agentic AI that processes natural language qu
 </details>
 
 **Key Features:**
-- Natural language interface with context-aware prompt engineering
-- Multi-model LLM routing (Claude Haiku/Sonnet/Opus) based on user tier
-- Real-time streaming responses with Server-Sent Events
-- Subscription management with Stripe Checkout & Customer Portal
-- Persistent conversation history with full-text search
+- **Multi-Sport Detection** — Automatic routing between NFL and NCAAB analysis based on query context
+- **NFL Intelligence** — 18,900+ game outcomes with TD tracking and probability modeling
+- **NCAAB Predictions** — 728 teams, March Madness bracket predictions with upset probability scoring
+- **Confidence Calibration** — Predictions scored with validated accuracy tiers
+- **Natural Language Interface** — Context-aware prompt engineering with multi-model LLM routing (Claude Haiku/Sonnet/Opus)
+- **Real-Time Streaming** — Server-Sent Events for live response delivery
 
 **Architecture & Technical Highlights:**
 - **Frontend:** Next.js 15 App Router, React 19, TypeScript, Zustand state management
 - **Backend:** FastAPI with async endpoints, intelligent agent routing system
-- **AI/ML:** Anthropic Claude API, dynamic prompt construction, context windowing
+- **AI/ML:** Anthropic Claude API, dynamic prompt construction, context windowing, adaptive learning
 - **Database:** Supabase (PostgreSQL) with Row-Level Security, real-time subscriptions
 - **Auth:** JWT-based authentication with protected API routes
 - **Payments:** Stripe integration (checkout sessions, webhooks, customer portal)
-- **Data Pipeline:** Automated ETL processing 500+ records weekly via Playwright
-- **Testing:** 116 automated tests with pytest
+- **Data Pipeline:** Automated ETL processing game data via Playwright
+- **Testing:** 161 automated tests with pytest
+- **Observability:** Helicone for LLM monitoring and analytics
 
 **Built With:**
 
-`Next.js 15` `React 19` `TypeScript` `FastAPI` `Python` `Claude API` `Supabase` `Stripe` `Tailwind CSS` `Zustand` `Playwright`
+`Next.js 15` `React 19` `TypeScript` `FastAPI` `Python` `Claude API` `Supabase` `Stripe` `Tailwind CSS` `Zustand` `Playwright` `Helicone`
 
 ---
 
 ### NCAAB Analytics
 **College Basketball Prediction System** | *76.3% prediction accuracy*
 
-A production-grade analytics pipeline for NCAA Men's Basketball that combines possession-based efficiency metrics with real-time betting market data to generate daily game predictions and value opportunities.
+A production-grade analytics pipeline for NCAA Men's Basketball that combines possession-based efficiency metrics with real-time market data to generate daily game predictions and identify high-confidence opportunities.
 
 <p align="center">
   <img src="https://img.shields.io/badge/Accuracy-76.3%25-brightgreen?style=for-the-badge" alt="Model Accuracy"/>
-  <img src="https://img.shields.io/badge/Games%20Analyzed-5,900+-blue?style=for-the-badge" alt="Games Analyzed"/>
+  <img src="https://img.shields.io/badge/Games%20Analyzed-6,100+-blue?style=for-the-badge" alt="Games Analyzed"/>
   <img src="https://img.shields.io/badge/Teams-728-purple?style=for-the-badge" alt="Teams"/>
 </p>
 
@@ -273,25 +275,24 @@ A production-grade analytics pipeline for NCAA Men's Basketball that combines po
 
 ```
 ══════════════════════════════════════════════════════════════════════
- STRONG BET PICKS (70%+ Confidence)
+ HIGH CONFIDENCE PICKS (70%+)
 ══════════════════════════════════════════════════════════════════════
 
   1. Louisiana Ragin' Cajuns @ App State Mountaineers
      Pick: App State Mountaineers (95% confidence)
-     Bet Type: MONEYLINE → TAKE_MONEYLINE
+     Analysis: Strong home efficiency advantage
 
   2. Niagara Purple Eagles @ Fairfield Stags
      Pick: Fairfield Stags (95% confidence)
-     Vegas: Spread -10.5 | ML: -800/490
-     Bet Type: MONEYLINE_JUICED → SMALL_ML_BET
+     Spread: -10.5 | Projected margin: 12.3
 
 ══════════════════════════════════════════════════════════════════════
- UNDERDOG VALUE PLAYS
+ UPSET PROBABILITY ALERTS
 ══════════════════════════════════════════════════════════════════════
 
-  → South Alabama Jaguars (77%)
+  → South Alabama Jaguars (77% win probability)
     vs James Madison Dukes
-    Vegas: +4.5 spread | ML +160
+    Spread: +4.5 | Model sees value
 ```
 
 </details>
@@ -299,12 +300,12 @@ A production-grade analytics pipeline for NCAA Men's Basketball that combines po
 **Key Capabilities:**
 - Possession-based efficiency metrics (KenPom-style) normalized per 100 possessions
 - Iterative strength of schedule using Colley-like algorithm (10 iterations)
-- Volatility detection identifying high-variance matchups for live betting
+- Volatility detection identifying high-variance matchups
 - Confidence calibration achieving 0.1801 Brier score (excellent)
-- Real-time Vegas odds integration with spread value detection
+- March Madness bracket predictions with upset probability scoring
 
 **Technical Highlights:**
-- **Data Pipeline:** R-based ETL processing 728 teams and 5,900+ games with incremental updates
+- **Data Pipeline:** R-based ETL processing 728 teams and 6,100+ games with incremental updates
 - **Statistical Modeling:** Four-factor analysis, adaptive recency weighting (14-day half-life)
 - **Prediction Engine:** Win probability calibration validated against historical performance
 - **Database:** SQLite with optimized schema for analytical queries
@@ -315,8 +316,8 @@ A production-grade analytics pipeline for NCAA Men's Basketball that combines po
 | Metric | Result |
 |--------|--------|
 | Overall Accuracy | 76.3% (971/1,273 games) |
-| STRONG_BET Picks | 80.8% accuracy |
-| VERY_HIGH Tier | 82.4% accuracy |
+| High Confidence Picks | 80.8% accuracy |
+| Very High Tier | 82.4% accuracy |
 
 **Built With:**
 
