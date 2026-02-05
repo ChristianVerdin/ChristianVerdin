@@ -1,8 +1,8 @@
 # Hi there, I'm Christian Verdin
 
-**Data Scientist & Full-Stack Engineer** with 7+ years of experience designing, developing, and delivering end-to-end data science, ML, and AI solutions that drive real business impact.
+**Senior Data Scientist & AI/ML Engineer** with 7+ years of experience designing, developing, and deploying end-to-end ML/AI systems — from data pipelines and production models to complete applications that drive real business impact.
 
-I build production-grade applications that integrate LLMs, real-time data pipelines, and modern web frameworks to solve complex analytical problems.
+I build production-grade systems that integrate LLMs, real-time data pipelines, and modern web frameworks to solve complex analytical problems.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/christian-verdin/)
 [![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:christiandverdin@gmail.com)
@@ -401,7 +401,7 @@ I'm always open to collaborating on projects together so feel free to reach out!
 </p>
 
 <p align="center">
-  <i>Open to opportunities in AI/ML engineering, full-stack development, and data-intensive applications.</i>
+  <i>Open to opportunities in AI/ML engineering, applied data science, and end-to-end AI applications.</i>
 </p>
 
 <p align="center">
