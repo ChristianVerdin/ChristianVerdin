@@ -55,7 +55,7 @@ I build production-grade systems that integrate LLMs, real-time data pipelines, 
 <br/>
 <sub><b>Prediction System</b></sub>
 <br/>
-<sub>76.3% accuracy • 6,100+ games</sub>
+<sub>68.8% live accuracy • 5,400+ games</sub>
 <br/>
 <code>R</code> <code>Python</code> <code>Statistics</code>
 </td>
@@ -207,7 +207,7 @@ A comprehensive analytics system for NFL game prediction, processing **285 games
 ### Daily Locks AI
 **Multi-Sport AI Agent with LLM-Powered Analytics**
 
-A full-stack application featuring an agentic AI that processes natural language queries against **18,900+ historical game outcomes** for NFL and **728 teams / 6,100+ games** for NCAAB. Delivers structured insights with confidence-calibrated predictions, adaptive learning, and real-time streaming responses.
+A full-stack application featuring an agentic AI system that processes natural language queries against **18,900+ historical NFL outcomes** and **730 NCAAB teams / 5,400+ games**. Features 7 dedicated analysis pages, real-time ESPN live score monitoring, and a proprietary second-half scoring model. Delivers confidence-calibrated predictions with 68.8% live accuracy (88.3% on STRONG_BET tier).
 
 **Live:** [dailylocks.ai](https://dailylocks.ai)
 
@@ -230,39 +230,44 @@ A full-stack application featuring an agentic AI that processes natural language
 </details>
 
 **Key Features:**
-- **Multi-Sport Detection** — Automatic routing between NFL and NCAAB analysis based on query context
-- **NFL Intelligence** — 18,900+ game outcomes with TD tracking and probability modeling
-- **NCAAB Predictions** — 728 teams, March Madness bracket predictions with upset probability scoring
-- **Confidence Calibration** — Predictions scored with validated accuracy tiers
+- **Multi-Sport Detection** — Automatic routing between NFL (archived) and NCAAB analysis based on query context
+- **7 Analysis Pages** — Matchups, Picks, H2 Unders, Race-To Props, Live Scores, Tournament Bracket, NFL Archive
+- **NCAAB Predictions** — 730 teams with KenPom-style efficiency metrics, daily automated predictions, and +EV edge calculations
+- **Live Score Monitoring** — Real-time ESPN API integration with dynamic recommendation adjustments based on game state (pre-game, H1, halftime, final)
+- **H2 Under Model** — Proprietary second-half scoring analysis with PRIME/STRONG/LEAN tiers and Vegas line comparison
+- **Race-To Props** — Race-to-30/35 second-half scoring props with breakeven odds and dual elite defense detection
+- **Confidence Calibration** — 68.8% live accuracy overall, 88.3% on STRONG_BET tier picks
 - **Natural Language Interface** — Context-aware prompt engineering with multi-model LLM routing (Claude Haiku/Sonnet/Opus)
-- **Real-Time Streaming** — Server-Sent Events for live response delivery
+- **March Madness Ready** — Cinderella scoring, seed matchup history (2010-2025), bracket path analysis
 
 **Architecture & Technical Highlights:**
-- **Frontend:** Next.js 15 App Router, React 19, TypeScript, Zustand state management
-- **Backend:** FastAPI with async endpoints, intelligent agent routing system
-- **AI/ML:** Anthropic Claude API, dynamic prompt construction, context windowing, adaptive learning
+- **Frontend:** Next.js 15 App Router, React 19, TypeScript, Zustand state management, Vercel Analytics
+- **Backend:** FastAPI with async endpoints, intelligent agent routing system, Redis caching (Railway)
+- **AI/ML:** Anthropic Claude API, dynamic prompt construction, context windowing, sport-specific handler bypass ($0 cost NCAAB queries)
+- **Live Data:** ESPN public API integration, 60-second polling, game_id matching between ESPN and prediction CSVs
 - **Database:** Supabase (PostgreSQL) with Row-Level Security, real-time subscriptions
-- **Auth:** JWT-based authentication with protected API routes
+- **Auth:** JWT-based authentication with auto-refresh token handling
 - **Payments:** Stripe integration (checkout sessions, webhooks, customer portal)
-- **Data Pipeline:** Automated ETL processing game data via Playwright
+- **Data Pipeline:** Automated daily R pipeline (ESPN data → SQLite → predictions → CSV sync → Vercel deploy)
 - **Testing:** 161 automated tests with pytest
 - **Observability:** Helicone for LLM monitoring and analytics
 
 **Built With:**
 
-`Next.js 15` `React 19` `TypeScript` `FastAPI` `Python` `Claude API` `Supabase` `Stripe` `Tailwind CSS` `Zustand` `Playwright` `Helicone`
+`Next.js 15` `React 19` `TypeScript` `FastAPI` `Python` `Claude API` `Supabase` `Stripe` `Tailwind CSS` `Zustand` `ESPN API` `Helicone`
 
 ---
 
 ### NCAAB Analytics
-**College Basketball Prediction System** | *76.3% prediction accuracy*
+**College Basketball Prediction System** | *68.8% live accuracy • 88.3% STRONG_BET*
 
-A production-grade analytics pipeline for NCAA Men's Basketball that combines possession-based efficiency metrics with real-time market data to generate daily game predictions and identify high-confidence opportunities.
+A production-grade analytics pipeline for NCAA Men's Basketball that combines possession-based efficiency metrics with real-time Vegas odds to generate daily game predictions, second-half scoring models, and race-to-points analysis. Powers the Daily Locks AI prediction engine with automated daily data pipelines.
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Accuracy-76.3%25-brightgreen?style=for-the-badge" alt="Model Accuracy"/>
-  <img src="https://img.shields.io/badge/Games%20Analyzed-6,100+-blue?style=for-the-badge" alt="Games Analyzed"/>
-  <img src="https://img.shields.io/badge/Teams-728-purple?style=for-the-badge" alt="Teams"/>
+  <img src="https://img.shields.io/badge/Live%20Accuracy-68.8%25-brightgreen?style=for-the-badge" alt="Live Accuracy"/>
+  <img src="https://img.shields.io/badge/STRONG__BET-88.3%25-gold?style=for-the-badge" alt="STRONG_BET Accuracy"/>
+  <img src="https://img.shields.io/badge/Games-5,400+-blue?style=for-the-badge" alt="Games Analyzed"/>
+  <img src="https://img.shields.io/badge/Teams-730-purple?style=for-the-badge" alt="Teams"/>
 </p>
 
 <p align="center">
@@ -278,21 +283,24 @@ A production-grade analytics pipeline for NCAA Men's Basketball that combines po
  HIGH CONFIDENCE PICKS (70%+)
 ══════════════════════════════════════════════════════════════════════
 
-  1. Louisiana Ragin' Cajuns @ App State Mountaineers
-     Pick: App State Mountaineers (95% confidence)
-     Analysis: Strong home efficiency advantage
+  1. Morgan St @ S. Carolina St
+     Pick: Morgan St (82% confidence) ⭐⭐
+     ML +102 | Edge: +33.0% vs Vegas
 
-  2. Niagara Purple Eagles @ Fairfield Stags
-     Pick: Fairfield Stags (95% confidence)
-     Spread: -10.5 | Projected margin: 12.3
+  2. Youngstown St @ Milwaukee
+     Pick: Youngstown St (81% confidence) ⭐⭐⭐
+     ML -120 | Edge: +26.8% vs Vegas
+
+  3. Utah St @ San Diego St
+     Pick: Utah St (75% confidence) ⭐
+     ML -108 | Edge: +23.6% vs Vegas | #12 ranked, W4 HOT
 
 ══════════════════════════════════════════════════════════════════════
- UPSET PROBABILITY ALERTS
+ H2 UNDER PLAYS
 ══════════════════════════════════════════════════════════════════════
 
-  → South Alabama Jaguars (77% win probability)
-    vs James Madison Dukes
-    Spread: +4.5 | Model sees value
+  PRIME: Illinois St @ Northern Iowa — 69.4 combined exp H2
+  PRIME: Indiana St @ Southern Illinois — 70.2 combined exp H2
 ```
 
 </details>
@@ -300,28 +308,33 @@ A production-grade analytics pipeline for NCAA Men's Basketball that combines po
 **Key Capabilities:**
 - Possession-based efficiency metrics (KenPom-style) normalized per 100 possessions
 - Iterative strength of schedule using Colley-like algorithm (10 iterations)
-- Volatility detection identifying high-variance matchups
+- Volatility detection identifying high-variance matchups for live betting
+- H2 under scoring model with PRIME/STRONG/LEAN tiers and Vegas line comparison
+- Race-to-30/35 second-half scoring props with breakeven odds calculation
+- +EV edge detection comparing model probability vs Vegas implied probability
 - Confidence calibration achieving 0.1801 Brier score (excellent)
-- March Madness bracket predictions with upset probability scoring
+- Automated daily pipeline: ESPN import → odds fetch → predictions → CSV sync
 
 **Technical Highlights:**
-- **Data Pipeline:** R-based ETL processing 728 teams and 6,100+ games with incremental updates
-- **Statistical Modeling:** Four-factor analysis, adaptive recency weighting (14-day half-life)
-- **Prediction Engine:** Win probability calibration validated against historical performance
-- **Database:** SQLite with optimized schema for analytical queries
-- **Agent Integration:** Python interface syncing daily predictions to conversational AI
+- **Data Pipeline:** R-based ETL processing 730 teams and 5,400+ games with daily incremental updates
+- **Statistical Modeling:** Four-factor analysis, adaptive recency weighting (14-day half-life), form detection (HOT/COLD)
+- **Prediction Engine:** Win probability calibration validated with 68.8% live accuracy across 500+ predictions
+- **Odds Integration:** The Odds API for real-time Vegas lines (spreads, totals, moneylines) with consensus line aggregation
+- **H2 Scoring Model:** Per-team second-half point projections with joint probability calculations
+- **Database:** SQLite (~39MB) with optimized schema for analytical queries
+- **Agent Integration:** Python interface syncing daily predictions to Daily Locks AI conversational agent
 
 **Performance Metrics:**
 
 | Metric | Result |
 |--------|--------|
-| Overall Accuracy | 76.3% (971/1,273 games) |
-| High Confidence Picks | 80.8% accuracy |
-| Very High Tier | 82.4% accuracy |
+| Live Accuracy | 68.8% (519 predictions) |
+| STRONG_BET Tier | 88.3% accuracy |
+| Brier Score | 0.1801 (excellent calibration) |
 
 **Built With:**
 
-`R` `Python` `SQLite` `Pandas` `Statistical Modeling` `The Odds API`
+`R` `Python` `SQLite` `Pandas` `The Odds API` `ESPN API` `Statistical Modeling`
 
 ---
 
