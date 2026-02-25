@@ -15,7 +15,7 @@ I build production-grade systems that integrate LLMs, real-time data pipelines, 
 
 <table>
 <tr>
-<td align="center" width="25%">
+<td align="center" width="20%">
 <a href="#lakeshoreiq---illinois-real-estate-intelligence">
 <img src="https://img.shields.io/badge/LakeshoreIQ-0EA5E9?style=for-the-badge&logo=homeadvisor&logoColor=white" alt="LakeshoreIQ"/>
 </a>
@@ -26,7 +26,18 @@ I build production-grade systems that integrate LLMs, real-time data pipelines, 
 <br/>
 <code>Next.js</code> <code>FastAPI</code> <code>Supabase</code>
 </td>
-<td align="center" width="25%">
+<td align="center" width="20%">
+<a href="#312deals---chicago-food--drink-deals">
+<img src="https://img.shields.io/badge/312Deals-E53E3E?style=for-the-badge&logo=yelp&logoColor=white" alt="312Deals"/>
+</a>
+<br/>
+<sub><b>Food & Drink Deals Platform</b></sub>
+<br/>
+<sub>2,850 venues • 73 neighborhoods</sub>
+<br/>
+<code>Next.js</code> <code>FastAPI</code> <code>MCP</code>
+</td>
+<td align="center" width="20%">
 <a href="#nfl-analytics-engine">
 <img src="https://img.shields.io/badge/NFL_Analytics-276DC3?style=for-the-badge&logo=r&logoColor=white" alt="NFL Analytics"/>
 </a>
@@ -37,7 +48,7 @@ I build production-grade systems that integrate LLMs, real-time data pipelines, 
 <br/>
 <code>R</code> <code>ggplot2</code> <code>SQLite</code>
 </td>
-<td align="center" width="25%">
+<td align="center" width="20%">
 <a href="#daily-locks-ai">
 <img src="https://img.shields.io/badge/Daily_Locks_AI-7C3AED?style=for-the-badge&logo=anthropic&logoColor=white" alt="Daily Locks AI"/>
 </a>
@@ -48,7 +59,7 @@ I build production-grade systems that integrate LLMs, real-time data pipelines, 
 <br/>
 <code>Next.js</code> <code>Claude</code> <code>ESPN API</code>
 </td>
-<td align="center" width="25%">
+<td align="center" width="20%">
 <a href="#ncaab-analytics">
 <img src="https://img.shields.io/badge/NCAAB_Analytics-FF6B00?style=for-the-badge&logo=espn&logoColor=white" alt="NCAAB Analytics"/>
 </a>
@@ -144,6 +155,63 @@ A production SaaS application aggregating **10 real-time data sources** to deliv
 `Next.js 15` `React 19` `TypeScript` `FastAPI` `Python` `Supabase` `PostgreSQL` `Redis` `Stripe` `Tailwind CSS` `shadcn/ui` `Zustand` `Recharts` `SQLite` `Google Street View API`
 
 [View Repository →](https://github.com/ChristianVerdin/illinois-real-estate)
+
+---
+
+### 312Deals - Chicago Food & Drink Deals
+**Multi-Channel Deals Aggregation Platform with AI Extraction Pipeline & MCP Server**
+
+A production platform aggregating **2,850+ venues**, **2,600+ active deals**, and **73 neighborhoods** across Chicago. Three delivery channels (REST API, MCP Server, WebMCP) all backed by a single SQLite database. Features an AI-powered extraction pipeline that parses unstructured venue HTML into structured deal data with automated quality scoring.
+
+**Live:** [312deals.com](https://312deals.com)
+
+<p align="center">
+  <img src="./assets/312deals/desktop-home-hero.png" width="800" alt="312Deals - Homepage with Featured Picks and Active Deals">
+</p>
+
+<details>
+<summary><b>View More Screenshots</b></summary>
+<br>
+<p align="center">
+  <img src="./assets/312deals/desktop-search.png" width="800" alt="312Deals - Search with Filters and Deal Cards">
+</p>
+<p align="center">
+  <img src="./assets/312deals/desktop-map.png" width="800" alt="312Deals - Map View with Venue Pins">
+</p>
+<p align="center">
+  <img src="./assets/312deals/desktop-happy-hours.png" width="800" alt="312Deals - Happy Hours Neighborhood Grid">
+</p>
+<p align="center">
+  <img src="./assets/312deals/desktop-student-guides.png" width="800" alt="312Deals - Student Deal Guides by University">
+</p>
+<p align="center">
+  <img src="./assets/312deals/desktop-student-guide-uchicago.png" width="800" alt="312Deals - UChicago Student Guide with Nearby Deals">
+</p>
+</details>
+
+**Key Capabilities:**
+- **21-Endpoint REST API** — Search by neighborhood, day, deal type, cuisine, price, rating, and time with geo-proximity queries, autocomplete, and a multi-stop bar crawl planner
+- **11-Tool MCP Server** — FastMCP server enabling AI agents to search deals, compare neighborhoods, get featured deals, and generate weekly digests
+- **8 Browser-Native WebMCP Tools** — Chrome 146+ integration via `navigator.modelContext` for in-browser AI agent access
+- **AI Extraction Pipeline** — Claude API parses unstructured venue HTML into structured deals via Pydantic validation with automated quality scoring (0-100)
+- **Time-Aware Search** — Chicago timezone logic for "happening now" deals with day-of-week and time-range filtering
+- **Community Verification** — User reports (outdated/confirm active) with aggregate summary views and priority verification queue
+- **Full-Text Search** — SQLite FTS5 virtual table with triggers across deal titles, descriptions, and item lists
+- **Programmatic SEO** — Auto-generated pages for 73 neighborhoods, 8 university guides, cuisine types, and happy hour guides
+- **Weekly Scrape Pipeline** — Automated Monday 6 AM CT refresh with configurable per-venue scrape frequency and content hash tracking
+
+**Architecture & Technical Highlights:**
+- **Frontend:** Next.js 14 App Router, TypeScript, Tailwind CSS, Radix UI (40+ components), React Query, dark mode
+- **Backend:** FastAPI with 21 endpoints on Railway, rate limiting (slowapi), retry logic (tenacity)
+- **Database:** SQLite with WAL mode, FTS5 full-text search, 14 tables + 5 views, JSON fields for flexible schema
+- **AI/ML:** Claude API for deal extraction, Pydantic models for validation, quality scoring algorithm
+- **MCP:** FastMCP 0.5+ server with 8 core + 3 workflow tools, WebMCP with declarative HTML tool registration
+- **Data Pipeline:** Playwright + BeautifulSoup scrapers, Firecrawl integration, Google Places API enrichment
+- **Deployment:** Vercel (frontend) + Railway (backend), weekly cron via GitHub Actions
+
+**Built With:**
+
+`Next.js 14` `TypeScript` `FastAPI` `Python` `SQLite` `Claude API` `FastMCP` `Google Places API` `Tailwind CSS` `Radix UI` `React Query` `Playwright`
 
 ---
 
@@ -378,6 +446,7 @@ A production-grade analytics pipeline for NCAA Men's Basketball that combines po
 
 ### AI & ML
 ![Claude](https://img.shields.io/badge/Claude_API-191919?style=flat-square&logo=anthropic&logoColor=white)
+![MCP](https://img.shields.io/badge/MCP/FastMCP-191919?style=flat-square&logo=anthropic&logoColor=white)
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white)
 ![LangChain](https://img.shields.io/badge/LangChain-121212?style=flat-square&logo=chainlink&logoColor=white)
 
