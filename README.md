@@ -33,7 +33,7 @@ I build production-grade systems that integrate LLMs, real-time data pipelines, 
 <br/>
 <sub><b>Statistical Intelligence</b></sub>
 <br/>
-<sub>285 games • Super Bowl LX</sub>
+<sub>285 games • Season Complete ✅</sub>
 <br/>
 <code>R</code> <code>ggplot2</code> <code>SQLite</code>
 </td>
@@ -42,11 +42,11 @@ I build production-grade systems that integrate LLMs, real-time data pipelines, 
 <img src="https://img.shields.io/badge/Daily_Locks_AI-7C3AED?style=for-the-badge&logo=anthropic&logoColor=white" alt="Daily Locks AI"/>
 </a>
 <br/>
-<sub><b>Multi-Sport AI Agent</b></sub>
+<sub><b>AI Betting Intelligence</b></sub>
 <br/>
-<sub>Live at dailylocks.ai</sub>
+<sub>Live at dailylocks.ai • 7 pages</sub>
 <br/>
-<code>Next.js</code> <code>Claude</code> <code>Stripe</code>
+<code>Next.js</code> <code>Claude</code> <code>ESPN API</code>
 </td>
 <td align="center" width="25%">
 <a href="#ncaab-analytics">
@@ -55,9 +55,9 @@ I build production-grade systems that integrate LLMs, real-time data pipelines, 
 <br/>
 <sub><b>Prediction System</b></sub>
 <br/>
-<sub>68.8% live accuracy • 5,400+ games</sub>
+<sub>68.8% live • 88.3% STRONG_BET</sub>
 <br/>
-<code>R</code> <code>Python</code> <code>Statistics</code>
+<code>R</code> <code>Python</code> <code>The Odds API</code>
 </td>
 </tr>
 </table>
@@ -126,7 +126,7 @@ A production SaaS application aggregating **10 real-time data sources** to deliv
 - **School Quality Ratings** — 5,112 Illinois schools with ISBE Report Card data, geocoded locations, proficiency trends, and quality scoring by designation
 - **Economic Indicators** — County unemployment rates and Chicago metro home price index via FRED API with year-over-year trend analysis
 - **Census Demographics** — ZIP-level population, income, housing, employment, and education data from the U.S. Census Bureau
-- **SaaS Monetization** — Three-tier subscription model (Free/Starter/Pro) with Stripe Checkout, usage metering, and feature gating
+- **SaaS Monetization** — Three-tier subscription model (Free / Starter $9.99/mo / Pro $24.99/mo) with Stripe Checkout, usage metering, and feature gating
 
 **Architecture & Technical Highlights:**
 - **Frontend:** Next.js 15 App Router, React 19, TypeScript, Tailwind CSS, shadcn/ui, Zustand, Recharts
@@ -148,9 +148,9 @@ A production SaaS application aggregating **10 real-time data sources** to deliv
 ---
 
 ### NFL Analytics Engine
-**Statistical Intelligence & Visualization Platform**
+**Statistical Intelligence & Visualization Platform** | *2025-26 Season Complete ✅*
 
-A comprehensive analytics system for NFL game prediction, processing **285 games**, **14,900+ player-quarter records**, **22,700+ snap counts**, and **1,455 TD events** through Super Bowl LX. Features automated matchup reports, real-time visualization generation, and predictive pattern recognition with **18,900+ historical game outcomes** analyzed.
+A comprehensive analytics system for NFL game prediction, processing **285 games**, **14,900+ player-quarter records**, **22,700+ snap counts**, and **1,455 TD events** through Super Bowl LX (SEA 29, NE 13). Features automated matchup reports, real-time visualization generation, and predictive pattern recognition with **18,900+ historical game outcomes** analyzed.
 
 <p align="center">
   <img src="./assets/nfl_analytics/02_quarter_predictions.png" width="800" alt="NFL Analytics - Quarter-by-Quarter Score Predictions">
