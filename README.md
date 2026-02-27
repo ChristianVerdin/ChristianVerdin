@@ -38,15 +38,15 @@ I build production-grade systems that integrate LLMs, real-time data pipelines, 
 <code>Next.js</code> <code>FastAPI</code> <code>MCP</code>
 </td>
 <td align="center" width="20%">
-<a href="#nfl-analytics-engine">
-<img src="https://img.shields.io/badge/NFL_Analytics-276DC3?style=for-the-badge&logo=r&logoColor=white" alt="NFL Analytics"/>
+<a href="#stock-monitor---real-time-options-trading-assistant">
+<img src="https://img.shields.io/badge/Stock_Monitor-10B981?style=for-the-badge&logo=tradingview&logoColor=white" alt="Stock Monitor"/>
 </a>
 <br/>
-<sub><b>Statistical Intelligence</b></sub>
+<sub><b>Options Trading Intelligence</b></sub>
 <br/>
-<sub>285 games • Season Complete ✅</sub>
+<sub>4 data sources • FastMCP • Live</sub>
 <br/>
-<code>R</code> <code>ggplot2</code> <code>SQLite</code>
+<code>Python</code> <code>FastMCP</code> <code>Playwright</code>
 </td>
 <td align="center" width="20%">
 <a href="#daily-locks-ai">
@@ -60,15 +60,15 @@ I build production-grade systems that integrate LLMs, real-time data pipelines, 
 <code>Next.js</code> <code>Claude</code> <code>ESPN API</code>
 </td>
 <td align="center" width="20%">
-<a href="#ncaab-analytics">
-<img src="https://img.shields.io/badge/NCAAB_Analytics-FF6B00?style=for-the-badge&logo=espn&logoColor=white" alt="NCAAB Analytics"/>
+<a href="#nfl-analytics-engine">
+<img src="https://img.shields.io/badge/NFL_Analytics-276DC3?style=for-the-badge&logo=r&logoColor=white" alt="NFL Analytics"/>
 </a>
 <br/>
-<sub><b>Prediction System</b></sub>
+<sub><b>Statistical Intelligence</b></sub>
 <br/>
-<sub>68.8% live • 88.3% STRONG_BET</sub>
+<sub>285 games • Season Complete</sub>
 <br/>
-<code>R</code> <code>Python</code> <code>The Odds API</code>
+<code>R</code> <code>ggplot2</code> <code>SQLite</code>
 </td>
 </tr>
 </table>
@@ -212,6 +212,80 @@ A production platform aggregating **2,850+ venues**, **2,600+ active deals**, an
 **Built With:**
 
 `Next.js 14` `TypeScript` `FastAPI` `Python` `SQLite` `Claude API` `FastMCP` `Google Places API` `Tailwind CSS` `Radix UI` `React Query` `Playwright`
+
+---
+
+### Stock Monitor - Real-Time Options Trading Assistant
+**Autonomous Multi-Source Trading Intelligence System with FastMCP Integration**
+
+An autonomous options trading intelligence system for penny put strategy across AI-disrupted sectors (SaaS, BPO, private credit). Combines **4 data source approaches** into a unified pipeline: AgentMail API for Bloomberg newsletter parsing, Gmail IMAP fallback, Playwright with stealth anti-detection for Bloomberg SPA network interception, and yfinance for real-time pricing and options chains. Features a 6-tool FastMCP server for Claude Code integration and automated morning briefing delivery via Telegram.
+
+<details>
+<summary><b>View Architecture & Sample Output</b></summary>
+<br>
+
+```
+scan_bloomberg() Orchestrator
+├── Approach 1: AgentMail API (primary — bloomberg-alerts@agentmail.to)
+│   └── REST API → parse threads → extract headlines → score
+├── Approach 2: Gmail IMAP (fallback)
+│   └── IMAP4_SSL → parse emails → extract headlines → score
+├── Approach 3: Playwright Search (fallback)
+│   └── Firefox persistent profile → SPA interception → parse JSON
+├── Approach 4: DevTools Helpers (interactive-only)
+│   └── ARTICLE_EXTRACT_JS → chrome-devtools MCP → manual extraction
+└── Output: data/bloomberg_headlines.json (scored, deduped, sorted)
+
+Morning Briefing Pipeline (8:00am CT weekdays)
+├── Portfolio Summary (positions.json + live refresh)
+├── Expiring Positions (DTE alerts)
+├── Overnight News (scan_bloomberg() auto-refresh if >2h stale)
+├── Today's Catalysts (earnings + thesis events)
+├── Penny Put Scan (yfinance options chains, $0.01-$0.50)
+└── Market Pulse (futures, VIX, sector ETFs)
+    → Delivered via OpenClaw + Telegram
+```
+
+```
+📈 MORNING BRIEFING — Friday, February 28, 2026
+────────────────────────────────────
+💼 PORTFOLIO
+Value: $86 | Day P&L: -$214 | Open: 7 positions
+PDT: 0/3 trades used (resets Mar 06)
+
+🔴 EXPIRING THIS WEEK (4)
+  • OWL $9.5P 2026-03-06 (7d) — Entry: $0.10 | Est: $0.01 | OTM
+  • OWL $10P 2026-03-06 (7d) — Entry: $0.20 | Est: $0.05 | OTM
+  • PYPL $42P 2026-03-06 (7d) — Entry: $0.17 | Est: $0.01 | OTM
+  • ADBE $200P 2026-03-06 (7d) — Entry: $0.21 | Est: $0.01 | OTM
+
+📰 OVERNIGHT NEWS
+  • BDC dividend cuts spread to mid-market [Bloomberg] — bdc_crisis
+  • Private credit defaults hit 18-month high [Bloomberg] — private_credit
+```
+
+</details>
+
+**Key Capabilities:**
+- **Multi-Source Bloomberg Pipeline** — 4-approach orchestrator: AgentMail API (primary), Gmail IMAP (fallback), Playwright SPA interception (fallback), DevTools JS extraction (interactive). Headlines scored against thesis signal keywords with ticker mention detection
+- **6-Tool FastMCP Server** — Portfolio summary, options positions, live pricing, options chain scanning, unusual volume detection, and earnings calendar — all accessible as Claude Code tools
+- **Automated Morning Briefing** — Pre-market summary at 8:00am CT covering portfolio P&L, expiring positions, overnight news, catalysts, penny put opportunities, and market pulse. Delivered via OpenClaw/Telegram
+- **Real-Time Position Tracking** — 60-second polling during market hours with P&L calculation, ITM/OTM detection, profit-taking alerts (100-300%), and PDT rule compliance tracking
+- **Thesis-Driven Scoring** — Headlines and catalysts scored against investment thesis keywords (SaaSpocalypse, BDC crisis, private credit, BPO death) with confirming/disconfirming signal classification
+- **Stealth Scraping** — Playwright persistent Firefox profiles with custom anti-detection (navigator spoofing, plugin injection, iframe override), CAPTCHA detection, and random delays
+
+**Architecture & Technical Highlights:**
+- **Data Pipeline:** AgentMail REST API (httpx) → Gmail IMAP (imaplib) → Playwright network interception → yfinance → robin_stocks, with atomic JSON writes and cache staleness detection
+- **MCP Server:** FastMCP with 6 tools exposing portfolio, pricing, scanning, and earnings data to Claude Code
+- **Scraping:** Playwright persistent Firefox profiles, `page.on("response")` interception (not DOM parsing), stealth script injection at context level
+- **Scheduling:** macOS launchd plists for market hours monitor (9:25am-4:05pm CT) and morning briefing (8:00am CT weekdays)
+- **Storage:** SQLite (8-table trade history schema) + JSON snapshots (positions, watchlist prices, Bloomberg headlines)
+- **Alerts:** OpenClaw bridge to Telegram — profit targets, expiry warnings, thesis signal detection
+- **Brokerage Integration:** robin_stocks for Robinhood API (positions, P&L, Greeks) with yfinance as free fallback
+
+**Built With:**
+
+`Python` `FastMCP` `Playwright` `httpx` `SQLite` `yfinance` `robin_stocks` `AgentMail API` `Gmail IMAP` `OpenClaw` `Telegram` `macOS launchd`
 
 ---
 
@@ -447,6 +521,7 @@ A production-grade analytics pipeline for NCAA Men's Basketball that combines po
 ### AI & ML
 ![Claude](https://img.shields.io/badge/Claude_API-191919?style=flat-square&logo=anthropic&logoColor=white)
 ![MCP](https://img.shields.io/badge/MCP/FastMCP-191919?style=flat-square&logo=anthropic&logoColor=white)
+![AgentMail](https://img.shields.io/badge/AgentMail-4F46E5?style=flat-square&logo=maildotru&logoColor=white)
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white)
 ![LangChain](https://img.shields.io/badge/LangChain-121212?style=flat-square&logo=chainlink&logoColor=white)
 
