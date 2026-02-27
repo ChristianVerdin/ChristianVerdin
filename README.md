@@ -33,7 +33,7 @@ I build production-grade systems that integrate LLMs, real-time data pipelines, 
 <br/>
 <sub><b>Food & Drink Deals Platform</b></sub>
 <br/>
-<sub>2,850 venues • 73 neighborhoods</sub>
+<sub>6,547 venues • 3,864 deals • Live</sub>
 <br/>
 <code>Next.js</code> <code>FastAPI</code> <code>MCP</code>
 </td>
@@ -159,9 +159,9 @@ A production SaaS application aggregating **10 real-time data sources** to deliv
 ---
 
 ### 312Deals - Chicago Food & Drink Deals
-**Multi-Channel Deals Aggregation Platform with AI Extraction Pipeline & MCP Server**
+**AI-Powered Restaurant Deal Intelligence Platform with Multi-Agent Pipeline & MCP Server**
 
-A production platform aggregating **2,850+ venues**, **2,600+ active deals**, and **73 neighborhoods** across Chicago. Three delivery channels (REST API, MCP Server, WebMCP) all backed by a single SQLite database. Features an AI-powered extraction pipeline that parses unstructured venue HTML into structured deal data with automated quality scoring.
+A production platform aggregating **6,547 venues**, **3,864 active deals**, and **73 neighborhoods** across Chicagoland. Multi-channel delivery (18-endpoint REST API, 11-tool MCP Server, ChatGPT CustomGPT, WebMCP) all backed by a single SQLite database. Features an automated deal collection pipeline using Claude API for extraction, Firecrawl for web scraping, and Apify for social media ingestion — with content hashing, adaptive scheduling, and 5,798 tracked deal sources. Currently integrating TinyFish Web Agent API for parallel deal extraction across 1,000+ sources simultaneously.
 
 **Live:** [312deals.com](https://312deals.com)
 
@@ -190,28 +190,32 @@ A production platform aggregating **2,850+ venues**, **2,600+ active deals**, an
 </details>
 
 **Key Capabilities:**
-- **21-Endpoint REST API** — Search by neighborhood, day, deal type, cuisine, price, rating, and time with geo-proximity queries, autocomplete, and a multi-stop bar crawl planner
-- **11-Tool MCP Server** — FastMCP server enabling AI agents to search deals, compare neighborhoods, get featured deals, and generate weekly digests
-- **8 Browser-Native WebMCP Tools** — Chrome 146+ integration via `navigator.modelContext` for in-browser AI agent access
+- **18-Endpoint REST API** — Search by neighborhood, day, deal type, cuisine, price, rating, and time with geo-proximity queries, autocomplete, and a multi-stop bar crawl planner
+- **11-Tool MCP Server** — FastMCP server enabling AI agents (Claude Desktop, Claude Code) to search deals, compare neighborhoods, get featured deals, and generate weekly digests
+- **ChatGPT CustomGPT** — Natural language deal search via OpenAI's custom GPT interface backed by the same REST API
+- **10 Browser-Native WebMCP Tools** — Chrome 146+ integration via `navigator.modelContext` for in-browser AI agent access
+- **Multi-Source Deal Pipeline** — 5,798 tracked sources across 6 types: deal pages, Instagram, Facebook, TikTok, newsletters (AgentMail), and venue websites. Content hashing skips unchanged pages (~60-80% cost savings). Adaptive scheduling with exponential backoff for failing sources
 - **AI Extraction Pipeline** — Claude API parses unstructured venue HTML into structured deals via Pydantic validation with automated quality scoring (0-100)
+- **Owner.com Integration** — Auto-detection and tagging of Owner.com restaurants with "Order Online" CTAs on venue pages
 - **Time-Aware Search** — Chicago timezone logic for "happening now" deals with day-of-week and time-range filtering
-- **Community Verification** — User reports (outdated/confirm active) with aggregate summary views and priority verification queue
-- **Full-Text Search** — SQLite FTS5 virtual table with triggers across deal titles, descriptions, and item lists
-- **Programmatic SEO** — Auto-generated pages for 73 neighborhoods, 8 university guides, cuisine types, and happy hour guides
-- **Weekly Scrape Pipeline** — Automated Monday 6 AM CT refresh with configurable per-venue scrape frequency and content hash tracking
+- **Community Verification** — User reports (outdated/confirm active) with aggregate summary views and smart verification queue
+- **100+ SEO Landing Pages** — Programmatic pages for 73 neighborhoods, 8 university guides, cuisine types, happy hour guides, and chain brand pages with JSON-LD structured data
+- **PWA with Offline Support** — Progressive Web App installable on mobile with service worker caching
 
 **Architecture & Technical Highlights:**
-- **Frontend:** Next.js 14 App Router, TypeScript, Tailwind CSS, Radix UI (40+ components), React Query, dark mode
-- **Backend:** FastAPI with 21 endpoints on Railway, rate limiting (slowapi), retry logic (tenacity)
-- **Database:** SQLite with WAL mode, FTS5 full-text search, 14 tables + 5 views, JSON fields for flexible schema
-- **AI/ML:** Claude API for deal extraction, Pydantic models for validation, quality scoring algorithm
-- **MCP:** FastMCP 0.5+ server with 8 core + 3 workflow tools, WebMCP with declarative HTML tool registration
-- **Data Pipeline:** Playwright + BeautifulSoup scrapers, Firecrawl integration, Google Places API enrichment
+- **Frontend:** Next.js 14 App Router, TypeScript, Tailwind CSS, Radix UI (40+ components), React Query, dark mode, PWA
+- **Backend:** FastAPI with 18 endpoints on Railway, rate limiting (slowapi), retry logic (tenacity)
+- **Database:** SQLite with WAL mode, FTS5 full-text search, 80+ venue metadata columns (patio, dog-friendly, sports bar, cuisine, OpenTable/Resy URLs)
+- **AI/ML:** Claude API for deal extraction + verification, Pydantic models for validation, quality scoring algorithm
+- **MCP:** FastMCP server with 11 tools, WebMCP with declarative HTML tool registration
+- **Deal Pipeline:** Firecrawl (web scraping) + Apify (Instagram/Facebook/TikTok) + AgentMail (newsletter ingestion) + Claude API (extraction). Weekly automated refresh with 7 serial phases
+- **Enrichment:** Firecrawl social/URL discovery, Google Places API, OpenTable metadata, CSV import pipeline
 - **Deployment:** Vercel (frontend) + Railway (backend), weekly cron via GitHub Actions
+- **Email:** Resend with DKIM/SPF/DMARC, newsletter system with subscribe/unsubscribe endpoints
 
 **Built With:**
 
-`Next.js 14` `TypeScript` `FastAPI` `Python` `SQLite` `Claude API` `FastMCP` `Google Places API` `Tailwind CSS` `Radix UI` `React Query` `Playwright`
+`Next.js 14` `TypeScript` `FastAPI` `Python` `SQLite` `Claude API` `FastMCP` `Firecrawl` `Apify` `AgentMail` `Google Places API` `Tailwind CSS` `Radix UI` `Vercel` `Railway`
 
 ---
 
@@ -522,6 +526,8 @@ A production-grade analytics pipeline for NCAA Men's Basketball that combines po
 ![Claude](https://img.shields.io/badge/Claude_API-191919?style=flat-square&logo=anthropic&logoColor=white)
 ![MCP](https://img.shields.io/badge/MCP/FastMCP-191919?style=flat-square&logo=anthropic&logoColor=white)
 ![AgentMail](https://img.shields.io/badge/AgentMail-4F46E5?style=flat-square&logo=maildotru&logoColor=white)
+![Firecrawl](https://img.shields.io/badge/Firecrawl-FF6B35?style=flat-square&logo=firebase&logoColor=white)
+![Apify](https://img.shields.io/badge/Apify-00C896?style=flat-square&logo=apify&logoColor=white)
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white)
 ![LangChain](https://img.shields.io/badge/LangChain-121212?style=flat-square&logo=chainlink&logoColor=white)
 
