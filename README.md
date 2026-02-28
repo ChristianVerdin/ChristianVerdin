@@ -468,7 +468,7 @@ A production-grade analytics pipeline for NCAA Men's Basketball that combines po
 - **Odds Integration:** The Odds API for real-time Vegas lines (spreads, totals, moneylines) with consensus line aggregation
 - **H2 Scoring Model:** Per-team second-half point projections with joint probability calculations
 - **Database:** SQLite (~39MB) with optimized schema for analytical queries
-- **Agent Integration:** Python interface syncing daily predictions to Daily Locks AI conversational agent
+- **Agent Integration:** Daily CSV exports synced to Daily Locks AI via `sync_to_agent.sh` (consumed by fanduel_scraping_agent's Python loader)
 
 **Performance Metrics:**
 
@@ -480,7 +480,7 @@ A production-grade analytics pipeline for NCAA Men's Basketball that combines po
 
 **Built With:**
 
-`R` `Python` `SQLite` `Pandas` `The Odds API` `ESPN API` `Statistical Modeling`
+`R` `tidyverse` `SQLite` `The Odds API` `ESPN API` `hoopR` `Statistical Modeling`
 
 ---
 
