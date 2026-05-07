@@ -17,19 +17,19 @@ I build production-grade systems that integrate LLMs, real-time data pipelines, 
 
 | Project | What it does | Status | Stack |
 | --- | --- | --- | --- |
-| [**LakeshoreIQ**](#lakeshoreiq---illinois-real-estate-intelligence) | Illinois real estate intelligence — 9 data sources (RentCast, Census, FRED, Chicago Open Data, ISBE schools, OSM amenities, FBI crime, Street View, GA4), 50+ neighborhoods, B2B API, 10-tool MCP server | Live · Open Beta | Next.js · FastAPI · Supabase · Stripe |
-| [**312Deals**](#312deals---chicago-food--drink-deals) | Chicago food & drink deals — 6,800+ venues, 8,000+ deals, 73 neighborhoods, multi-channel agent surface (REST · 11-tool MCP · ChatGPT · AI Chat) | Live | Next.js · FastAPI · SQLite · MCP |
-| [**Daily Locks AI**](#daily-locks-ai) | Multi-sport AI agent — 730 NCAAB teams, conference tournament intelligence, second-half scoring model, ESPN live integration, Claude-powered chat | Live · Open Beta | Next.js · FastAPI · Claude · Stripe |
+| [**LakeshoreIQ**](#lakeshoreiq---illinois-real-estate-intelligence) | Illinois real estate intelligence — 9 data sources spanning real estate, government open data, school data, demographics, and crime/safety; 50+ neighborhoods; B2B API; 10-tool MCP server | Live · Open Beta | Next.js · FastAPI · PostgreSQL |
+| [**312Deals**](#312deals---chicago-food--drink-deals) | Chicago food & drink deals — 6,800+ venues, 8,000+ deals, 73 neighborhoods, multi-channel agent surface (REST · 11-tool MCP · custom GPT · in-app AI chat) | Live | Next.js · FastAPI · SQLite · MCP |
+| [**Daily Locks AI**](#daily-locks-ai) | Multi-sport AI agent — 730 NCAAB teams, conference tournament intelligence, second-half scoring model, real-time live-data integration, LLM-powered chat | Live · Open Beta | Next.js · FastAPI · Python · LLM API |
 | [**NFL Analytics**](#nfl-analytics-engine) | Pure R analytics engine — 285 games, 1,455 TD events, 21 custom playoff visualizations, 116+ matchup reports | 2025-26 Complete | R · ggplot2 · SQLite |
-| **MLB 2026** | Production modeling pipeline — daily run cadence, alpha-pattern detection across historical splits, automated DraftKings odds verification, auto-deploy | Live (in-season) | R · Python · Supabase |
+| **MLB 2026** | Production modeling pipeline — daily run cadence, alpha-pattern detection across historical splits, automated third-party odds verification, auto-deploy | Live (in-season) | R · Python · PostgreSQL |
 
 ### Popular Use Cases
 
-- **LakeshoreIQ** — Property evaluation with AVM + rent estimates, side-by-side ZIP-code market comparison, school district analysis, investment cash-flow modeling, daily first-mover Zillow alerts to email
-- **312Deals** — Real-time "happening now" deal discovery, neighborhood and cuisine filtering, seasonal event guides (St. Patrick's Day, Mother's Day), university-area deal browsing, AI agent integration via MCP / ChatGPT
-- **Daily Locks AI** — Daily NCAAB picks, conference tournament bracket tracking with Monte Carlo futures, second-half scoring (H2 under) plays, race-to-points props, natural-language AI chat for matchup questions
-- **NFL Analytics** — 14-page matchup intelligence reports per game, playoff scenario simulation, player trend / breakout detection (20%+ usage shifts), custom multi-panel ggplot2 dashboards for skill-position analysis
-- **MLB 2026** — Daily pregame model predictions, alpha-pattern detection across historical splits, DraftKings odds verification before publish, automated deploy to dailylocks.ai
+- **LakeshoreIQ** — Property evaluation with AVM + rent estimates, side-by-side ZIP-code market comparison, school district analysis, investment cash-flow modeling, daily first-mover listing alerts via automated email
+- **312Deals** — Real-time "happening now" deal discovery, neighborhood and cuisine filtering, seasonal event guides (St. Patrick's Day, Mother's Day), university-area deal browsing, AI agent integration via MCP and custom GPT
+- **Daily Locks AI** — Daily NCAAB picks, conference tournament bracket tracking with Monte Carlo futures, second-half scoring plays, in-game prop analysis, natural-language AI chat for matchup questions
+- **NFL Analytics** — 14-page matchup intelligence reports per game, playoff scenario simulation, player trend / breakout detection (20%+ usage shifts), custom multi-panel dashboards for skill-position analysis
+- **MLB 2026** — Daily pregame model predictions, alpha-pattern detection across historical splits, third-party odds verification before publish, automated deploy
 
 ---
 
@@ -77,40 +77,31 @@ A production SaaS application aggregating **9 real-time data sources** to delive
 </details>
 
 **Key Capabilities:**
-- **Property Search Engine** — Filters by county, city, 50+ Chicago neighborhoods, property type, price, beds/baths, sqft, year built, and days on market with Street View imagery and listing photos
-- **Automated Valuations** — RentCast AVM with confidence scoring, rent estimates with comparable analysis, and a full investment calculator (cash flow, cap rate, cash-on-cash return, 5-year ROI projection)
-- **Market Analysis** — ZIP-level sale and rental metrics with 2BR rental stats computed from active listings; side-by-side comparison of up to 5 ZIP codes
-- **Neighborhood Intelligence** — 28-category amenity scoring via OpenStreetMap, walkability proxy, and drilldown into specific amenity types within configurable radius
-- **Crime & Safety Analysis** — Chicago crime data with safety scoring (0-100), violent/property breakdown, arrest rates, and 6-month trend detection (Chicago only, Socrata API)
-- **Development Activity Tracking** — Building permits, business licenses, and liquor licenses scored into a development activity index with investment breakdowns (Chicago only)
-- **School Quality Ratings** — 5,112 Illinois schools with ISBE Report Card data, geocoded locations, proficiency trends, and quality scoring by designation
-- **Economic Indicators** — County unemployment rates and Chicago metro home price index via FRED API with year-over-year trend analysis
-- **Census Demographics** — ZIP-level population, income, housing, employment, and education data from the U.S. Census Bureau
-- **SaaS Monetization** — Three-tier subscription model (Free / Starter $9.99/mo / Pro $24.99/mo) with Stripe Checkout, usage metering, and feature gating
-- **B2B API** — Tiered pricing ($199-$999+/mo) with developer portal for API key management, usage tracking, and documentation
-- **10-Tool MCP Server** — Property search, valuations, crime, schools, demographics, development activity, economic indicators, amenities, neighborhood comparison, and investment analysis — all accessible as AI agent tools
+- **Property Search Engine** — Multi-faceted filters across location, property type, size, price, and listing-age dimensions with imagery
+- **Automated Valuations & Investment Modeling** — AVM with confidence scoring, rent comparables, and full investment calculator (cash flow, cap rate, cash-on-cash, 5-year ROI)
+- **Market & Neighborhood Intelligence** — ZIP-level sale/rental metrics, side-by-side comparisons, multi-category amenity scoring with walkability proxy and drilldown
+- **Public-Data Layers** — Crime/safety scoring with trend detection, development activity tracking, 5,000+ school quality ratings, county-level economic indicators, ZIP-level demographics
+- **SaaS Monetization** — Tiered subscription model with usage metering and feature gating, plus a B2B API tier with developer portal
+- **10-Tool MCP Server** — Property, market, and intelligence layers exposed as agent-callable tools
 
 **Architecture & Technical Highlights:**
-- **Frontend:** Next.js 15 App Router, React 19, TypeScript, Tailwind CSS, shadcn/ui, Zustand, Recharts
-- **Backend:** FastAPI with async endpoints, 10 service modules, Redis caching (Upstash), Pydantic validation
-- **Database:** Supabase (PostgreSQL) with Row-Level Security, plus SQLite for ISBE school data (5,112 schools, 94% geocoded)
-- **Auth:** Supabase Auth with JWT validation, protected API routes, email verification
-- **Payments:** Stripe integration (checkout sessions, webhooks, customer portal, usage enforcement)
-- **Data Sources:** RentCast API, U.S. Census Bureau, OpenStreetMap Overpass, Chicago Open Data Portal (3 datasets), FRED API, ISBE Report Card, Google Street View, Google Analytics 4
-- **Geocoding:** Census Batch Geocoder (primary) + Nominatim fallback for school location resolution
-- **Caching Strategy:** Redis with tiered TTLs — 1hr (property), 1 day (crime/permits), 7 days (amenities/FRED), 30 days (schools), 1 year (census)
-- **Deployment:** Vercel (frontend, auto-deploy from main) + Railway (backend) with environment-based configuration
+- **Frontend:** Next.js + React + TypeScript with Tailwind, charts, and lightweight state management
+- **Backend:** Async Python (FastAPI) with tiered Redis caching and schema-validated request/response handling
+- **Database:** Managed PostgreSQL with row-level security; SQLite for static reference data
+- **Auth & Billing:** JWT-based auth with email verification; subscription billing with webhooks and customer portal
+- **Data Layer:** 9 third-party / public data sources with usage-aware caching strategy
+- **Deployment:** Serverless frontend + managed backend, env-driven config
 
 **Built With:**
 
-`Next.js 15` `React 19` `TypeScript` `FastAPI` `Python` `Supabase` `PostgreSQL` `Redis` `Stripe` `Tailwind CSS` `shadcn/ui` `Zustand` `Recharts` `SQLite` `Google Street View API`
+`Next.js` `React` `TypeScript` `FastAPI` `Python` `PostgreSQL` `Redis` `SQLite` `Tailwind CSS`
 
 ---
 
 ### 312Deals - Chicago Food & Drink Deals
 **AI-Powered Restaurant Deal Intelligence Platform with Multi-Agent Pipeline & MCP Server**
 
-A production platform aggregating **6,800+ venues**, **8,000+ active deals**, and **73 neighborhoods** across Chicagoland. Multi-channel delivery (18-endpoint REST API, 11-tool MCP Server, ChatGPT CustomGPT, AI Chat) all backed by a single SQLite database. Features an automated deal collection pipeline using LLM extraction across web, social media, and email-based content sources — with content hashing (~60-80% API cost savings), adaptive scheduling, and **5,810 tracked deal sources**. Weekly "Deal Sheet" newsletter via Resend with DKIM/SPF/DMARC. Multi-select filters for neighborhoods, cuisines, and deal types with collapsible sidebar. Seasonal content guides (St. Patrick's Day) and active SEO campaign with 2,520+ Google-indexed pages.
+A production platform aggregating **6,800+ venues**, **8,000+ active deals**, and **73 neighborhoods** across Chicagoland. Multi-channel delivery (18-endpoint REST API, 11-tool MCP Server, custom GPT, in-app AI chat) all backed by a single SQLite database. Features an automated deal collection pipeline using LLM extraction across web, social media, and email-based content sources — with content hashing (~60-80% API cost savings), adaptive scheduling, and **5,810 tracked deal sources**. Weekly "Deal Sheet" newsletter via authenticated transactional email (DKIM/SPF/DMARC). Multi-select filters for neighborhoods, cuisines, and deal types with collapsible sidebar. Seasonal content guides (St. Patrick's Day) and active SEO campaign with 2,520+ Google-indexed pages.
 
 **Live:** [312deals.com](https://312deals.com)
 
@@ -146,34 +137,26 @@ A production platform aggregating **6,800+ venues**, **8,000+ active deals**, an
 </details>
 
 **Key Capabilities:**
-- **18-Endpoint REST API** — Search by neighborhood, day, deal type, cuisine, price, rating, and time with geo-proximity queries, autocomplete, and a multi-stop bar crawl planner
-- **11-Tool MCP Server** — FastMCP server enabling AI agents to search deals, compare neighborhoods, get featured deals, and generate weekly digests
-- **ChatGPT CustomGPT** — Natural language deal search via OpenAI's custom GPT interface backed by the same REST API
-- **Multi-Select Filters** — Collapsible sidebar with multi-select for neighborhoods, deal types, and cuisines enabling granular deal discovery
-- **Multi-Source Deal Pipeline** — 5,810 tracked sources spanning deal pages, social media platforms, newsletters (AgentMail), and venue websites. Content hashing skips unchanged pages (~60-80% cost savings). Adaptive scheduling with exponential backoff for failing sources
-- **AI Chat** — Natural language deal search at `/chat` powered by Claude API (Sonnet 4) with context-aware responses
-- **Seasonal Content Guides** — Programmatic event-driven pages (St. Patrick's Day, holidays) with themed filtering and venue grouping
-- **AI Extraction Pipeline** — Claude API parses unstructured venue HTML into structured deals via Pydantic validation with automated quality scoring (0-100)
-- **Owner.com Integration** — Auto-detection and tagging of Owner.com restaurants with "Order Online" CTAs on venue pages
-- **Time-Aware Search** — Chicago timezone logic for "happening now" deals with day-of-week and time-range filtering
-- **Community Verification** — User reports (outdated/confirm active) with aggregate summary views and smart verification queue
-- **100+ SEO Landing Pages** — Programmatic pages for 73 neighborhoods, 8 university guides, cuisine types, happy hour guides, and chain brand pages with JSON-LD structured data
-- **PWA with Offline Support** — Progressive Web App installable on mobile with service worker caching
+- **18-Endpoint REST API** — Geo-proximity search, multi-faceted filters, autocomplete, and a multi-stop bar crawl planner
+- **11-Tool MCP Server + Custom GPT + AI Chat** — Deal search, neighborhood comparison, featured picks, and weekly digests exposed as agent-callable tools, plus an in-app `/chat` interface
+- **Multi-Source Deal Pipeline** — 5,810+ tracked sources with content hashing for ~60-80% cost savings and adaptive scheduling with exponential backoff
+- **AI Extraction Pipeline** — LLM parses unstructured content into structured deals with schema validation and automated quality scoring (0-100)
+- **Time-Aware Search & Community Verification** — Timezone-aware "happening now" filtering plus user-driven verification queue
+- **Seasonal Content Guides + 100+ SEO Landing Pages** — Programmatic event, neighborhood, university, and cuisine pages with structured-data markup
+- **PWA with Offline Support** — Installable mobile app with service-worker caching
 
 **Architecture & Technical Highlights:**
-- **Frontend:** Next.js 14 App Router, TypeScript, Tailwind CSS, Radix UI (40+ components), React Query, dark mode, PWA
-- **Backend:** FastAPI with 18 endpoints on Railway, rate limiting (slowapi), retry logic (tenacity)
-- **Database:** SQLite with WAL mode, FTS5 full-text search, 80+ venue metadata columns (patio, dog-friendly, sports bar, cuisine, OpenTable/Resy URLs)
-- **AI/ML:** Claude API for deal extraction + verification, Pydantic models for validation, quality scoring algorithm
-- **MCP:** FastMCP server with 11 tools
-- **Deal Pipeline:** Multi-source content ingestion (web, social, email) → LLM extraction → quality scoring → publish. Weekly automated refresh with 7 serial phases
-- **Enrichment:** Firecrawl social/URL discovery, Google Places API, OpenTable metadata, CSV import pipeline
-- **Deployment:** Vercel (frontend) + Railway (backend), weekly cron via GitHub Actions
-- **Email:** Resend with DKIM/SPF/DMARC, newsletter system with subscribe/unsubscribe endpoints
+- **Frontend:** Next.js + TypeScript with Tailwind, server-state library, dark mode, PWA
+- **Backend:** Async Python (FastAPI) with 18 endpoints, rate limiting, and retry logic
+- **Database:** SQLite with WAL mode and full-text search, 80+ venue metadata columns
+- **AI:** LLM-based extraction and verification with schema-validated outputs and automated quality scoring
+- **Pipeline:** Multi-source content ingestion → LLM extraction → quality scoring → publish (weekly automated refresh, 7 phases)
+- **Deployment:** Serverless frontend + managed backend, scheduled cron via CI
+- **Email:** Authenticated transactional + newsletter delivery with one-click unsubscribe
 
 **Built With:**
 
-`Next.js 14` `TypeScript` `FastAPI` `Python` `SQLite` `Claude API` `FastMCP` `Firecrawl` `Apify` `AgentMail` `Resend` `Google Places API` `Tailwind CSS` `Radix UI` `Vercel` `Railway`
+`Next.js` `TypeScript` `FastAPI` `Python` `SQLite` `LLM API` `MCP / FastMCP` `Tailwind CSS`
 
 ---
 
@@ -205,22 +188,21 @@ A comprehensive analytics system for NFL game prediction, processing **285 games
 </details>
 
 **Key Capabilities:**
-- **Matchup Intelligence System** — Generates 14-page reports per game with player trends, red zone efficiency, and situational analysis across 116+ matchup reports
-- **Quarter-by-Quarter Tracking** — 1,455 TD events and 14,900+ player stat records with Q1-Q4 breakdowns for granular performance analysis
-- **Visualization Engine** — 21 custom playoff visualizations including skill position dashboards, TD probability gauges, and clutch performer analysis
-- **Playoff Scenario Simulator** — Win/loss impact modeling for seeding scenarios with elimination risk detection
-- **Player Trend Analysis** — Distinguishes usage pattern changes and identifies breakout performers with 20%+ usage increases
+- **Matchup Intelligence System** — 14-page reports per game with player trends, red zone efficiency, and situational analysis (116+ reports)
+- **Quarter-by-Quarter Tracking** — 1,455 TD events and 14,900+ player stat records with Q1-Q4 breakdowns
+- **Visualization Engine** — 21 custom playoff visualizations including skill-position dashboards, TD probability gauges, and clutch performer analysis
+- **Playoff Scenario Simulator** — Win/loss impact modeling for seeding and elimination risk
+- **Player Trend Analysis** — Usage-shift detection and breakout identification (20%+ usage increases)
 
 **Technical Highlights:**
-- **Data Pipeline:** R-based ETL processing 500+ metrics per game via nflreadr API with SQLite persistence
-- **Statistical Modeling:** EPA calculations, efficiency matrices, player trend detection (20%+ usage changes)
-- **Visualization:** ggplot2 with custom `theme_nfl_playoff()`, multi-panel dashboards via gridExtra
-- **Database:** 9 core tables + 5 quarter-level tracking tables with parameterized query wrappers
-- **Automation:** Batch game analysis processing 14 games in parallel with `analyze_week_matchups.sh`
+- **Data Pipeline:** R-based ETL processing 500+ metrics per game with SQLite persistence
+- **Statistical Modeling:** EPA calculations, efficiency matrices, trend detection
+- **Visualization:** ggplot2 with custom theming and multi-panel dashboards
+- **Database & Automation:** 9 core + 5 quarter-level tracking tables; parallel batch matchup processing
 
 **Built With:**
 
-`R` `tidyverse` `ggplot2` `SQLite` `nflreadr` `gridExtra` `Cairo`
+`R` `tidyverse` `ggplot2` `SQLite`
 
 [View Repository →](https://github.com/ChristianVerdin/nfl_analytics)
 
@@ -229,7 +211,7 @@ A comprehensive analytics system for NFL game prediction, processing **285 games
 ### Daily Locks AI
 **Multi-Sport AI Agent with LLM-Powered Analytics & Conference Tournament Intelligence**
 
-A full-stack application featuring an agentic AI system that processes natural language queries against **730 NCAAB teams / 6,333+ games** and **18,900+ historical NFL outcomes** (archived). Features 7 dedicated analysis pages, real-time ESPN live score monitoring, conference tournament bracket tracking with Monte Carlo futures simulation, and a proprietary second-half scoring model. NCAAB model v2.1 with fatigue modeling, rest day adjustments, and H2H context for tournament play.
+A full-stack application featuring an agentic AI system that processes natural language queries against **730 NCAAB teams / 6,333+ games** and **18,900+ historical NFL outcomes** (archived). Features 7 dedicated analysis pages, real-time live score monitoring via public sports-data integration, conference tournament bracket tracking with Monte Carlo futures simulation, and a proprietary second-half scoring model. NCAAB model v2.1 with fatigue modeling, rest day adjustments, and H2H context for tournament play.
 
 **Live:** [dailylocks.ai](https://dailylocks.ai)
 
@@ -252,29 +234,27 @@ A full-stack application featuring an agentic AI system that processes natural l
 </details>
 
 **Key Features:**
-- **Conference Tournament Intelligence** — Live bracket tracking with auto-refresh, Monte Carlo simulation for tournament futures, fatigue modeling with rest day and travel adjustments, round robin and parlay builders
-- **Multi-Sport Detection** — Automatic routing between NFL (archived, 2025-26 complete) and NCAAB analysis based on query context
+- **Conference Tournament Intelligence** — Live bracket tracking with auto-refresh, Monte Carlo simulation, fatigue/rest/travel adjustments, round robin and parlay builders
+- **Multi-Sport Detection** — Automatic routing between archived NFL and live NCAAB analysis based on query context
 - **7 Analysis Pages** — Matchups, Picks, H2 Unders, Race-To Props, Live Scores, Conference Tournament Tracker, NFL Archive
-- **NCAAB Predictions v2.1** — 730 teams with KenPom-style efficiency metrics, daily automated predictions, and tournament-specific fatigue/rest modeling
-- **Live Score Monitoring** — Real-time ESPN API integration with dynamic recommendation adjustments based on game state (pre-game, H1, halftime, final)
-- **Natural Language Interface** — Context-aware prompt engineering with multi-model LLM routing (Claude Haiku/Sonnet/Opus)
-- **Telegram Alert Pipeline** — Momentum detection, adaptive polling, live recommendations, upset alerts, and tracking via automated alert pipeline
+- **NCAAB Predictions v2.1** — 730 teams with efficiency-metric-driven daily predictions and tournament-specific modeling
+- **Live Score Monitoring** — Real-time public-API integration with state-aware recommendation adjustments (pre-game, H1, halftime, final)
+- **Natural Language Interface** — Multi-model LLM routing with context-aware prompt engineering
+- **Telegram Alert Pipeline** — Momentum detection, adaptive polling, live recommendations, upset alerts
 
 **Architecture & Technical Highlights:**
-- **Frontend:** Next.js 15 App Router, React 19, TypeScript, Zustand state management, Vercel Analytics
-- **Backend:** FastAPI with async endpoints, intelligent agent routing system, Redis caching (Railway)
-- **AI/ML:** Anthropic Claude API, dynamic prompt construction, context windowing, sport-specific handler bypass ($0 cost NCAAB queries), multi-model routing
-- **Live Data:** ESPN public API integration, 60-second polling, game_id matching between ESPN and prediction CSVs, conference tournament bracket tracking
-- **Database:** Supabase (PostgreSQL) with Row-Level Security, real-time subscriptions
-- **Auth:** JWT-based authentication with auto-refresh token handling
-- **Payments:** Stripe integration (checkout sessions, webhooks, customer portal)
-- **Data Pipeline:** Automated daily R pipeline (ESPN data → SQLite → predictions → CSV sync → Vercel deploy)
-- **Testing:** 161 automated tests with pytest
-- **Observability:** Helicone for LLM monitoring and analytics
+- **Frontend:** Next.js + React + TypeScript with state management and analytics
+- **Backend:** Async Python (FastAPI) with intelligent agent routing and Redis caching
+- **AI:** LLM-powered chat with dynamic prompt construction, multi-model routing, and sport-specific handler bypass for cost-zero queries
+- **Live Data:** Public sports-API integration with 60-second polling and game-state matching
+- **Database:** Managed PostgreSQL with row-level security and real-time subscriptions
+- **Auth & Billing:** JWT-based authentication and subscription billing with webhooks
+- **Data Pipeline:** Automated daily R pipeline → CSV sync → frontend deploy
+- **Quality:** 161 automated tests with LLM observability and analytics
 
 **Built With:**
 
-`Next.js 15` `React 19` `TypeScript` `FastAPI` `Python` `Claude API` `Supabase` `Stripe` `Tailwind CSS` `Zustand` `ESPN API` `Helicone`
+`Next.js` `React` `TypeScript` `FastAPI` `Python` `LLM API` `PostgreSQL` `Tailwind CSS`
 
 ---
 
@@ -289,24 +269,23 @@ A production-grade analytics pipeline for NCAA Men's Basketball that combines po
 
 **Key Capabilities:**
 - Possession-based efficiency metrics (KenPom-style) normalized per 100 possessions
-- Iterative strength of schedule using Colley-like algorithm (10 iterations)
-- Volatility detection identifying high-variance matchups for live betting
-- +EV edge detection comparing model probability vs Vegas implied probability
-- Conference tournament analysis with fatigue modeling, rest day adjustments, and H2H context
+- Iterative strength-of-schedule calculation
+- Volatility detection for high-variance matchups
+- +EV edge detection comparing model probability vs. implied probability
+- Conference tournament analysis with fatigue, rest, and head-to-head modeling
 - Pick review system for tracking agent picks by tier
-- Automated daily pipeline: ESPN import → odds fetch → predictions → CSV sync
+- Automated daily pipeline: data import → odds fetch → predictions → CSV sync
 
 **Technical Highlights:**
 - **Data Pipeline:** R-based ETL processing 730 teams and 6,333+ games with daily incremental updates
-- **Statistical Modeling:** Four-factor analysis, adaptive recency weighting (14-day half-life), form detection (HOT/COLD)
-- **Odds Integration:** The Odds API for real-time Vegas lines (spreads, totals, moneylines) with consensus line aggregation
-- **H2 Scoring Model:** Per-team second-half point projections with joint probability calculations
-- **Database:** SQLite (~39MB) with optimized schema for analytical queries
-- **Agent Integration:** Daily CSV exports synced to Daily Locks AI via `sync_to_agent.sh`
+- **Statistical Modeling:** Four-factor analysis, adaptive recency weighting (14-day half-life), form detection
+- **Odds Integration:** Real-time third-party odds with consensus aggregation
+- **Database:** SQLite (~39MB) with optimized analytical schema
+- **Agent Integration:** Daily CSV exports synced to Daily Locks AI
 
 **Built With:**
 
-`R` `tidyverse` `SQLite` `The Odds API` `ESPN API` `hoopR` `Statistical Modeling`
+`R` `tidyverse` `SQLite` `Statistical Modeling`
 
 ---
 
@@ -337,7 +316,6 @@ A production-grade analytics pipeline for NCAA Men's Basketball that combines po
 
 ### Backend & Data
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
-![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
@@ -349,21 +327,19 @@ A production-grade analytics pipeline for NCAA Men's Basketball that combines po
 <td valign="top" width="33%">
 
 ### AI & ML
-![Claude](https://img.shields.io/badge/Claude_API-191919?style=flat-square&logo=anthropic&logoColor=white)
+![LLM_API](https://img.shields.io/badge/LLM_API-191919?style=flat-square&logo=anthropic&logoColor=white)
 ![MCP](https://img.shields.io/badge/MCP/FastMCP-191919?style=flat-square&logo=anthropic&logoColor=white)
-![AgentMail](https://img.shields.io/badge/AgentMail-4F46E5?style=flat-square&logo=maildotru&logoColor=white)
-![Firecrawl](https://img.shields.io/badge/Firecrawl-FF6B35?style=flat-square&logo=firebase&logoColor=white)
-![Apify](https://img.shields.io/badge/Apify-00C896?style=flat-square&logo=apify&logoColor=white)
-![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white)
 ![LangChain](https://img.shields.io/badge/LangChain-121212?style=flat-square&logo=chainlink&logoColor=white)
+![Prompt_Engineering](https://img.shields.io/badge/Prompt_Engineering-4F46E5?style=flat-square&logoColor=white)
+![RAG](https://img.shields.io/badge/RAG-7C3AED?style=flat-square&logoColor=white)
 
 </td>
 <td valign="top" width="33%">
 
 ### Infrastructure
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
-![Railway](https://img.shields.io/badge/Railway-0B0D0E?style=flat-square&logo=railway&logoColor=white)
-![Stripe](https://img.shields.io/badge/Stripe-008CDD?style=flat-square&logo=stripe&logoColor=white)
+![Serverless](https://img.shields.io/badge/Serverless-FD5750?style=flat-square&logo=serverless&logoColor=white)
+![REST_API](https://img.shields.io/badge/REST_API-009688?style=flat-square&logoColor=white)
+![Webhooks](https://img.shields.io/badge/Webhooks-1A73E8?style=flat-square&logoColor=white)
 ![Telegram](https://img.shields.io/badge/Telegram-26A5E4?style=flat-square&logo=telegram&logoColor=white)
 
 </td>
