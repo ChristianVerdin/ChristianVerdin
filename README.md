@@ -1,10 +1,10 @@
 # Hi there, I'm Christian Verdin
 
-**Senior Data Scientist & AI/ML Engineer** with 7+ years of experience designing, developing, and deploying end-to-end ML/AI systems — from data pipelines and production models to complete applications that drive real business impact.
+**Senior Data Scientist & AI/ML Engineer** with 7+ years of experience designing, developing, and deploying end-to-end ML/AI systems, from data pipelines and production models to complete applications that drive real business impact.
 
 I build production-grade systems that integrate LLMs, real-time data pipelines, and modern web frameworks to solve complex analytical problems.
 
-> **Currently open to full-time senior IC roles in AI/ML engineering and applied data science.** The projects below are personal builds — production-deployed but written outside of work hours, end-to-end by me.
+> **Currently open to full-time senior IC roles in AI/ML engineering and applied data science.** The projects below are personal builds, production-deployed but written outside of work hours, end-to-end by me.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/christian-verdin/)
 [![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:christiandverdin@gmail.com)
@@ -17,19 +17,19 @@ I build production-grade systems that integrate LLMs, real-time data pipelines, 
 
 | Project | What it does | Status | Stack |
 | --- | --- | --- | --- |
-| [**LakeshoreIQ**](#lakeshoreiq---illinois-real-estate-intelligence) | Illinois real estate intelligence — 9 data sources spanning real estate, government open data, school data, demographics, and crime/safety; 50+ neighborhoods; B2B API; 10-tool MCP server | Live · Open Beta | Next.js · FastAPI · PostgreSQL |
-| [**312Deals**](#312deals---chicago-food--drink-deals) | Chicago food & drink deals — 6,800+ venues, 8,000+ deals, 73 neighborhoods, multi-channel agent surface (REST · 11-tool MCP · custom GPT · in-app AI chat) | Live | Next.js · FastAPI · SQLite · MCP |
-| [**Daily Locks AI**](#daily-locks-ai) | Multi-sport AI agent — 730 NCAAB teams, conference tournament intelligence, second-half scoring model, real-time live-data integration, LLM-powered chat | Live · Open Beta | Next.js · FastAPI · Python · LLM API |
-| [**NFL Analytics**](#nfl-analytics-engine) | Pure R analytics engine — 285 games, 1,455 TD events, 21 custom playoff visualizations, 116+ matchup reports | 2025-26 Complete | R · ggplot2 · SQLite |
-| **MLB 2026** | Production modeling pipeline — daily run cadence, alpha-pattern detection across historical splits, automated third-party odds verification, auto-deploy | Live (in-season) | R · Python · PostgreSQL |
+| [**LakeshoreIQ**](#lakeshoreiq---illinois-real-estate-intelligence) | Illinois real estate intelligence, 9 data sources spanning real estate, government open data, school data, demographics, and crime/safety; 50+ neighborhoods; B2B API; 10-tool MCP server | Live · Open Beta | Next.js · FastAPI · PostgreSQL |
+| [**312Deals**](#312deals---chicago-food--drink-deals) | Chicago food & drink deals, 6,800+ venues, 8,000+ deals, 73 neighborhoods, multi-channel agent surface (REST · 11-tool MCP · custom GPT · in-app AI chat) | Live | Next.js · FastAPI · SQLite · MCP |
+| [**Daily Locks AI**](#daily-locks-ai) | Multi-sport AI agent, 730 NCAAB teams, conference tournament intelligence, second-half scoring model, real-time live-data integration, LLM-powered chat | Live · Open Beta | Next.js · FastAPI · Python · LLM API |
+| [**NFL Analytics**](#nfl-analytics-engine) | Pure R analytics engine, 285 games, 1,455 TD events, 21 custom playoff visualizations, 116+ matchup reports | 2025-26 Complete | R · ggplot2 · SQLite |
+| **MLB 2026** | Production modeling pipeline, daily run cadence, alpha-pattern detection across historical splits, automated third-party odds verification, auto-deploy | Live (in-season) | R · Python · PostgreSQL |
 
 ### Popular Use Cases
 
-- **LakeshoreIQ** — Property evaluation with AVM + rent estimates, side-by-side ZIP-code market comparison, school district analysis, investment cash-flow modeling, daily first-mover listing alerts via automated email
-- **312Deals** — Real-time "happening now" deal discovery, neighborhood and cuisine filtering, seasonal event guides (St. Patrick's Day, Mother's Day), university-area deal browsing, AI agent integration via MCP and custom GPT
-- **Daily Locks AI** — Daily NCAAB picks, conference tournament bracket tracking with Monte Carlo futures, second-half scoring plays, in-game prop analysis, natural-language AI chat for matchup questions
-- **NFL Analytics** — 14-page matchup intelligence reports per game, playoff scenario simulation, player trend / breakout detection (20%+ usage shifts), custom multi-panel dashboards for skill-position analysis
-- **MLB 2026** — Daily pregame model predictions, alpha-pattern detection across historical splits, third-party odds verification before publish, automated deploy
+- **LakeshoreIQ**: Property evaluation with AVM + rent estimates, side-by-side ZIP-code market comparison, school district analysis, investment cash-flow modeling, daily first-mover listing alerts via automated email
+- **312Deals**: Real-time "happening now" deal discovery, neighborhood and cuisine filtering, seasonal event guides (St. Patrick's Day, Mother's Day), university-area deal browsing, AI agent integration via MCP and custom GPT
+- **Daily Locks AI**: Daily NCAAB picks, conference tournament bracket tracking with Monte Carlo futures, second-half scoring plays, in-game prop analysis, natural-language AI chat for matchup questions
+- **NFL Analytics**: 14-page matchup intelligence reports per game, playoff scenario simulation, player trend / breakout detection (20%+ usage shifts), custom multi-panel dashboards for skill-position analysis
+- **MLB 2026**: Daily pregame model predictions, alpha-pattern detection across historical splits, third-party odds verification before publish, automated deploy
 
 ---
 
@@ -77,12 +77,12 @@ A production SaaS application aggregating **9 real-time data sources** to delive
 </details>
 
 **Key Capabilities:**
-- **Property Search Engine** — Multi-faceted filters across location, property type, size, price, and listing-age dimensions with imagery
-- **Automated Valuations & Investment Modeling** — AVM with confidence scoring, rent comparables, and full investment calculator (cash flow, cap rate, cash-on-cash, 5-year ROI)
-- **Market & Neighborhood Intelligence** — ZIP-level sale/rental metrics, side-by-side comparisons, multi-category amenity scoring with walkability proxy and drilldown
-- **Public-Data Layers** — Crime/safety scoring with trend detection, development activity tracking, 5,000+ school quality ratings, county-level economic indicators, ZIP-level demographics
-- **SaaS Monetization** — Tiered subscription model with usage metering and feature gating, plus a B2B API tier with developer portal
-- **10-Tool MCP Server** — Property, market, and intelligence layers exposed as agent-callable tools
+- **Property Search Engine**: Multi-faceted filters across location, property type, size, price, and listing-age dimensions with imagery
+- **Automated Valuations & Investment Modeling**: AVM with confidence scoring, rent comparables, and full investment calculator (cash flow, cap rate, cash-on-cash, 5-year ROI)
+- **Market & Neighborhood Intelligence**: ZIP-level sale/rental metrics, side-by-side comparisons, multi-category amenity scoring with walkability proxy and drilldown
+- **Public-Data Layers**: Crime/safety scoring with trend detection, development activity tracking, 5,000+ school quality ratings, county-level economic indicators, ZIP-level demographics
+- **SaaS Monetization**: Tiered subscription model with usage metering and feature gating, plus a B2B API tier with developer portal
+- **10-Tool MCP Server**: Property, market, and intelligence layers exposed as agent-callable tools
 
 **Architecture & Technical Highlights:**
 - **Frontend:** Next.js + React + TypeScript with Tailwind, charts, and lightweight state management
@@ -101,7 +101,7 @@ A production SaaS application aggregating **9 real-time data sources** to delive
 ### 312Deals - Chicago Food & Drink Deals
 **AI-Powered Restaurant Deal Intelligence Platform with Multi-Agent Pipeline & MCP Server**
 
-A production platform aggregating **6,800+ venues**, **8,000+ active deals**, and **73 neighborhoods** across Chicagoland. Multi-channel delivery (18-endpoint REST API, 11-tool MCP Server, custom GPT, in-app AI chat) all backed by a single SQLite database. Features an automated deal collection pipeline using LLM extraction across web, social media, and email-based content sources — with content hashing (~60-80% API cost savings), adaptive scheduling, and **5,810 tracked deal sources**. Weekly "Deal Sheet" newsletter via authenticated transactional email (DKIM/SPF/DMARC). Multi-select filters for neighborhoods, cuisines, and deal types with collapsible sidebar. Seasonal content guides (St. Patrick's Day) and active SEO campaign with 2,520+ Google-indexed pages.
+A production platform aggregating **6,800+ venues**, **8,000+ active deals**, and **73 neighborhoods** across Chicagoland. Multi-channel delivery (18-endpoint REST API, 11-tool MCP Server, custom GPT, in-app AI chat) all backed by a single SQLite database. Features an automated deal collection pipeline using LLM extraction across web, social media, and email-based content sources, with content hashing (~60-80% API cost savings), adaptive scheduling, and **5,810 tracked deal sources**. Weekly "Deal Sheet" newsletter via authenticated transactional email (DKIM/SPF/DMARC). Multi-select filters for neighborhoods, cuisines, and deal types with collapsible sidebar. Seasonal content guides (St. Patrick's Day) and active SEO campaign with 2,520+ Google-indexed pages.
 
 **Live:** [312deals.com](https://312deals.com)
 
@@ -137,13 +137,13 @@ A production platform aggregating **6,800+ venues**, **8,000+ active deals**, an
 </details>
 
 **Key Capabilities:**
-- **18-Endpoint REST API** — Geo-proximity search, multi-faceted filters, autocomplete, and a multi-stop bar crawl planner
-- **11-Tool MCP Server + Custom GPT + AI Chat** — Deal search, neighborhood comparison, featured picks, and weekly digests exposed as agent-callable tools, plus an in-app `/chat` interface
-- **Multi-Source Deal Pipeline** — 5,810+ tracked sources with content hashing for ~60-80% cost savings and adaptive scheduling with exponential backoff
-- **AI Extraction Pipeline** — LLM parses unstructured content into structured deals with schema validation and automated quality scoring (0-100)
-- **Time-Aware Search & Community Verification** — Timezone-aware "happening now" filtering plus user-driven verification queue
-- **Seasonal Content Guides + 100+ SEO Landing Pages** — Programmatic event, neighborhood, university, and cuisine pages with structured-data markup
-- **PWA with Offline Support** — Installable mobile app with service-worker caching
+- **18-Endpoint REST API**: Geo-proximity search, multi-faceted filters, autocomplete, and a multi-stop bar crawl planner
+- **11-Tool MCP Server + Custom GPT + AI Chat**: Deal search, neighborhood comparison, featured picks, and weekly digests exposed as agent-callable tools, plus an in-app `/chat` interface
+- **Multi-Source Deal Pipeline**: 5,810+ tracked sources with content hashing for ~60-80% cost savings and adaptive scheduling with exponential backoff
+- **AI Extraction Pipeline**: LLM parses unstructured content into structured deals with schema validation and automated quality scoring (0-100)
+- **Time-Aware Search & Community Verification**: Timezone-aware "happening now" filtering plus user-driven verification queue
+- **Seasonal Content Guides + 100+ SEO Landing Pages**: Programmatic event, neighborhood, university, and cuisine pages with structured-data markup
+- **PWA with Offline Support**: Installable mobile app with service-worker caching
 
 **Architecture & Technical Highlights:**
 - **Frontend:** Next.js + TypeScript with Tailwind, server-state library, dark mode, PWA
@@ -188,11 +188,11 @@ A comprehensive analytics system for NFL game prediction, processing **285 games
 </details>
 
 **Key Capabilities:**
-- **Matchup Intelligence System** — 14-page reports per game with player trends, red zone efficiency, and situational analysis (116+ reports)
-- **Quarter-by-Quarter Tracking** — 1,455 TD events and 14,900+ player stat records with Q1-Q4 breakdowns
-- **Visualization Engine** — 21 custom playoff visualizations including skill-position dashboards, TD probability gauges, and clutch performer analysis
-- **Playoff Scenario Simulator** — Win/loss impact modeling for seeding and elimination risk
-- **Player Trend Analysis** — Usage-shift detection and breakout identification (20%+ usage increases)
+- **Matchup Intelligence System**: 14-page reports per game with player trends, red zone efficiency, and situational analysis (116+ reports)
+- **Quarter-by-Quarter Tracking**: 1,455 TD events and 14,900+ player stat records with Q1-Q4 breakdowns
+- **Visualization Engine**: 21 custom playoff visualizations including skill-position dashboards, TD probability gauges, and clutch performer analysis
+- **Playoff Scenario Simulator**: Win/loss impact modeling for seeding and elimination risk
+- **Player Trend Analysis**: Usage-shift detection and breakout identification (20%+ usage increases)
 
 **Technical Highlights:**
 - **Data Pipeline:** R-based ETL processing 500+ metrics per game with SQLite persistence
@@ -234,13 +234,13 @@ A full-stack application featuring an agentic AI system that processes natural l
 </details>
 
 **Key Features:**
-- **Conference Tournament Intelligence** — Live bracket tracking with auto-refresh, Monte Carlo simulation, fatigue/rest/travel adjustments, round robin and parlay builders
-- **Multi-Sport Detection** — Automatic routing between archived NFL and live NCAAB analysis based on query context
-- **7 Analysis Pages** — Matchups, Picks, H2 Unders, Race-To Props, Live Scores, Conference Tournament Tracker, NFL Archive
-- **NCAAB Predictions v2.1** — 730 teams with efficiency-metric-driven daily predictions and tournament-specific modeling
-- **Live Score Monitoring** — Real-time public-API integration with state-aware recommendation adjustments (pre-game, H1, halftime, final)
-- **Natural Language Interface** — Multi-model LLM routing with context-aware prompt engineering
-- **Telegram Alert Pipeline** — Momentum detection, adaptive polling, live recommendations, upset alerts
+- **Conference Tournament Intelligence**: Live bracket tracking with auto-refresh, Monte Carlo simulation, fatigue/rest/travel adjustments, round robin and parlay builders
+- **Multi-Sport Detection**: Automatic routing between archived NFL and live NCAAB analysis based on query context
+- **7 Analysis Pages**: Matchups, Picks, H2 Unders, Race-To Props, Live Scores, Conference Tournament Tracker, NFL Archive
+- **NCAAB Predictions v2.1**: 730 teams with efficiency-metric-driven daily predictions and tournament-specific modeling
+- **Live Score Monitoring**: Real-time public-API integration with state-aware recommendation adjustments (pre-game, H1, halftime, final)
+- **Natural Language Interface**: Multi-model LLM routing with context-aware prompt engineering
+- **Telegram Alert Pipeline**: Momentum detection, adaptive polling, live recommendations, upset alerts
 
 **Architecture & Technical Highlights:**
 - **Frontend:** Next.js + React + TypeScript with state management and analytics
