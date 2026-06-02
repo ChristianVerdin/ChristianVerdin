@@ -4,7 +4,7 @@
 
 I build production-grade systems that integrate LLMs, real-time data pipelines, and modern web frameworks to solve complex analytical problems.
 
-> **Currently open to full-time senior IC roles in AI/ML engineering and applied data science.** The projects below are personal builds, production-deployed but written outside of work hours, end-to-end by me.
+> The projects below are personal builds — production-deployed, written outside of work hours, and built end-to-end by me.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/christian-verdin/)
 [![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:christiandverdin@gmail.com)
@@ -18,17 +18,17 @@ I build production-grade systems that integrate LLMs, real-time data pipelines, 
 | Project | What it does | Status | Stack |
 | --- | --- | --- | --- |
 | [**LakeshoreIQ**](#lakeshoreiq---illinois-real-estate-intelligence) | Illinois real estate intelligence, 9 data sources spanning real estate, government open data, school data, demographics, and crime/safety; 50+ neighborhoods; B2B API; 10-tool MCP server | Live · Open Beta | Next.js · FastAPI · PostgreSQL |
-| [**312Deals**](#312deals---chicago-food--drink-deals) | Chicago food & drink deals, 6,800+ venues, 8,000+ deals, 73 neighborhoods, multi-channel agent surface (REST · 11-tool MCP · custom GPT · in-app AI chat) | Live | Next.js · FastAPI · SQLite · MCP |
-| [**Daily Locks AI**](#daily-locks-ai) | Multi-sport AI agent, 730 NCAAB teams, conference tournament intelligence, second-half scoring model, real-time live-data integration, LLM-powered chat | Live · Open Beta | Next.js · FastAPI · Python · LLM API |
-| [**NFL Analytics**](#nfl-analytics-engine) | Pure R analytics engine, 285 games, 1,455 TD events, 21 custom playoff visualizations, 116+ matchup reports | 2025-26 Complete | R · ggplot2 · SQLite |
+| [**312Deals**](#312deals---chicago-food--drink-deals) | Chicago food & drink deals, 12,700+ venues, 36,000+ deals, 137 neighborhoods, multi-channel agent surface (REST · 11-tool MCP · custom GPT · in-app AI chat) | Live | Next.js · FastAPI · SQLite · MCP |
+| [**Daily Locks AI**](#daily-locks-ai) | AI sports-betting analytics agent — model-driven daily picks, player-prop & first-5-innings analysis, live in-game value detection, and a natural-language chat agent (currently MLB; prior NFL & NCAAB seasons archived) | Live · Open Beta | Next.js · FastAPI · Python · LLM API |
+| [**NFL Analytics**](#nfl-analytics-engine) | Pure R analytics engine — full-season game & player processing, quarter-by-quarter scoring models, automated matchup reports, and a custom playoff visualization suite | 2025-26 Complete | R · ggplot2 · SQLite |
 | **MLB 2026** | Production modeling pipeline, daily run cadence, alpha-pattern detection across historical splits, automated third-party odds verification, auto-deploy | Live (in-season) | R · Python · PostgreSQL |
 
 ### Popular Use Cases
 
 - **LakeshoreIQ**: Property evaluation with AVM + rent estimates, side-by-side ZIP-code market comparison, school district analysis, investment cash-flow modeling, daily first-mover listing alerts via automated email
 - **312Deals**: Real-time "happening now" deal discovery, neighborhood and cuisine filtering, seasonal event guides (St. Patrick's Day, Mother's Day), university-area deal browsing, AI agent integration via MCP and custom GPT
-- **Daily Locks AI**: Daily NCAAB picks, conference tournament bracket tracking with Monte Carlo futures, second-half scoring plays, in-game prop analysis, natural-language AI chat for matchup questions
-- **NFL Analytics**: 14-page matchup intelligence reports per game, playoff scenario simulation, player trend / breakout detection (20%+ usage shifts), custom multi-panel dashboards for skill-position analysis
+- **Daily Locks AI**: Model-driven daily picks and best bets, player-prop & first-5-innings analysis, live in-game value detection, and a natural-language AI chat for matchup and betting-angle questions
+- **NFL Analytics**: Automated per-game matchup intelligence reports, playoff scenario simulation, player trend & breakout detection, and custom multi-panel dashboards for skill-position analysis
 - **MLB 2026**: Daily pregame model predictions, alpha-pattern detection across historical splits, third-party odds verification before publish, automated deploy
 
 ---
@@ -101,7 +101,7 @@ A production SaaS application aggregating **9 real-time data sources** to delive
 ### 312Deals - Chicago Food & Drink Deals
 **AI-Powered Restaurant Deal Intelligence Platform with Multi-Agent Pipeline & MCP Server**
 
-A production platform aggregating **6,800+ venues**, **8,000+ active deals**, and **73 neighborhoods** across Chicagoland. Multi-channel delivery (18-endpoint REST API, 11-tool MCP Server, custom GPT, in-app AI chat) all backed by a single SQLite database. Features an automated deal collection pipeline using LLM extraction across web, social media, and email-based content sources, with content hashing (~60-80% API cost savings), adaptive scheduling, and **5,810 tracked deal sources**. Weekly "Deal Sheet" newsletter via authenticated transactional email (DKIM/SPF/DMARC). Multi-select filters for neighborhoods, cuisines, and deal types with collapsible sidebar. Seasonal content guides (St. Patrick's Day) and active SEO campaign with 2,520+ Google-indexed pages.
+A production platform aggregating **12,700+ venues**, **36,000+ active deals**, and **137 neighborhoods** across Chicagoland. Multi-channel delivery (18-endpoint REST API, 11-tool MCP Server, custom GPT, in-app AI chat) all backed by a single SQLite database. Features an automated deal collection pipeline using LLM extraction across web, social media, and email-based content sources, with content hashing (~60-80% API cost savings), adaptive scheduling, and **5,810 tracked deal sources**. Weekly "Deal Sheet" newsletter via authenticated transactional email (DKIM/SPF/DMARC). Multi-select filters for neighborhoods, cuisines, and deal types with collapsible sidebar. Seasonal content guides (St. Patrick's Day) and active SEO campaign with 2,520+ Google-indexed pages.
 
 **Live:** [312deals.com](https://312deals.com)
 
@@ -163,7 +163,7 @@ A production platform aggregating **6,800+ venues**, **8,000+ active deals**, an
 ### NFL Analytics Engine
 **Statistical Intelligence & Visualization Platform** | *2025-26 Season Complete ✅*
 
-A comprehensive analytics system for NFL game prediction, processing **285 games**, **14,900+ player-quarter records**, **22,700+ snap counts**, and **1,455 TD events** through Super Bowl LX (SEA 29, NE 13). Features automated matchup reports, real-time visualization generation, and predictive pattern recognition with **18,900+ historical game outcomes** analyzed.
+A comprehensive analytics system for NFL game prediction, processing full-season game, player-quarter, snap-count, and touchdown data through Super Bowl LX (SEA over NE). Features automated matchup reports, real-time visualization generation, and predictive pattern recognition across multiple seasons of historical game outcomes.
 
 <p align="center">
   <img src="./images/nfl_analytics/02_quarter_predictions.png" width="800" alt="NFL Analytics - Quarter-by-Quarter Score Predictions">
@@ -188,30 +188,28 @@ A comprehensive analytics system for NFL game prediction, processing **285 games
 </details>
 
 **Key Capabilities:**
-- **Matchup Intelligence System**: 14-page reports per game with player trends, red zone efficiency, and situational analysis (116+ reports)
-- **Quarter-by-Quarter Tracking**: 1,455 TD events and 14,900+ player stat records with Q1-Q4 breakdowns
-- **Visualization Engine**: 21 custom playoff visualizations including skill-position dashboards, TD probability gauges, and clutch performer analysis
+- **Matchup Intelligence System**: Multi-page reports per game with player trends, red-zone efficiency, and situational analysis
+- **Quarter-by-Quarter Tracking**: Touchdown events and player stat records with Q1–Q4 breakdowns
+- **Visualization Engine**: Custom playoff visualizations including skill-position dashboards, TD probability gauges, and clutch performer analysis
 - **Playoff Scenario Simulator**: Win/loss impact modeling for seeding and elimination risk
-- **Player Trend Analysis**: Usage-shift detection and breakout identification (20%+ usage increases)
+- **Player Trend Analysis**: Usage-shift detection and breakout identification
 
 **Technical Highlights:**
-- **Data Pipeline:** R-based ETL processing 500+ metrics per game with SQLite persistence
+- **Data Pipeline:** R-based ETL processing a broad set of metrics per game with SQLite persistence
 - **Statistical Modeling:** EPA calculations, efficiency matrices, trend detection
 - **Visualization:** ggplot2 with custom theming and multi-panel dashboards
-- **Database & Automation:** 9 core + 5 quarter-level tracking tables; parallel batch matchup processing
+- **Database & Automation:** Core and quarter-level tracking tables; parallel batch matchup processing
 
 **Built With:**
 
 `R` `tidyverse` `ggplot2` `SQLite`
 
-[View Repository →](https://github.com/ChristianVerdin/nfl_analytics)
-
 ---
 
 ### Daily Locks AI
-**Multi-Sport AI Agent with LLM-Powered Analytics & Conference Tournament Intelligence**
+**AI Sports-Betting Analytics Agent with LLM-Powered Chat & Model-Driven Daily Picks**
 
-A full-stack application featuring an agentic AI system that processes natural language queries against **730 NCAAB teams / 6,333+ games** and **18,900+ historical NFL outcomes** (archived). Features 7 dedicated analysis pages, real-time live score monitoring via public sports-data integration, conference tournament bracket tracking with Monte Carlo futures simulation, and a proprietary second-half scoring model. NCAAB model v2.1 with fatigue modeling, rest day adjustments, and H2H context for tournament play.
+A full-stack application featuring an agentic AI system that turns pitcher stats, batting metrics, park factors, and sportsbook odds into model-generated daily predictions — positioned as "your research, done." Currently focused on MLB for the 2026 season, with prior NFL and NCAAB seasons archived (code preserved in-repo). Delivers confidence-tiered picks with edge-vs-Vegas analysis, player-prop coverage (home runs, hits, total bases, walks, strikeouts), first-5-innings plays, team power rankings, live in-game value detection, and a natural-language chat agent.
 
 **Live:** [dailylocks.ai](https://dailylocks.ai)
 
@@ -234,23 +232,21 @@ A full-stack application featuring an agentic AI system that processes natural l
 </details>
 
 **Key Features:**
-- **Conference Tournament Intelligence**: Live bracket tracking with auto-refresh, Monte Carlo simulation, fatigue/rest/travel adjustments, round robin and parlay builders
-- **Multi-Sport Detection**: Automatic routing between archived NFL and live NCAAB analysis based on query context
-- **7 Analysis Pages**: Matchups, Picks, H2 Unders, Race-To Props, Live Scores, Conference Tournament Tracker, NFL Archive
-- **NCAAB Predictions v2.1**: 730 teams with efficiency-metric-driven daily predictions and tournament-specific modeling
-- **Live Score Monitoring**: Real-time public-API integration with state-aware recommendation adjustments (pre-game, H1, halftime, final)
-- **Natural Language Interface**: Multi-model LLM routing with context-aware prompt engineering
-- **Telegram Alert Pipeline**: Momentum detection, adaptive polling, live recommendations, upset alerts
+- **Model-Driven Daily Picks**: Confidence-tiered recommendations with positive-edge detection against sportsbook lines
+- **Player Prop & First-5 Analysis**: HR, hits, total bases, walks, and strikeout markets plus starter-quality first-5-innings plays
+- **Live In-Game Value Detection**: Real-time score monitoring with game-state-aware recommendation adjustments
+- **Natural-Language Chat Agent**: Reasoning-shaped questions route to an LLM with the full daily research bundle as cached context; fast deterministic handlers answer list/table lookups at zero model cost
+- **Subscription Tiers**: Freemium access with metered AI usage and tiered model access, billed via Stripe
+- **Archived Seasons**: NFL and NCAAB engines preserved in-repo from prior seasons
 
 **Architecture & Technical Highlights:**
 - **Frontend:** Next.js + React + TypeScript with state management and analytics
-- **Backend:** Async Python (FastAPI) with intelligent agent routing and Redis caching
-- **AI:** LLM-powered chat with dynamic prompt construction, multi-model routing, and sport-specific handler bypass for cost-zero queries
-- **Live Data:** Public sports-API integration with 60-second polling and game-state matching
-- **Database:** Managed PostgreSQL with row-level security and real-time subscriptions
-- **Auth & Billing:** JWT-based authentication and subscription billing with webhooks
-- **Data Pipeline:** Automated daily R pipeline → CSV sync → frontend deploy
-- **Quality:** 161 automated tests with LLM observability and analytics
+- **Backend:** Async Python (FastAPI) on a Dockerized service with intelligent query routing
+- **AI:** LLM-powered chat with cached research context, multi-model routing by tier, and deterministic handler bypass for cost-zero queries
+- **Live Data:** Public sports-API integration with periodic polling and game-state matching
+- **Database & Auth:** Supabase (PostgreSQL) with row-level security; JWT auth and Stripe subscription billing with webhooks
+- **Data Pipeline:** Automated daily R model pipeline → CSV sync → frontend deploy
+- **Observability:** LLM tracing and usage analytics on the chat path
 
 **Built With:**
 
@@ -259,9 +255,9 @@ A full-stack application featuring an agentic AI system that processes natural l
 ---
 
 ### NCAAB Analytics
-**College Basketball Prediction System v2.1** | *Conference Tournament Live*
+**College Basketball Prediction System** | *2025-26 Season Complete*
 
-A production-grade analytics pipeline for NCAA Men's Basketball that combines possession-based efficiency metrics with real-time Vegas odds to generate daily game predictions, second-half scoring models, race-to-points analysis, and conference tournament intelligence. v2.1 adds fatigue modeling, rest day adjustments, and H2H context for tournament play. Powers the Daily Locks AI prediction engine with automated daily data pipelines.
+A production-grade analytics pipeline for NCAA Men's Basketball that combined possession-based efficiency metrics with real-time Vegas odds to generate daily game predictions, second-half scoring models, race-to-points analysis, and conference tournament intelligence — with fatigue modeling, rest-day adjustments, and head-to-head context for tournament play. Powered the Daily Locks AI prediction engine during the 2025-26 season; the full season is finished and the model is archived.
 
 <p align="center">
   <img src="./images/ncaab_architecture.svg" width="800" alt="NCAAB Analytics Architecture"/>
@@ -277,10 +273,10 @@ A production-grade analytics pipeline for NCAA Men's Basketball that combines po
 - Automated daily pipeline: data import → odds fetch → predictions → CSV sync
 
 **Technical Highlights:**
-- **Data Pipeline:** R-based ETL processing 730 teams and 6,333+ games with daily incremental updates
-- **Statistical Modeling:** Four-factor analysis, adaptive recency weighting (14-day half-life), form detection
+- **Data Pipeline:** R-based ETL processing full NCAA Division I team and game data with daily incremental updates
+- **Statistical Modeling:** Four-factor analysis, adaptive recency weighting, form detection
 - **Odds Integration:** Real-time third-party odds with consensus aggregation
-- **Database:** SQLite (~39MB) with optimized analytical schema
+- **Database:** SQLite with optimized analytical schema
 - **Agent Integration:** Daily CSV exports synced to Daily Locks AI
 
 **Built With:**
@@ -367,7 +363,7 @@ I'm always open to collaborating on projects together so feel free to reach out!
 </p>
 
 <p align="center">
-  <i>Open to full-time senior IC roles in AI/ML engineering, applied data science, and building AI-powered products.</i>
+  <i>Building AI-powered products across real estate, local commerce, and sports analytics.</i>
 </p>
 
 <p align="center">
