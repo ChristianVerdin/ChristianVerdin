@@ -17,7 +17,6 @@ I build production-grade systems that integrate LLMs, real-time data pipelines, 
 
 | Project | What it does | Status | Stack |
 | --- | --- | --- | --- |
-
 | [**312Deals**](#312deals---chicago-food--drink-deals) | Chicago food & drink deals, 12,700+ venues, 36,000+ deals, 137 neighborhoods, multi-channel agent surface (REST · 11-tool MCP · custom GPT · in-app AI chat) | Live | Next.js · FastAPI · SQLite · MCP |
 | [**LakeshoreIQ**](#lakeshoreiq---illinois-real-estate-intelligence) | Illinois real estate intelligence, 9 data sources spanning real estate, government open data, school data, demographics, and crime/safety; 50+ neighborhoods; B2B API; 10-tool MCP server | Live · Open Beta | Next.js · FastAPI · PostgreSQL |
 | [**Daily Locks AI**](#daily-locks-ai) | An AI multi-agent orchestrator and full-stack application that turns pitcher stats, batting metrics, park factors, and live odds into model-driven daily MLB insights, player-prop analysis, and live in-game value detection. Includes a natural-language chat agent with multi-model LLM routing and tracing/observability on the chat path. (currently MLB; prior NFL & NCAAB seasons archived) | Live · Open Beta | Next.js · FastAPI · Python · LLM API |
@@ -35,8 +34,6 @@ I build production-grade systems that integrate LLMs, real-time data pipelines, 
 ---
 
 ## Featured Projects
-
----
 
 ### 312Deals - Chicago Food & Drink Deals
 **AI-Powered Restaurant Deal Intelligence Platform with Multi-Agent Pipeline & MCP Server**
@@ -98,6 +95,7 @@ A production platform aggregating **12,700+ venues**, **36,000+ active deals**, 
 
 `Next.js` `TypeScript` `FastAPI` `Python` `SQLite` `LLM API` `MCP / FastMCP` `Tailwind CSS`
 
+---
 
 ### LakeshoreIQ - Illinois Real Estate Intelligence
 **Full-Stack Property Search, Valuation & Market Analysis Platform**
