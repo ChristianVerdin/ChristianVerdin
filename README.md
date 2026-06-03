@@ -17,9 +17,10 @@ I build production-grade systems that integrate LLMs, real-time data pipelines, 
 
 | Project | What it does | Status | Stack |
 | --- | --- | --- | --- |
-| [**LakeshoreIQ**](#lakeshoreiq---illinois-real-estate-intelligence) | Illinois real estate intelligence, 9 data sources spanning real estate, government open data, school data, demographics, and crime/safety; 50+ neighborhoods; B2B API; 10-tool MCP server | Live · Open Beta | Next.js · FastAPI · PostgreSQL |
+
 | [**312Deals**](#312deals---chicago-food--drink-deals) | Chicago food & drink deals, 12,700+ venues, 36,000+ deals, 137 neighborhoods, multi-channel agent surface (REST · 11-tool MCP · custom GPT · in-app AI chat) | Live | Next.js · FastAPI · SQLite · MCP |
-| [**Daily Locks AI**](#daily-locks-ai) | AI sports-betting analytics agent — model-driven daily picks, player-prop & first-5-innings analysis, live in-game value detection, and a natural-language chat agent (currently MLB; prior NFL & NCAAB seasons archived) | Live · Open Beta | Next.js · FastAPI · Python · LLM API |
+| [**LakeshoreIQ**](#lakeshoreiq---illinois-real-estate-intelligence) | Illinois real estate intelligence, 9 data sources spanning real estate, government open data, school data, demographics, and crime/safety; 50+ neighborhoods; B2B API; 10-tool MCP server | Live · Open Beta | Next.js · FastAPI · PostgreSQL |
+| [**Daily Locks AI**](#daily-locks-ai) | An AI multi-agent orchestrator and full-stack application that turns pitcher stats, batting metrics, park factors, and live odds into model-driven daily MLB insights, player-prop analysis, and live in-game value detection. Includes a natural-language chat agent with multi-model LLM routing and tracing/observability on the chat path. (currently MLB; prior NFL & NCAAB seasons archived) | Live · Open Beta | Next.js · FastAPI · Python · LLM API |
 | [**NFL Analytics**](#nfl-analytics-engine) | Pure R analytics engine — full-season game & player processing, quarter-by-quarter scoring models, automated matchup reports, and a custom playoff visualization suite | 2025-26 Complete | R · ggplot2 · SQLite |
 | **MLB 2026** | Production modeling pipeline, daily run cadence, alpha-pattern detection across historical splits, automated third-party odds verification, auto-deploy | Live (in-season) | R · Python · PostgreSQL |
 
@@ -34,67 +35,6 @@ I build production-grade systems that integrate LLMs, real-time data pipelines, 
 ---
 
 ## Featured Projects
-
-### LakeshoreIQ - Illinois Real Estate Intelligence
-**Full-Stack Property Search, Valuation & Market Analysis Platform**
-
-A production SaaS application aggregating **9 real-time data sources** to deliver property search, automated valuations, market analysis, and neighborhood intelligence across **150+ Illinois cities** and **50+ Chicago neighborhoods**. Integrates census demographics, school quality ratings, crime statistics, development activity tracking, and economic indicators into a unified property analysis experience. Features a **B2B API** with tiered pricing, **10-tool MCP server**, and **15+ backend services**.
-
-**Live:** [lakeshoreiq.com](https://lakeshoreiq.com)
-
-<p align="center">
-  <img src="./images/illinois_real_estate/property_details.png" width="800" alt="LakeshoreIQ - Property Details with Neighborhood Intelligence">
-</p>
-
-<p align="center">
-  <img src="./images/illinois_real_estate/amenity_drilldown.png" width="800" alt="LakeshoreIQ - Amenity Drilldown">
-</p>
-
-<details>
-<summary><b>View More Screenshots</b></summary>
-<br>
-<p align="center">
-  <img src="./images/illinois_real_estate/crime_safety.png" width="800" alt="LakeshoreIQ - Crime & Safety Analysis">
-</p>
-<p align="center">
-  <img src="./images/illinois_real_estate/FirstMover_1.png" width="800" alt="LakeshoreIQ - First-Mover Daily Email">
-</p>
-<p align="center">
-  <img src="./images/illinois_real_estate/FirstMover_2.png" width="800" alt="LakeshoreIQ - First-Mover Detail View">
-</p>
-<p align="center">
-  <img src="./images/illinois_real_estate/landing_hero_1.png" width="800" alt="LakeshoreIQ - Landing">
-</p>
-<p align="center">
-  <img src="./images/illinois_real_estate/school_ratings.png" width="800" alt="LakeshoreIQ - School Ratings">
-</p>
-<p align="center">
-  <img src="./images/illinois_real_estate/search_results.png" width="800" alt="LakeshoreIQ - Property Search Results">
-</p>
-<p align="center">
-  <img src="./images/illinois_real_estate/valuation_calculator.png" width="800" alt="LakeshoreIQ - Valuation & Investment Calculator">
-</p>
-</details>
-
-**Key Capabilities:**
-- **Property Search Engine**: Multi-faceted filters across location, property type, size, price, and listing-age dimensions with imagery
-- **Automated Valuations & Investment Modeling**: AVM with confidence scoring, rent comparables, and full investment calculator (cash flow, cap rate, cash-on-cash, 5-year ROI)
-- **Market & Neighborhood Intelligence**: ZIP-level sale/rental metrics, side-by-side comparisons, multi-category amenity scoring with walkability proxy and drilldown
-- **Public-Data Layers**: Crime/safety scoring with trend detection, development activity tracking, 5,000+ school quality ratings, county-level economic indicators, ZIP-level demographics
-- **SaaS Monetization**: Tiered subscription model with usage metering and feature gating, plus a B2B API tier with developer portal
-- **10-Tool MCP Server**: Property, market, and intelligence layers exposed as agent-callable tools
-
-**Architecture & Technical Highlights:**
-- **Frontend:** Next.js + React + TypeScript with Tailwind, charts, and lightweight state management
-- **Backend:** Async Python (FastAPI) with tiered Redis caching and schema-validated request/response handling
-- **Database:** Managed PostgreSQL with row-level security; SQLite for static reference data
-- **Auth & Billing:** JWT-based auth with email verification; subscription billing with webhooks and customer portal
-- **Data Layer:** 9 third-party / public data sources with usage-aware caching strategy
-- **Deployment:** Serverless frontend + managed backend, env-driven config
-
-**Built With:**
-
-`Next.js` `React` `TypeScript` `FastAPI` `Python` `PostgreSQL` `Redis` `SQLite` `Tailwind CSS`
 
 ---
 
@@ -157,6 +97,68 @@ A production platform aggregating **12,700+ venues**, **36,000+ active deals**, 
 **Built With:**
 
 `Next.js` `TypeScript` `FastAPI` `Python` `SQLite` `LLM API` `MCP / FastMCP` `Tailwind CSS`
+
+
+### LakeshoreIQ - Illinois Real Estate Intelligence
+**Full-Stack Property Search, Valuation & Market Analysis Platform**
+
+A production SaaS application aggregating **9 real-time data sources** to deliver property search, automated valuations, market analysis, and neighborhood intelligence across **150+ Illinois cities** and **50+ Chicago neighborhoods**. Integrates census demographics, school quality ratings, crime statistics, development activity tracking, and economic indicators into a unified property analysis experience. Features a **B2B API** with tiered pricing, **10-tool MCP server**, and **15+ backend services**.
+
+**Live:** [lakeshoreiq.com](https://lakeshoreiq.com)
+
+<p align="center">
+  <img src="./images/illinois_real_estate/property_details.png" width="800" alt="LakeshoreIQ - Property Details with Neighborhood Intelligence">
+</p>
+
+<p align="center">
+  <img src="./images/illinois_real_estate/amenity_drilldown.png" width="800" alt="LakeshoreIQ - Amenity Drilldown">
+</p>
+
+<details>
+<summary><b>View More Screenshots</b></summary>
+<br>
+<p align="center">
+  <img src="./images/illinois_real_estate/crime_safety.png" width="800" alt="LakeshoreIQ - Crime & Safety Analysis">
+</p>
+<p align="center">
+  <img src="./images/illinois_real_estate/FirstMover_1.png" width="800" alt="LakeshoreIQ - First-Mover Daily Email">
+</p>
+<p align="center">
+  <img src="./images/illinois_real_estate/FirstMover_2.png" width="800" alt="LakeshoreIQ - First-Mover Detail View">
+</p>
+<p align="center">
+  <img src="./images/illinois_real_estate/landing_hero_1.png" width="800" alt="LakeshoreIQ - Landing">
+</p>
+<p align="center">
+  <img src="./images/illinois_real_estate/school_ratings.png" width="800" alt="LakeshoreIQ - School Ratings">
+</p>
+<p align="center">
+  <img src="./images/illinois_real_estate/search_results.png" width="800" alt="LakeshoreIQ - Property Search Results">
+</p>
+<p align="center">
+  <img src="./images/illinois_real_estate/valuation_calculator.png" width="800" alt="LakeshoreIQ - Valuation & Investment Calculator">
+</p>
+</details>
+
+**Key Capabilities:**
+- **Property Search Engine**: Multi-faceted filters across location, property type, size, price, and listing-age dimensions with imagery
+- **Automated Valuations & Investment Modeling**: AVM with confidence scoring, rent comparables, and full investment calculator (cash flow, cap rate, cash-on-cash, 5-year ROI)
+- **Market & Neighborhood Intelligence**: ZIP-level sale/rental metrics, side-by-side comparisons, multi-category amenity scoring with walkability proxy and drilldown
+- **Public-Data Layers**: Crime/safety scoring with trend detection, development activity tracking, 5,000+ school quality ratings, county-level economic indicators, ZIP-level demographics
+- **SaaS Monetization**: Tiered subscription model with usage metering and feature gating, plus a B2B API tier with developer portal
+- **10-Tool MCP Server**: Property, market, and intelligence layers exposed as agent-callable tools
+
+**Architecture & Technical Highlights:**
+- **Frontend:** Next.js + React + TypeScript with Tailwind, charts, and lightweight state management
+- **Backend:** Async Python (FastAPI) with tiered Redis caching and schema-validated request/response handling
+- **Database:** Managed PostgreSQL with row-level security; SQLite for static reference data
+- **Auth & Billing:** JWT-based auth with email verification; subscription billing with webhooks and customer portal
+- **Data Layer:** 9 third-party / public data sources with usage-aware caching strategy
+- **Deployment:** Serverless frontend + managed backend, env-driven config
+
+**Built With:**
+
+`Next.js` `React` `TypeScript` `FastAPI` `Python` `PostgreSQL` `Redis` `SQLite` `Tailwind CSS`
 
 ---
 
