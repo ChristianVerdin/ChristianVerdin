@@ -17,7 +17,7 @@ I build production-grade systems that integrate LLMs, real-time data pipelines, 
 
 | Project | What it does | Status | Stack |
 | --- | --- | --- | --- |
-| [**312Deals**](#312deals---chicago-food--drink-deals) | Chicago food & drink deals, 12,700+ venues, 36,000+ deals, 137 neighborhoods, multi-channel agent surface (REST · 11-tool MCP · custom GPT · in-app AI chat) | Live | Next.js · FastAPI · SQLite · MCP |
+| [**312Deals**](#312deals---chicago-food--drink-deals) | Chicago food & drink deals, 13,000+ venues, 50,000+ deals, 145+ neighborhoods, multi-channel agent surface (REST · 11-tool MCP · custom GPT · in-app AI chat) | Live | Next.js · FastAPI · SQLite · MCP |
 | [**LakeshoreIQ**](#lakeshoreiq---illinois-real-estate-intelligence) | Illinois real estate intelligence, 9 data sources spanning real estate, government open data, school data, demographics, and crime/safety; 50+ neighborhoods; B2B API; 10-tool MCP server | Live · Open Beta | Next.js · FastAPI · PostgreSQL |
 | [**Daily Locks AI**](#daily-locks-ai) | An AI multi-agent orchestrator and full-stack application that turns pitcher stats, batting metrics, park factors, and live odds into model-driven daily MLB insights, player-prop analysis, and live in-game value detection. Includes a natural-language chat agent with multi-model LLM routing and tracing/observability on the chat path. (currently MLB; prior NFL & NCAAB seasons archived) | Live · Open Beta | Next.js · FastAPI · Python · LLM API |
 | [**NFL Analytics**](#nfl-analytics-engine) | Pure R analytics engine — full-season game & player processing, quarter-by-quarter scoring models, automated matchup reports, and a custom playoff visualization suite | 2025-26 Complete | R · ggplot2 · SQLite |
@@ -38,45 +38,45 @@ I build production-grade systems that integrate LLMs, real-time data pipelines, 
 ### 312Deals - Chicago Food & Drink Deals
 **AI-Powered Restaurant Deal Intelligence Platform with Multi-Agent Pipeline & MCP Server**
 
-A production platform aggregating **12,700+ venues**, **36,000+ active deals**, and **137 neighborhoods** across Chicagoland. Multi-channel delivery (18-endpoint REST API, 11-tool MCP Server, custom GPT, in-app AI chat) all backed by a single SQLite database. Features an automated deal collection pipeline using LLM extraction across web, social media, and email-based content sources, with content hashing (~60-80% API cost savings), adaptive scheduling, and **5,810 tracked deal sources**. Weekly "Deal Sheet" newsletter via authenticated transactional email (DKIM/SPF/DMARC). Multi-select filters for neighborhoods, cuisines, and deal types with collapsible sidebar. Seasonal content guides (St. Patrick's Day) and active SEO campaign with 2,520+ Google-indexed pages.
+A production platform aggregating **13,000+ venues**, **50,000+ active deals**, and **145+ neighborhoods** across Chicagoland. Multi-channel delivery (18-endpoint REST API, 11-tool MCP Server, custom GPT, in-app AI chat) all backed by a single SQLite database. Features an automated deal collection pipeline using LLM extraction across web, social media, and email-based content sources, with content hashing (~60-80% API cost savings), adaptive scheduling, and **20,000+ tracked deal sources**. Weekly "Deal Sheet" newsletter via authenticated transactional email (DKIM/SPF/DMARC). Multi-select filters for neighborhoods, cuisines, and deal types with collapsible sidebar. Seasonal content guides and an active SEO/AEO program driving **~100K monthly Google Search impressions** (avg. position ~10, up from ~22 in March).
 
 **Live:** [312deals.com](https://312deals.com)
 
 <p align="center">
-  <img src="./images/312deals/plausible_312_april.png" width="800" alt="312Deals - Plausible Analytics (April Traffic)">
+  <img src="./images/312deals/plausible_312_june.png" width="800" alt="312Deals - Live traffic (June 2026): 3.7k monthly visitors, +231% MoM">
 </p>
 
 <p align="center">
-  <img src="./images/312deals/09_search-results.png" width="800" alt="312Deals - Search Results with Filters">
+  <img src="./images/312deals/desktop-home-fresh.png" width="800" alt="312Deals - Homepage with live deal stats and seasonal guides">
 </p>
 
 <details>
 <summary><b>View More Screenshots</b></summary>
 <br>
 <p align="center">
-  <img src="./images/312deals/desktop-home-fresh.png" width="800" alt="312Deals - Homepage">
+  <img src="./images/312deals/world-cup-guide.png" width="800" alt="312Deals - World Cup 2026 Watch-Party Guide">
+</p>
+<p align="center">
+  <img src="./images/312deals/world-cup-neighborhoods.png" width="800" alt="312Deals - Live World Cup Specials by Neighborhood">
+</p>
+<p align="center">
+  <img src="./images/312deals/09_search-results.png" width="800" alt="312Deals - Search Results with Filters">
 </p>
 <p align="center">
   <img src="./images/312deals/1_Neighborhoods.png" width="800" alt="312Deals - Neighborhoods Browser">
 </p>
 <p align="center">
-  <img src="./images/312deals/04_Patio_DrinkCategory_1.png" width="800" alt="312Deals - Patio & Drink Category Filtering">
+  <img src="./images/312deals/desktop-home-browse.png" width="800" alt="312Deals - Browse Deals by Type & Active Now">
 </p>
 <p align="center">
-  <img src="./images/312deals/07_Wings_TR.png" width="800" alt="312Deals - Cuisine-Specific Deal Discovery">
-</p>
-<p align="center">
-  <img src="./images/312deals/02_MothersDay_1.png" width="800" alt="312Deals - Mother's Day Seasonal Guide">
-</p>
-<p align="center">
-  <img src="./images/312deals/02_MothersDay_2.png" width="800" alt="312Deals - Mother's Day Seasonal Guide (cont.)">
+  <img src="./images/312deals/ai-chat.png" width="800" alt="312Deals - AI Chat (natural-language deal search)">
 </p>
 </details>
 
 **Key Capabilities:**
 - **18-Endpoint REST API**: Geo-proximity search, multi-faceted filters, autocomplete, and a multi-stop bar crawl planner
 - **11-Tool MCP Server + Custom GPT + AI Chat**: Deal search, neighborhood comparison, featured picks, and weekly digests exposed as agent-callable tools, plus an in-app `/chat` interface
-- **Multi-Source Deal Pipeline**: 5,810+ tracked sources with content hashing for ~60-80% cost savings and adaptive scheduling with exponential backoff
+- **Multi-Source Deal Pipeline**: 20,000+ tracked sources with content hashing for ~60-80% cost savings and adaptive scheduling with exponential backoff
 - **AI Extraction Pipeline**: LLM parses unstructured content into structured deals with schema validation and automated quality scoring (0-100)
 - **Time-Aware Search & Community Verification**: Timezone-aware "happening now" filtering plus user-driven verification queue
 - **Seasonal Content Guides + 100+ SEO Landing Pages**: Programmatic event, neighborhood, university, and cuisine pages with structured-data markup
