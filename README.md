@@ -17,7 +17,7 @@ I build production-grade systems that integrate LLMs, real-time data pipelines, 
 
 | Project | What it does | Status | Stack |
 | --- | --- | --- | --- |
-| [**312Deals**](#312deals---chicago-food--drink-deals) | Chicago food & drink deals, 13,000+ venues, 50,000+ deals, 145+ neighborhoods, multi-channel agent surface (REST · 11-tool MCP · custom GPT · in-app AI chat) | Live | Next.js · FastAPI · SQLite · MCP |
+| [**312Deals**](#312deals---chicago-food--drink-deals) | Chicago food & drink deals, 13,000+ venues, 65,000+ deals, 149 neighborhoods, multi-channel agent surface (REST · 11-tool MCP · custom GPT · in-app AI chat) | Live | Next.js · FastAPI · SQLite · MCP |
 | [**LakeshoreIQ**](#lakeshoreiq---illinois-real-estate-intelligence) | Illinois real estate intelligence, 9 data sources spanning real estate, government open data, school data, demographics, and crime/safety; 50+ neighborhoods; B2B API; 10-tool MCP server | Live · Open Beta | Next.js · FastAPI · PostgreSQL |
 | [**Daily Locks AI**](#daily-locks-ai) | An AI multi-agent orchestrator and full-stack application that turns pitcher stats, batting metrics, park factors, and live odds into model-driven daily MLB insights, player-prop analysis, and live in-game value detection. Includes a natural-language chat agent with multi-model LLM routing and tracing/observability on the chat path. (currently MLB; prior NFL & NCAAB seasons archived) | Live · Open Beta | Next.js · FastAPI · Python · LLM API |
 | [**NFL Analytics**](#nfl-analytics-engine) | Pure R analytics engine — full-season game & player processing, quarter-by-quarter scoring models, automated matchup reports, and a custom playoff visualization suite | 2025-26 Complete | R · ggplot2 · SQLite |
@@ -26,7 +26,7 @@ I build production-grade systems that integrate LLMs, real-time data pipelines, 
 ### Popular Use Cases
 
 - **LakeshoreIQ**: Property evaluation with AVM + rent estimates, side-by-side ZIP-code market comparison, school district analysis, investment cash-flow modeling, daily first-mover listing alerts via automated email
-- **312Deals**: Real-time "happening now" deal discovery, neighborhood and cuisine filtering, seasonal event guides (St. Patrick's Day, Mother's Day), university-area deal browsing, AI agent integration via MCP and custom GPT
+- **312Deals**: Real-time "happening now" and day-of-week deal discovery, neighborhood and cuisine filtering, seasonal and event guides (game day, deep-dish pizza, happy hours), university-area deal browsing, AI agent integration via MCP and custom GPT
 - **Daily Locks AI**: Model-driven daily picks and best bets, player-prop & first-5-innings analysis, live in-game value detection, and a natural-language AI chat for matchup and betting-angle questions
 - **NFL Analytics**: Automated per-game matchup intelligence reports, playoff scenario simulation, player trend & breakout detection, and custom multi-panel dashboards for skill-position analysis
 - **MLB 2026**: Daily pregame model predictions, alpha-pattern detection across historical splits, third-party odds verification before publish, automated deploy
@@ -38,12 +38,16 @@ I build production-grade systems that integrate LLMs, real-time data pipelines, 
 ### 312Deals - Chicago Food & Drink Deals
 **AI-Powered Restaurant Deal Intelligence Platform with Multi-Agent Pipeline & MCP Server**
 
-A production platform aggregating **13,000+ venues**, **50,000+ active deals**, and **145+ neighborhoods** across Chicagoland. Multi-channel delivery (18-endpoint REST API, 11-tool MCP Server, custom GPT, in-app AI chat) all backed by a single SQLite database. Features an automated deal collection pipeline using LLM extraction across web, social media, and email-based content sources, with content hashing (~60-80% API cost savings), adaptive scheduling, and **20,000+ tracked deal sources**. Weekly "Deal Sheet" newsletter via authenticated transactional email (DKIM/SPF/DMARC). Multi-select filters for neighborhoods, cuisines, and deal types with collapsible sidebar. Seasonal content guides and an active SEO/AEO program driving **~100K monthly Google Search impressions** (avg. position ~10, up from ~22 in March).
+A production platform aggregating **13,000+ venues**, **65,000+ active deals**, and **149 neighborhoods** across Chicagoland. Multi-channel delivery (18-endpoint REST API, 11-tool MCP Server, custom GPT, in-app AI chat) all backed by a single SQLite database. Features an automated deal collection pipeline using LLM extraction across web, social media, and email-based content sources, with content hashing (~60-80% API cost savings), adaptive scheduling, and **20,000+ tracked deal sources**. Weekly "Deal Sheet" newsletter via authenticated transactional email (DKIM/SPF/DMARC). Multi-select filters for neighborhoods, cuisines, and deal types with collapsible sidebar. Seasonal content guides and an active SEO/AEO program driving **~665K monthly Google Search impressions** and **~4,150 clicks** at an average position of **~3** (up from ~22 in March), plus **~6,000 monthly site visitors**, with a machine-readable `llms.txt` earning a **Mintlify Agent Score of 96/100 (Grade A)**.
 
 **Live:** [312deals.com](https://312deals.com)
 
 <p align="center">
-  <img src="./images/312deals/plausible_312_june.png" width="800" alt="312Deals - Live traffic (June 2026): 3.7k monthly visitors, +231% MoM">
+  <img src="./images/312deals/plausible_312_july.png" width="800" alt="312Deals - Live Plausible traffic (28-day): 6.1k visitors +54%, ~80% organic search, iOS-heavy local audience">
+</p>
+
+<p align="center">
+  <img src="./images/312deals/gsc_312_july.png" width="800" alt="312Deals - Google Search Console (28-day): 665K impressions, 4.15K clicks, avg. position 3.1">
 </p>
 
 <p align="center">
