@@ -20,6 +20,7 @@ I build production-grade systems that integrate LLMs, real-time data pipelines, 
 | [**312Deals**](#312deals---chicago-food--drink-deals) | Chicago food & drink deals, 13,000+ venues, 65,000+ deals, 149 neighborhoods, multi-channel agent surface (REST · 11-tool MCP · custom GPT · in-app AI chat) | Live | Next.js · FastAPI · SQLite · MCP |
 | [**LakeshoreIQ**](#lakeshoreiq---illinois-real-estate-intelligence) | Illinois real estate intelligence, 9 data sources spanning real estate, government open data, school data, demographics, and crime/safety; 50+ neighborhoods; B2B API; 10-tool MCP server | Live · Open Beta | Next.js · FastAPI · PostgreSQL |
 | [**Daily Locks AI**](#daily-locks-ai) | An AI multi-agent orchestrator and full-stack application that turns pitcher stats, batting metrics, park factors, and live odds into model-driven daily MLB insights, player-prop analysis, and live in-game value detection. Includes a natural-language chat agent with multi-model LLM routing and tracing/observability on the chat path. (currently MLB; prior NFL & NCAAB seasons archived) | Live · Open Beta | Next.js · FastAPI · Python · LLM API |
+| [**Daily Locks TV**](#daily-locks-tv---fire-tv-app-on-amazons-vega-os) | Native Fire TV companion for dailylocks.ai on Amazon's new Vega OS — the day's model-graded board on the 10-foot screen, with remote-first D-pad UX, instant cached cold starts, and an MLB/NFL/NCAAF league toggle | Live on the Amazon Appstore | React Native · Vega OS · TypeScript |
 | [**NFL Analytics**](#nfl-analytics-engine) | Pure R analytics engine — full-season game & player processing, quarter-by-quarter scoring models, automated matchup reports, and a custom playoff visualization suite | 2025-26 Complete | R · ggplot2 · SQLite |
 | **MLB 2026** | Production modeling pipeline, daily run cadence, alpha-pattern detection across historical splits, automated third-party odds verification, auto-deploy | Live (in-season) | R · Python · PostgreSQL |
 
@@ -28,6 +29,7 @@ I build production-grade systems that integrate LLMs, real-time data pipelines, 
 - **LakeshoreIQ**: Property evaluation with AVM + rent estimates, side-by-side ZIP-code market comparison, school district analysis, investment cash-flow modeling, daily first-mover listing alerts via automated email
 - **312Deals**: Real-time "happening now" and day-of-week deal discovery, neighborhood and cuisine filtering, seasonal and event guides (game day, deep-dish pizza, happy hours), university-area deal browsing, AI agent integration via MCP and custom GPT
 - **Daily Locks AI**: Model-driven daily picks and best bets, player-prop & first-5-innings analysis, live in-game value detection, and a natural-language AI chat for matchup and betting-angle questions
+- **Daily Locks TV**: The day's board on the living-room TV — scan confidence-tiered picks before first pitch, drill into any matchup with the remote, switch leagues from the couch
 - **NFL Analytics**: Automated per-game matchup intelligence reports, playoff scenario simulation, player trend & breakout detection, and custom multi-panel dashboards for skill-position analysis
 - **MLB 2026**: Daily pregame model predictions, alpha-pattern detection across historical splits, third-party odds verification before publish, automated deploy
 
@@ -258,6 +260,44 @@ A full-stack application featuring an agentic AI system that turns pitcher stats
 
 ---
 
+### Daily Locks TV - Fire TV App on Amazon's Vega OS
+**Native TV Companion for dailylocks.ai | Live on the Amazon Appstore**
+
+A production Fire TV application built on **Amazon's new Vega OS platform** (React Native — Amazon's non-Android successor to Fire OS for TV apps), putting the day's model-graded board on the living-room TV. Remote-first by design: cartesian D-pad focus management, an animated focus ring, and big, legible cards tuned for the 10-foot screen. Shipped through the full Amazon release pipeline — Vega Virtual Device and physical-stick verification, platform KPI gates, a Live App Testing beta delivered through the store, and Appstore approval.
+
+**Live:** [Daily Locks TV on the Amazon Appstore](https://www.amazon.com/dp/B0GX2XTHJ9) — free, Fire TV Stick 4K Select & Fire TV Stick HD (2nd Gen)
+
+<p align="center">
+  <img src="./images/dailylocks_tv/board.png" width="800" alt="Daily Locks TV - Top Picks board with league pills, confidence tiers, and D-pad focus ring">
+</p>
+
+<details>
+<summary><b>View More Screenshots</b></summary>
+<br>
+<p align="center">
+  <img src="./images/dailylocks_tv/detail.png" width="800" alt="Daily Locks TV - Matchup detail with starters, power ranks, Vegas line, model edge, and pitcher intel">
+</p>
+</details>
+
+**Key Capabilities:**
+- **Model Board on the Big Screen**: Confidence-tiered picks with win probability, market price with sportsbook attribution, and park/weather context; full matchup detail one OK-press away
+- **League Toggle**: MLB / NFL / NCAAF with per-league snapshots (instant switch-back, no loading flash) and designed "season starts soon" states for pre-season leagues
+- **Instant Cold Start**: Persisted board cache hydrates the last-good board immediately (with an "as of" freshness badge), then silently refreshes — 1.35 s mean time-to-first-frame measured on hardware vs the 1.5 s platform gate
+- **Resilience Contract Under Test**: A fetch failure never clears a rendered board; designed states for every failure mode; 40 jest tests across parsers, cache, focus, and store resilience
+- **Compliance Enforced in Code**: Strictly informational — an honesty filter gates what can headline, book attribution on every price, persistent 21+ / responsible-gaming footer, no wagering functionality
+
+**Architecture & Technical Highlights:**
+- **Platform:** React Native on Vega OS with `@amazon-devices` packages; 3-architecture `.vpkg` release builds (aarch64 / armv7 / x86_64)
+- **TV UX:** Cartesian focus with `TVFocusGuideView` bridges, explicit BackHandler wiring, transform-only focus animation to protect the frame budget
+- **Data Layer:** DTO→model parsers, zustand store with per-league board slices, jittered ~20-minute polling against the dailylocks.ai public API, TTFD instrumentation via the Kepler performance API
+- **Release Ops:** Vega Virtual Device + physical stick verification (including wireless VDA-over-TCP/IP debugging), platform KPI measurement, Live App Testing beta → store promotion
+
+**Built With:**
+
+`React Native` `TypeScript` `Vega OS` `zustand` `react-navigation` `jest`
+
+---
+
 ### NCAAB Analytics
 **College Basketball Prediction System** | *2025-26 Season Complete*
 
@@ -308,6 +348,7 @@ A production-grade analytics pipeline for NCAA Men's Basketball that combined po
 ### Frontend
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white)
 ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![React Native](https://img.shields.io/badge/React_Native_(Vega_OS)-20232A?style=flat-square&logo=react&logoColor=61DAFB)
 ![Tailwind](https://img.shields.io/badge/Tailwind-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
 
@@ -367,7 +408,7 @@ I'm always open to collaborating on projects together so feel free to reach out!
 </p>
 
 <p align="center">
-  <i>Building AI-powered products across real estate, local commerce, and sports analytics.</i>
+  <i>Building AI-powered products across real estate, local commerce, sports analytics, and connected TV.</i>
 </p>
 
 <p align="center">
