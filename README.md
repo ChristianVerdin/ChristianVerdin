@@ -265,7 +265,7 @@ A full-stack application featuring an agentic AI system that turns pitcher stats
 
 A production Fire TV application built on **Amazon's new Vega OS platform** (React Native — Amazon's non-Android successor to Fire OS for TV apps), putting the day's model-graded board on the living-room TV. Remote-first by design: cartesian D-pad focus management, an animated focus ring, and big, legible cards tuned for the 10-foot screen. Shipped through the full Amazon release pipeline — Vega Virtual Device and physical-stick verification, platform KPI gates, a Live App Testing beta delivered through the store, and Appstore approval.
 
-**Live:** [Daily Locks TV on the Amazon Appstore](https://www.amazon.com/dp/B0GX2XTHJ9) — free, Fire TV Stick 4K Select & Fire TV Stick HD (2nd Gen)
+**Live:** [Daily Locks TV on the Amazon Appstore](https://www.amazon.com/dp/B0HC8HWQ6B) — free, Fire TV Stick 4K Select & Fire TV Stick HD (2nd Gen)
 
 <p align="center">
   <img src="./images/dailylocks_tv/board.png" width="800" alt="Daily Locks TV - Top Picks board with league pills, confidence tiers, and D-pad focus ring">
