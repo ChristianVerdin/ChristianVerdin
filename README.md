@@ -21,6 +21,7 @@ I build production-grade systems that integrate LLMs, real-time data pipelines, 
 | [**LakeshoreIQ**](#lakeshoreiq---illinois-real-estate-intelligence) | Illinois real estate intelligence, 9 data sources spanning real estate, government open data, school data, demographics, and crime/safety; 50+ neighborhoods; B2B API; 10-tool MCP server | Live · Open Beta | Next.js · FastAPI · PostgreSQL |
 | [**Daily Locks AI**](#daily-locks-ai) | An AI multi-agent orchestrator and full-stack application that turns pitcher stats, batting metrics, park factors, and live odds into model-driven daily MLB insights, player-prop analysis, and live in-game value detection. Includes a natural-language chat agent with multi-model LLM routing and tracing/observability on the chat path. (currently MLB; prior NFL & NCAAB seasons archived) | Live · Open Beta | Next.js · FastAPI · Python · LLM API |
 | [**Daily Locks TV**](#daily-locks-tv---fire-tv-app-on-amazons-vega-os) | Native Fire TV companion for dailylocks.ai on Amazon's new Vega OS — the day's model-graded board on the 10-foot screen, with remote-first D-pad UX, instant cached cold starts, and an MLB/NFL/NCAAF league toggle | Live on the Amazon Appstore | React Native · Vega OS · TypeScript |
+| [**CFB GameDay Board**](#cfb-gameday-board---college-football-slate-on-web-and-ios) | Every FBS college football game on one screen: venue, kickoff-hour stadium weather from Open-Meteo, TV and streaming, publicly posted lines with implied scores, then live scores and cover/total state. Web PWA plus a native iOS app on the App Store. Stdlib Python, vanilla JS, zero dependencies | Live · App Store | Python · JavaScript · SwiftUI · Vercel |
 | [**NFL Analytics**](#nfl-analytics-engine) | Pure R analytics engine — full-season game & player processing, quarter-by-quarter scoring models, automated matchup reports, and a custom playoff visualization suite | 2025-26 Complete | R · ggplot2 · SQLite |
 | **MLB 2026** | Production modeling pipeline, daily run cadence, alpha-pattern detection across historical splits, automated third-party odds verification, auto-deploy | Live (in-season) | R · Python · PostgreSQL |
 
@@ -30,6 +31,7 @@ I build production-grade systems that integrate LLMs, real-time data pipelines, 
 - **312Deals**: Real-time "happening now" and day-of-week deal discovery, neighborhood and cuisine filtering, seasonal and event guides (game day, deep-dish pizza, happy hours), university-area deal browsing, AI agent integration via MCP and custom GPT
 - **Daily Locks AI**: Model-driven daily picks and best bets, player-prop & first-5-innings analysis, live in-game value detection, and a natural-language AI chat for matchup and betting-angle questions
 - **Daily Locks TV**: The day's board on the living-room TV — scan confidence-tiered picks before first pitch, drill into any matchup with the remote, switch leagues from the couch
+- **CFB GameDay Board**: Saturday slate triage — which kickoffs have rain or wind in the forecast, what is on which network, where the posted line sits, and once games start, who is covering and what the total needs
 - **NFL Analytics**: Automated per-game matchup intelligence reports, playoff scenario simulation, player trend & breakout detection, and custom multi-panel dashboards for skill-position analysis
 - **MLB 2026**: Daily pregame model predictions, alpha-pattern detection across historical splits, third-party odds verification before publish, automated deploy
 
@@ -295,6 +297,37 @@ A production Fire TV application built on **Amazon's new Vega OS platform** (Rea
 **Built With:**
 
 `React Native` `TypeScript` `Vega OS` `zustand` `react-navigation` `jest`
+
+---
+
+### CFB GameDay Board - College Football Slate on Web and iOS
+**One screen for every FBS Saturday | Live on the web and the App Store**
+
+A situational board for college football weekends: venue, kickoff-hour stadium weather, TV and streaming, publicly posted spread and total with implied scores, then live score, clock, and cover/total state once games kick. Built with a deliberately small footprint (standard-library Python server and snapshot builder, vanilla JavaScript client, no framework, no build step) and wrapped in a native SwiftUI shell for iOS that passed App Review on the first full submission.
+
+**Live:** [cfbgameday.app](https://cfbgameday.app) · [CFB GameDay Board on the App Store](https://apps.apple.com/us/app/cfb-gameday-board/id6809035228) — free, no ads, no account · [Source on GitHub](https://github.com/ChristianVerdin/cfb-gameday-board)
+
+<p align="center">
+  <img src="./images/cfb_gameday/board.png" width="260" alt="CFB GameDay Board - slate board with day, conference, and time filters">
+  <img src="./images/cfb_gameday/live.png" width="260" alt="CFB GameDay Board - live desk with cover and total state">
+  <img src="./images/cfb_gameday/lines.png" width="260" alt="CFB GameDay Board - lines sheet">
+</p>
+
+**Key Capabilities:**
+- **Kickoff-Hour Weather**: Open-Meteo forecast at each stadium's coordinates for the kick hour, with flags for rain, wind, heat, and altitude and an impact read per game
+- **Posted Lines, Not Steam**: The DraftKings numbers ESPN publishes with its scoreboard, plus implied final scores; the snapshot carries the prior line forward when ESPN nulls odds at kickoff
+- **Live Cover State**: Every 30 seconds during games: score, clock, down and distance, whether the favorite is covering, and what the total needs
+- **Filters That Match How Fans Watch**: Day, time window, conference, ranked only, weather-impact only, starred, by-network board, lines sheet, landslide board, full-text search
+- **Information Display by Design**: No wagering, no sportsbook links, no accounts, no tracking; rated 17+ only because it shows publicly posted lines
+
+**Architecture & Technical Highlights:**
+- **Stack:** Python standard library (server, ESPN proxy, weekly snapshot builder), vanilla JavaScript UI, Vercel Python function for the hosted live proxy with 20-second CDN caching
+- **iOS:** SwiftUI tab shell around a shared WKWebView, xcodegen project, App Store Connect API release pipeline (archive, export, validate, upload, attach, submit) driven by scripts
+- **Ops:** GitHub Action rebuilds the slate snapshot Thursday night and Saturday morning; PWA with a shell-only service worker; offline view with retry
+
+**Built With:**
+
+`Python` `JavaScript` `SwiftUI` `WKWebView` `Vercel` `GitHub Actions` `Open-Meteo` `ESPN`
 
 ---
 
