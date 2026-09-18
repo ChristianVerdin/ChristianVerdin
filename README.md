@@ -1,449 +1,157 @@
-# Hi there, I'm Christian Verdin
+# Christian Verdin
 
-**Senior Data Scientist & AI/ML Engineer** with 7+ years of experience designing, developing, and deploying end-to-end ML/AI systems, from data pipelines and production models to complete applications that drive real business impact.
+**AI engineer and senior data scientist who ships agentic systems to production and keeps them running.**
 
-I build production-grade systems that integrate LLMs, real-time data pipelines, and modern web frameworks to solve complex analytical problems.
+Seven years of production ML at Fortune 500 scale. By day I lead production AI for a Fortune 500 data science team: a multi-agent analytics platform on Databricks used by hundreds of business users, the evaluation and observability layer behind it, and the MCP surface that lets other AI clients call it. By night I ship the projects below: production-deployed, written outside work hours, built end to end by me, and run through real platform reviews (Apple App Store, Amazon Ring Appstore).
 
-> The projects below are personal builds — production-deployed, written outside of work hours, and built end-to-end by me.
+**Looking at:** AI Engineer · Forward Deployed Engineer · Solutions Architect (AI/Data) · Senior Data Scientist (GenAI). Chicago, remote, or relocation.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/christian-verdin/)
-[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:christiandverdin@gmail.com)
-[![Portfolio](https://img.shields.io/badge/Portfolio-dailylocks.ai-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://dailylocks.ai)
-[![Medium](https://img.shields.io/badge/Medium-Articles-000000?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@cver123/about)
-
----
-
-## Projects at a Glance
-
-| Project | What it does | Status | Stack |
-| --- | --- | --- | --- |
-| [**312Deals**](#312deals---chicago-food--drink-deals) | Chicago food & drink deals, 13,000+ venues, 65,000+ deals, 149 neighborhoods, multi-channel agent surface (REST · 11-tool MCP · custom GPT · in-app AI chat) | Live | Next.js · FastAPI · SQLite · MCP |
-| [**LakeshoreIQ**](#lakeshoreiq---illinois-real-estate-intelligence) | Illinois real estate intelligence, 9 data sources spanning real estate, government open data, school data, demographics, and crime/safety; 50+ neighborhoods; B2B API; 10-tool MCP server | Live · Open Beta | Next.js · FastAPI · PostgreSQL |
-| [**Daily Locks AI**](#daily-locks-ai) | An AI multi-agent orchestrator and full-stack application that turns pitcher stats, batting metrics, park factors, and live odds into model-driven daily MLB insights, player-prop analysis, and live in-game value detection. Includes a natural-language chat agent with multi-model LLM routing and tracing/observability on the chat path. (currently MLB; prior NFL & NCAAB seasons archived) | Live · Open Beta | Next.js · FastAPI · Python · LLM API |
-| [**Daily Locks TV**](#daily-locks-tv---fire-tv-app-on-amazons-vega-os) | Native Fire TV companion for dailylocks.ai on Amazon's new Vega OS — the day's model-graded board on the 10-foot screen, with remote-first D-pad UX, instant cached cold starts, and an MLB/NFL/NCAAF league toggle | Live on the Amazon Appstore | React Native · Vega OS · TypeScript |
-| [**CFB GameDay Board**](#cfb-gameday-board---college-football-slate-on-web-and-ios) | Every FBS college football game on one screen: venue, kickoff-hour stadium weather from Open-Meteo, TV and streaming, publicly posted lines with implied scores, then live scores and cover/total state. Web PWA plus a native iOS app on the App Store. Stdlib Python, vanilla JS, zero dependencies | Live · App Store | Python · JavaScript · SwiftUI · Vercel |
-| [**NFL Analytics**](#nfl-analytics-engine) | Pure R analytics engine — full-season game & player processing, quarter-by-quarter scoring models, automated matchup reports, and a custom playoff visualization suite | 2025-26 Complete | R · ggplot2 · SQLite |
-| **MLB 2026** | Production modeling pipeline, daily run cadence, alpha-pattern detection across historical splits, automated third-party odds verification, auto-deploy | Live (in-season) | R · Python · PostgreSQL |
-
-### Popular Use Cases
-
-- **LakeshoreIQ**: Property evaluation with AVM + rent estimates, side-by-side ZIP-code market comparison, school district analysis, investment cash-flow modeling, daily first-mover listing alerts via automated email
-- **312Deals**: Real-time "happening now" and day-of-week deal discovery, neighborhood and cuisine filtering, seasonal and event guides (game day, deep-dish pizza, happy hours), university-area deal browsing, AI agent integration via MCP and custom GPT
-- **Daily Locks AI**: Model-driven daily picks and best bets, player-prop & first-5-innings analysis, live in-game value detection, and a natural-language AI chat for matchup and betting-angle questions
-- **Daily Locks TV**: The day's board on the living-room TV — scan confidence-tiered picks before first pitch, drill into any matchup with the remote, switch leagues from the couch
-- **CFB GameDay Board**: Saturday slate triage — which kickoffs have rain or wind in the forecast, what is on which network, where the posted line sits, and once games start, who is covering and what the total needs
-- **NFL Analytics**: Automated per-game matchup intelligence reports, playoff scenario simulation, player trend & breakout detection, and custom multi-panel dashboards for skill-position analysis
-- **MLB 2026**: Daily pregame model predictions, alpha-pattern detection across historical splits, third-party odds verification before publish, automated deploy
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-christian--verdin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/christian-verdin/)
+[![Email](https://img.shields.io/badge/Email-christiandverdin%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:christiandverdin@gmail.com)
+[![Live](https://img.shields.io/badge/Live-312deals.com-0F6E6E?style=for-the-badge&logo=google-chrome&logoColor=white)](https://312deals.com)
+[![App Store](https://img.shields.io/badge/App_Store-CFB_GameDay_Board-0D96F6?style=for-the-badge&logo=apple&logoColor=white)](https://apps.apple.com/us/app/cfb-gameday-board/id6809035228)
 
 ---
 
-## Featured Projects
+## Projects
 
-### 312Deals - Chicago Food & Drink Deals
-**AI-Powered Restaurant Deal Intelligence Platform with Multi-Agent Pipeline & MCP Server**
+| Project | What it does | Status | Stack | Code |
+| --- | --- | --- | --- | --- |
+| [**312Deals**](#312deals--chicago-food--drink-deals) | Chicago food & drink deals: 90,000+ active deals across 12,500+ venues and 149 neighborhoods from 18,000+ tracked sources, ingested by an LLM extraction pipeline. Agent-first surface: REST API · 11-tool MCP server · 17 WebMCP tools · custom GPT · in-app chat | **Live** | Next.js · FastAPI · SQLite on Cloudflare R2 · MCP | [312deals-webmcp](https://github.com/ChristianVerdin/312deals-webmcp) · MIT (WebMCP Challenge entry) |
+| [**CFB GameDay Board**](#cfb-gameday-board--college-football-slate-on-web-and-ios) | Every FBS game on one screen: kickoff-hour stadium weather, TV, posted lines with implied scores, then live cover/total state. Stdlib Python, vanilla JS, zero dependencies; SwiftUI iOS shell | **Live · App Store** | Python · JavaScript · SwiftUI · Vercel | [cfb-gameday-board](https://github.com/ChristianVerdin/cfb-gameday-board) · MIT |
+| [**LakeshoreIQ**](#lakeshoreiq--illinois-real-estate-intelligence) | Illinois real-estate intelligence over 9 live data sources; AVM, rent comps, neighborhood scoring; 10-tool MCP server | Open beta | Next.js · FastAPI · PostgreSQL · Redis | private |
+| [**Camera Recall**](#camera-recall--natural-language-qa-over-smart-camera-events) | Natural-language Q&A over a household's Ring camera event history. Deliberately metadata-only (no video, clip, or snapshot scopes). Passed Ring Appstore certification on first submission | Certified | FastAPI · Postgres · Railway · 300+ tests | private |
+| [**World Cup bracket tracker**](#world-cup-bracket-tracker) | Twice-daily auto-updating tracker for an AgentMail World Cup 2026 bracket. GitHub Actions + AgentMail API, no servers | Complete | Python · GitHub Actions | [worldcup_agentcup-tracker](https://github.com/ChristianVerdin/worldcup_agentcup-tracker) · MIT |
 
-A production platform aggregating **13,000+ venues**, **65,000+ active deals**, and **149 neighborhoods** across Chicagoland. Multi-channel delivery (18-endpoint REST API, 11-tool MCP Server, custom GPT, in-app AI chat) all backed by a single SQLite database. Features an automated deal collection pipeline using LLM extraction across web, social media, and email-based content sources, with content hashing (~60-80% API cost savings), adaptive scheduling, and **20,000+ tracked deal sources**. Weekly "Deal Sheet" newsletter via authenticated transactional email (DKIM/SPF/DMARC). Multi-select filters for neighborhoods, cuisines, and deal types with collapsible sidebar. Seasonal content guides and an active SEO/AEO program driving **~665K monthly Google Search impressions** and **~4,150 clicks** at an average position of **~3** (up from ~22 in March), plus **~6,000 monthly site visitors**, with a machine-readable `llms.txt` earning a **Mintlify Agent Score of 96/100 (Grade A)**.
+### Where to start reading
 
-**Live:** [312deals.com](https://312deals.com)
+- **[312deals-webmcp](https://github.com/ChristianVerdin/312deals-webmcp)**: how a data platform exposes itself to browser-native agents. 17 tools on `document.modelContext`, a "Tonight" planner a person and their agent build together, write-with-consent tips routed to human review. Start at `docs/04-WEBMCP-ARCHITECTURE.md`.
+- **[cfb-gameday-board](https://github.com/ChristianVerdin/cfb-gameday-board)**: the cleanest end-to-end example. Zero-dependency Python server and snapshot builder, vanilla JS client, SwiftUI shell, scripted App Store Connect release pipeline, GitHub Action that rebuilds the slate twice a week. Start at `docs/ARCHITECTURE.md`, then `ios/APP_STORE.md`.
+
+---
+
+## 312Deals — Chicago Food & Drink Deals
+**LLM extraction pipeline + agent-first distribution for local commerce**
+
+A production platform aggregating **90,000+ active deals** across **12,500+ venues** and **149 neighborhoods** across Chicagoland, ingested from **18,000+ tracked sources**. The pipeline runs unstructured web, social, and email content through LLM extraction with schema validation, content hashing (~60–80% API cost reduction), adaptive scheduling with exponential backoff, and automated 0–100 quality scoring, at roughly **$0.007 per verified deal**. Distribution is agent-first: an 18-endpoint REST API, an 11-tool MCP server, 17 in-page WebMCP tools (entered in OpenAI's WebMCP Challenge, Sept 2026), a custom GPT, in-app chat, and a machine-readable `llms.txt` scoring **96/100 on Mintlify's Agent Score**. Programmatic SEO (100+ landing pages) took organic search from average position ~22 to page one. Since the March 2026 launch: **25,000+ unique visitors, 7,700+ in the last 28 days**, all organic; Search Console shows **16.4K clicks and 1.7M impressions at an average position of 6**.
+
+**Live:** [312deals.com](https://312deals.com) · **Public code:** [312deals-webmcp](https://github.com/ChristianVerdin/312deals-webmcp)
 
 <p align="center">
-  <img src="./images/312deals/plausible_312_july.png" width="800" alt="312Deals - Live Plausible traffic (28-day): 6.1k visitors +54%, ~80% organic search, iOS-heavy local audience">
+  <img src="./images/312deals/plausible_312_since_launch.png" width="800" alt="312Deals - Plausible traffic since the March 2026 launch: 25k unique visitors, growth month over month">
 </p>
-
 <p align="center">
-  <img src="./images/312deals/gsc_312_july.png" width="800" alt="312Deals - Google Search Console (28-day): 665K impressions, 4.15K clicks, avg. position 3.1">
-</p>
-
-<p align="center">
-  <img src="./images/312deals/desktop-home-fresh.png" width="800" alt="312Deals - Homepage with live deal stats and seasonal guides">
+  <img src="./images/312deals/desktop-home-sep.png" width="800" alt="312Deals - Homepage, September 2026: 92,000+ deals, 12,000+ venues, 149 neighborhoods">
 </p>
 
 <details>
-<summary><b>View More Screenshots</b></summary>
+<summary><b>More screenshots</b></summary>
 <br>
-<p align="center">
-  <img src="./images/312deals/world-cup-guide.png" width="800" alt="312Deals - World Cup 2026 Watch-Party Guide">
-</p>
-<p align="center">
-  <img src="./images/312deals/world-cup-neighborhoods.png" width="800" alt="312Deals - Live World Cup Specials by Neighborhood">
-</p>
-<p align="center">
-  <img src="./images/312deals/09_search-results.png" width="800" alt="312Deals - Search Results with Filters">
-</p>
-<p align="center">
-  <img src="./images/312deals/1_Neighborhoods.png" width="800" alt="312Deals - Neighborhoods Browser">
-</p>
-<p align="center">
-  <img src="./images/312deals/desktop-home-browse.png" width="800" alt="312Deals - Browse Deals by Type & Active Now">
-</p>
-<p align="center">
-  <img src="./images/312deals/ai-chat.png" width="800" alt="312Deals - AI Chat (natural-language deal search)">
-</p>
+<p align="center"><img src="./images/312deals/gsc_312_since_launch.png" width="800" alt="312Deals - Google Search Console since launch: 16.4K clicks, 1.72M impressions, average position 6"></p>
+<p align="center"><img src="./images/312deals/ai-chat.png" width="800" alt="312Deals - AI chat (natural-language deal search)"></p>
 </details>
 
-**Key Capabilities:**
-- **18-Endpoint REST API**: Geo-proximity search, multi-faceted filters, autocomplete, and a multi-stop bar crawl planner
-- **11-Tool MCP Server + Custom GPT + AI Chat**: Deal search, neighborhood comparison, featured picks, and weekly digests exposed as agent-callable tools, plus an in-app `/chat` interface
-- **Multi-Source Deal Pipeline**: 20,000+ tracked sources with content hashing for ~60-80% cost savings and adaptive scheduling with exponential backoff
-- **AI Extraction Pipeline**: LLM parses unstructured content into structured deals with schema validation and automated quality scoring (0-100)
-- **Time-Aware Search & Community Verification**: Timezone-aware "happening now" filtering plus user-driven verification queue
-- **Seasonal Content Guides + 100+ SEO Landing Pages**: Programmatic event, neighborhood, university, and cuisine pages with structured-data markup
-- **PWA with Offline Support**: Installable mobile app with service-worker caching
+**What's interesting technically**
+- **Agent surface as a first-class product:** the same tool definitions serve the MCP server, the WebMCP registration, and the custom GPT, so a person, a browser agent, and a desktop agent get identical capabilities.
+- **Extraction economics:** content hashing and adaptive scheduling turned an LLM-per-page pipeline into something that costs under a cent per verified deal.
+- **Data as a distributed artifact:** SQLite with WAL and FTS5, distributed through Cloudflare R2 with If-Match ETag guards, so the read path never blocks on the write path.
+- **Quality loop:** automated 0–100 scoring plus a user-driven verification queue; public venue payloads are sanitized through an explicit allow-list.
 
-**Architecture & Technical Highlights:**
-- **Frontend:** Next.js + TypeScript with Tailwind, server-state library, dark mode, PWA
-- **Backend:** Async Python (FastAPI) with 18 endpoints, rate limiting, and retry logic
-- **Database:** SQLite with WAL mode and full-text search, 80+ venue metadata columns
-- **AI:** LLM-based extraction and verification with schema-validated outputs and automated quality scoring
-- **Pipeline:** Multi-source content ingestion → LLM extraction → quality scoring → publish (weekly automated refresh, 7 phases)
-- **Deployment:** Serverless frontend + managed backend, scheduled cron via CI
-- **Email:** Authenticated transactional + newsletter delivery with one-click unsubscribe
-
-**Built With:**
-
-`Next.js` `TypeScript` `FastAPI` `Python` `SQLite` `LLM API` `MCP / FastMCP` `Tailwind CSS`
+**Built with:** `Next.js` `TypeScript` `FastAPI` `Python` `SQLite` `Cloudflare R2` `MCP / FastMCP` `WebMCP` `Railway` `Vercel` `Plausible`
 
 ---
 
-### LakeshoreIQ - Illinois Real Estate Intelligence
-**Full-Stack Property Search, Valuation & Market Analysis Platform**
+## CFB GameDay Board — College Football Slate on Web and iOS
+**One screen for every FBS Saturday | Live on the web and the App Store | Public, MIT**
 
-A production SaaS application aggregating **9 real-time data sources** to deliver property search, automated valuations, market analysis, and neighborhood intelligence across **150+ Illinois cities** and **50+ Chicago neighborhoods**. Integrates census demographics, school quality ratings, crime statistics, development activity tracking, and economic indicators into a unified property analysis experience. Features a **B2B API** with tiered pricing, **10-tool MCP server**, and **15+ backend services**.
+Venue, kickoff-hour stadium weather, TV and streaming, publicly posted spread and total with implied scores, then live score, clock, down and distance, and cover/total state once games kick, refreshed every 30 seconds while games run. Built with a deliberately small footprint: a standard-library Python server and snapshot builder, a vanilla JavaScript client with no framework and no build step, and a native SwiftUI shell that passed App Review on the first full submission. Built, deployed to the web, and submitted to App Review in a single day. Rated 4+, free, no ads, no account, and Apple's privacy label reads **Data Not Collected**.
 
-**Live:** [lakeshoreiq.com](https://lakeshoreiq.com)
-
-<p align="center">
-  <img src="./images/illinois_real_estate/property_details.png" width="800" alt="LakeshoreIQ - Property Details with Neighborhood Intelligence">
-</p>
+**Live:** [cfbgameday.app](https://cfbgameday.app) · [App Store](https://apps.apple.com/us/app/cfb-gameday-board/id6809035228) · **Source:** [cfb-gameday-board](https://github.com/ChristianVerdin/cfb-gameday-board)
 
 <p align="center">
-  <img src="./images/illinois_real_estate/amenity_drilldown.png" width="800" alt="LakeshoreIQ - Amenity Drilldown">
+  <img src="./images/cfb_gameday/desktop_board_sep.png" width="800" alt="CFB GameDay Board - Week 3 Saturday slate on desktop: projections, stadium, kickoff-hour weather, spread, total, and moneyline per game">
 </p>
-
-<details>
-<summary><b>View More Screenshots</b></summary>
-<br>
-<p align="center">
-  <img src="./images/illinois_real_estate/crime_safety.png" width="800" alt="LakeshoreIQ - Crime & Safety Analysis">
-</p>
-<p align="center">
-  <img src="./images/illinois_real_estate/FirstMover_1.png" width="800" alt="LakeshoreIQ - First-Mover Daily Email">
-</p>
-<p align="center">
-  <img src="./images/illinois_real_estate/FirstMover_2.png" width="800" alt="LakeshoreIQ - First-Mover Detail View">
-</p>
-<p align="center">
-  <img src="./images/illinois_real_estate/landing_hero_1.png" width="800" alt="LakeshoreIQ - Landing">
-</p>
-<p align="center">
-  <img src="./images/illinois_real_estate/school_ratings.png" width="800" alt="LakeshoreIQ - School Ratings">
-</p>
-<p align="center">
-  <img src="./images/illinois_real_estate/search_results.png" width="800" alt="LakeshoreIQ - Property Search Results">
-</p>
-<p align="center">
-  <img src="./images/illinois_real_estate/valuation_calculator.png" width="800" alt="LakeshoreIQ - Valuation & Investment Calculator">
-</p>
-</details>
-
-**Key Capabilities:**
-- **Property Search Engine**: Multi-faceted filters across location, property type, size, price, and listing-age dimensions with imagery
-- **Automated Valuations & Investment Modeling**: AVM with confidence scoring, rent comparables, and full investment calculator (cash flow, cap rate, cash-on-cash, 5-year ROI)
-- **Market & Neighborhood Intelligence**: ZIP-level sale/rental metrics, side-by-side comparisons, multi-category amenity scoring with walkability proxy and drilldown
-- **Public-Data Layers**: Crime/safety scoring with trend detection, development activity tracking, 5,000+ school quality ratings, county-level economic indicators, ZIP-level demographics
-- **SaaS Monetization**: Tiered subscription model with usage metering and feature gating, plus a B2B API tier with developer portal
-- **10-Tool MCP Server**: Property, market, and intelligence layers exposed as agent-callable tools
-
-**Architecture & Technical Highlights:**
-- **Frontend:** Next.js + React + TypeScript with Tailwind, charts, and lightweight state management
-- **Backend:** Async Python (FastAPI) with tiered Redis caching and schema-validated request/response handling
-- **Database:** Managed PostgreSQL with row-level security; SQLite for static reference data
-- **Auth & Billing:** JWT-based auth with email verification; subscription billing with webhooks and customer portal
-- **Data Layer:** 9 third-party / public data sources with usage-aware caching strategy
-- **Deployment:** Serverless frontend + managed backend, env-driven config
-
-**Built With:**
-
-`Next.js` `React` `TypeScript` `FastAPI` `Python` `PostgreSQL` `Redis` `SQLite` `Tailwind CSS`
-
----
-
-### NFL Analytics Engine
-**Statistical Intelligence & Visualization Platform** | *2025-26 Season Complete ✅*
-
-A comprehensive analytics system for NFL game prediction, processing full-season game, player-quarter, snap-count, and touchdown data through Super Bowl LX (SEA over NE). Features automated matchup reports, real-time visualization generation, and predictive pattern recognition across multiple seasons of historical game outcomes.
-
-<p align="center">
-  <img src="./images/nfl_analytics/02_quarter_predictions.png" width="800" alt="NFL Analytics - Quarter-by-Quarter Score Predictions">
-</p>
-
-<p align="center">
-  <img src="./images/nfl_analytics/20_skill_position_matchups.png" width="800" alt="NFL Analytics - Skill Position Matchups Dashboard">
-</p>
-
-<details>
-<summary><b>View More Screenshots</b></summary>
-<br>
-<p align="center">
-  <img src="./images/nfl_analytics/2_efficiency_matrix.png" width="800" alt="NFL Analytics - Team Efficiency Matrix">
-</p>
-<p align="center">
-  <img src="./images/nfl_analytics/1_playoff_epa_comparison.png" width="800" alt="NFL Analytics - EPA Comparison Analysis">
-</p>
-<p align="center">
-  <img src="./images/nfl_analytics/3_quarter_scoring_heatmap.png" width="800" alt="NFL Analytics - Quarter Scoring Heatmap">
-</p>
-</details>
-
-**Key Capabilities:**
-- **Matchup Intelligence System**: Multi-page reports per game with player trends, red-zone efficiency, and situational analysis
-- **Quarter-by-Quarter Tracking**: Touchdown events and player stat records with Q1–Q4 breakdowns
-- **Visualization Engine**: Custom playoff visualizations including skill-position dashboards, TD probability gauges, and clutch performer analysis
-- **Playoff Scenario Simulator**: Win/loss impact modeling for seeding and elimination risk
-- **Player Trend Analysis**: Usage-shift detection and breakout identification
-
-**Technical Highlights:**
-- **Data Pipeline:** R-based ETL processing a broad set of metrics per game with SQLite persistence
-- **Statistical Modeling:** EPA calculations, efficiency matrices, trend detection
-- **Visualization:** ggplot2 with custom theming and multi-panel dashboards
-- **Database & Automation:** Core and quarter-level tracking tables; parallel batch matchup processing
-
-**Built With:**
-
-`R` `tidyverse` `ggplot2` `SQLite`
-
----
-
-### Daily Locks AI
-**AI Sports-Betting Analytics Agent with LLM-Powered Chat & Model-Driven Daily Picks**
-
-A full-stack application featuring an agentic AI system that turns pitcher stats, batting metrics, park factors, and sportsbook odds into model-generated daily predictions — positioned as "your research, done." Currently focused on MLB for the 2026 season, with prior NFL and NCAAB seasons archived (code preserved in-repo). Delivers confidence-tiered picks with edge-vs-Vegas analysis, player-prop coverage (home runs, hits, total bases, walks, strikeouts), first-5-innings plays, team power rankings, live in-game value detection, and a natural-language chat agent.
-
-**Live:** [dailylocks.ai](https://dailylocks.ai)
-
-<p align="center">
-  <img src="./images/dailylocks/desktop-conference-tournaments.png" width="800" alt="Daily Locks AI - Conference Tournament Tracker">
-</p>
-
-<details>
-<summary><b>View More Screenshots</b></summary>
-<br>
-<p align="center">
-  <img src="./images/dailylocks/desktop-ai-chat.png" width="800" alt="Daily Locks AI - AI Chat Interface">
-</p>
-<p align="center">
-  <img src="./images/dailylocks/mlb-picks.png" width="800" alt="Daily Locks AI - MLB Picks">
-</p>
-<p align="center">
-  <img src="./images/dailylocks/mlb-props.png" width="800" alt="Daily Locks AI - MLB Props">
-</p>
-</details>
-
-**Key Features:**
-- **Model-Driven Daily Picks**: Confidence-tiered recommendations with positive-edge detection against sportsbook lines
-- **Player Prop & First-5 Analysis**: HR, hits, total bases, walks, and strikeout markets plus starter-quality first-5-innings plays
-- **Live In-Game Value Detection**: Real-time score monitoring with game-state-aware recommendation adjustments
-- **Natural-Language Chat Agent**: Reasoning-shaped questions route to an LLM with the full daily research bundle as cached context; fast deterministic handlers answer list/table lookups at zero model cost
-- **Subscription Tiers**: Freemium access with metered AI usage and tiered model access, billed via Stripe
-- **Archived Seasons**: NFL and NCAAB engines preserved in-repo from prior seasons
-
-**Architecture & Technical Highlights:**
-- **Frontend:** Next.js + React + TypeScript with state management and analytics
-- **Backend:** Async Python (FastAPI) on a Dockerized service with intelligent query routing
-- **AI:** LLM-powered chat with cached research context, multi-model routing by tier, and deterministic handler bypass for cost-zero queries
-- **Live Data:** Public sports-API integration with periodic polling and game-state matching
-- **Database & Auth:** Supabase (PostgreSQL) with row-level security; JWT auth and Stripe subscription billing with webhooks
-- **Data Pipeline:** Automated daily R model pipeline → CSV sync → frontend deploy
-- **Observability:** LLM tracing and usage analytics on the chat path
-
-**Built With:**
-
-`Next.js` `React` `TypeScript` `FastAPI` `Python` `LLM API` `PostgreSQL` `Tailwind CSS`
-
----
-
-### Daily Locks TV - Fire TV App on Amazon's Vega OS
-**Native TV Companion for dailylocks.ai | Live on the Amazon Appstore**
-
-A production Fire TV application built on **Amazon's new Vega OS platform** (React Native — Amazon's non-Android successor to Fire OS for TV apps), putting the day's model-graded board on the living-room TV. Remote-first by design: cartesian D-pad focus management, an animated focus ring, and big, legible cards tuned for the 10-foot screen. Shipped through the full Amazon release pipeline — Vega Virtual Device and physical-stick verification, platform KPI gates, a Live App Testing beta delivered through the store, and Appstore approval.
-
-**Live:** [Daily Locks TV on the Amazon Appstore](https://www.amazon.com/dp/B0HC8HWQ6B) — free, Fire TV Stick 4K Select & Fire TV Stick HD (2nd Gen)
-
-<p align="center">
-  <img src="./images/dailylocks_tv/board.png" width="800" alt="Daily Locks TV - Top Picks board with league pills, confidence tiers, and D-pad focus ring">
-</p>
-
-<details>
-<summary><b>View More Screenshots</b></summary>
-<br>
-<p align="center">
-  <img src="./images/dailylocks_tv/detail.png" width="800" alt="Daily Locks TV - Matchup detail with starters, power ranks, Vegas line, model edge, and pitcher intel">
-</p>
-</details>
-
-**Key Capabilities:**
-- **Model Board on the Big Screen**: Confidence-tiered picks with win probability, market price with sportsbook attribution, and park/weather context; full matchup detail one OK-press away
-- **League Toggle**: MLB / NFL / NCAAF with per-league snapshots (instant switch-back, no loading flash) and designed "season starts soon" states for pre-season leagues
-- **Instant Cold Start**: Persisted board cache hydrates the last-good board immediately (with an "as of" freshness badge), then silently refreshes — 1.35 s mean time-to-first-frame measured on hardware vs the 1.5 s platform gate
-- **Resilience Contract Under Test**: A fetch failure never clears a rendered board; designed states for every failure mode; 40 jest tests across parsers, cache, focus, and store resilience
-- **Compliance Enforced in Code**: Strictly informational — an honesty filter gates what can headline, book attribution on every price, persistent 21+ / responsible-gaming footer, no wagering functionality
-
-**Architecture & Technical Highlights:**
-- **Platform:** React Native on Vega OS with `@amazon-devices` packages; 3-architecture `.vpkg` release builds (aarch64 / armv7 / x86_64)
-- **TV UX:** Cartesian focus with `TVFocusGuideView` bridges, explicit BackHandler wiring, transform-only focus animation to protect the frame budget
-- **Data Layer:** DTO→model parsers, zustand store with per-league board slices, jittered ~20-minute polling against the dailylocks.ai public API, TTFD instrumentation via the Kepler performance API
-- **Release Ops:** Vega Virtual Device + physical stick verification (including wireless VDA-over-TCP/IP debugging), platform KPI measurement, Live App Testing beta → store promotion
-
-**Built With:**
-
-`React Native` `TypeScript` `Vega OS` `zustand` `react-navigation` `jest`
-
----
-
-### CFB GameDay Board - College Football Slate on Web and iOS
-**One screen for every FBS Saturday | Live on the web and the App Store**
-
-A situational board for college football weekends: venue, kickoff-hour stadium weather, TV and streaming, publicly posted spread and total with implied scores, then live score, clock, and cover/total state once games kick. Built with a deliberately small footprint (standard-library Python server and snapshot builder, vanilla JavaScript client, no framework, no build step) and wrapped in a native SwiftUI shell for iOS that passed App Review on the first full submission.
-
-**Live:** [cfbgameday.app](https://cfbgameday.app) · [CFB GameDay Board on the App Store](https://apps.apple.com/us/app/cfb-gameday-board/id6809035228) — free, no ads, no account · [Source on GitHub](https://github.com/ChristianVerdin/cfb-gameday-board)
-
 <p align="center">
   <img src="./images/cfb_gameday/board.png" width="260" alt="CFB GameDay Board - slate board with day, conference, and time filters">
   <img src="./images/cfb_gameday/live.png" width="260" alt="CFB GameDay Board - live desk with cover and total state">
   <img src="./images/cfb_gameday/lines.png" width="260" alt="CFB GameDay Board - lines sheet">
 </p>
 
-**Key Capabilities:**
-- **Kickoff-Hour Weather**: Open-Meteo forecast at each stadium's coordinates for the kick hour, with flags for rain, wind, heat, and altitude and an impact read per game
-- **Posted Lines, Not Steam**: The DraftKings numbers ESPN publishes with its scoreboard, plus implied final scores; the snapshot carries the prior line forward when ESPN nulls odds at kickoff
-- **Live Cover State**: Every 30 seconds during games: score, clock, down and distance, whether the favorite is covering, and what the total needs
-- **Filters That Match How Fans Watch**: Day, time window, conference, ranked only, weather-impact only, starred, by-network board, lines sheet, landslide board, full-text search
-- **Information Display by Design**: No wagering, no sportsbook links, no accounts, no tracking; rated 17+ only because it shows publicly posted lines
+**What's interesting technically**
+- **Weather at the kick hour:** Open-Meteo forecast at each stadium's coordinates with rain, wind, heat, and altitude flags and an impact read per game.
+- **Snapshot discipline:** the weekly builder carries the prior line forward when the upstream feed nulls odds at kickoff, a bug found on the first live Saturday and fixed the same day.
+- **Release pipeline as code:** archive, export, validate, upload, attach, and submit through the App Store Connect API from one script; the same pattern is reusable for the next iOS app.
+- **Information display only:** no wagering, no sportsbook links, no accounts, no tracking.
 
-**Architecture & Technical Highlights:**
-- **Stack:** Python standard library (server, ESPN proxy, weekly snapshot builder), vanilla JavaScript UI, Vercel Python function for the hosted live proxy with 20-second CDN caching
-- **iOS:** SwiftUI tab shell around a shared WKWebView, xcodegen project, App Store Connect API release pipeline (archive, export, validate, upload, attach, submit) driven by scripts
-- **Ops:** GitHub Action rebuilds the slate snapshot Thursday night and Saturday morning; PWA with a shell-only service worker; offline view with retry
-
-**Built With:**
-
-`Python` `JavaScript` `SwiftUI` `WKWebView` `Vercel` `GitHub Actions` `Open-Meteo` `ESPN`
+**Built with:** `Python (stdlib)` `JavaScript` `SwiftUI` `WKWebView` `Vercel` `GitHub Actions` `Open-Meteo`
 
 ---
 
-### NCAAB Analytics
-**College Basketball Prediction System** | *2025-26 Season Complete*
+## LakeshoreIQ — Illinois Real Estate Intelligence
+**Property search, valuation, and neighborhood intelligence over 9 live data sources**
 
-A production-grade analytics pipeline for NCAA Men's Basketball that combined possession-based efficiency metrics with real-time Vegas odds to generate daily game predictions, second-half scoring models, race-to-points analysis, and conference tournament intelligence — with fatigue modeling, rest-day adjustments, and head-to-head context for tournament play. Powered the Daily Locks AI prediction engine during the 2025-26 season; the full season is finished and the model is archived.
+Aggregates census demographics, school ratings (5,000+), crime statistics, transit GTFS, FEMA, FRED, and listing feeds across **150+ Illinois cities** and **50+ Chicago neighborhoods** into one analysis experience: AVM valuations with confidence scoring, rent comparables, an investment calculator, side-by-side ZIP comparison, and daily first-mover listing alerts. Exposed through a public API and a **10-tool MCP server**; 15+ backend services behind tiered Redis caching.
 
-<p align="center">
-  <img src="./images/ncaab_architecture.svg" width="800" alt="NCAAB Analytics Architecture"/>
-</p>
+**Live:** [lakeshoreiq.com](https://lakeshoreiq.com)
 
-**Key Capabilities:**
-- Possession-based efficiency metrics (KenPom-style) normalized per 100 possessions
-- Iterative strength-of-schedule calculation
-- Volatility detection for high-variance matchups
-- +EV edge detection comparing model probability vs. implied probability
-- Conference tournament analysis with fatigue, rest, and head-to-head modeling
-- Pick review system for tracking agent picks by tier
-- Automated daily pipeline: data import → odds fetch → predictions → CSV sync
+<details>
+<summary><b>Screenshots</b></summary>
+<br>
+<p align="center"><img src="./images/illinois_real_estate/property_details.png" width="800" alt="LakeshoreIQ - property details"></p>
+<p align="center"><img src="./images/illinois_real_estate/valuation_calculator.png" width="800" alt="LakeshoreIQ - valuation and investment calculator"></p>
+<p align="center"><img src="./images/illinois_real_estate/FirstMover_1.png" width="800" alt="LakeshoreIQ - first-mover daily email"></p>
+</details>
 
-**Technical Highlights:**
-- **Data Pipeline:** R-based ETL processing full NCAA Division I team and game data with daily incremental updates
-- **Statistical Modeling:** Four-factor analysis, adaptive recency weighting, form detection
-- **Odds Integration:** Real-time third-party odds with consensus aggregation
-- **Database:** SQLite with optimized analytical schema
-- **Agent Integration:** Daily CSV exports synced to Daily Locks AI
-
-**Built With:**
-
-`R` `tidyverse` `SQLite` `Statistical Modeling`
+**Built with:** `Next.js` `React` `TypeScript` `FastAPI` `Python` `PostgreSQL` `Redis` `Tailwind CSS`
 
 ---
 
-## Technical Skills
+## Camera Recall — Natural-Language Q&A over Smart-Camera Events
+**Certified on the Amazon Ring Appstore | metadata-only by design**
 
-<table>
-<tr>
-<td valign="top" width="33%">
+Answers questions like "did the dog walker come today, and how long did they stay?" over a household's own Ring event history. The architecture deliberately holds **no live-video, clip, or snapshot scopes**, so the product never touches footage; that keeps it outside Illinois biometric-privacy law and viable in a market where Ring withholds its own AI features. **Passed Ring Appstore certification on the first submission** (Aug 2026) and a second re-validation round (Sept 2026), with a published architecture page, a reviewer demo environment, and a versioned privacy-and-legal questionnaire. Production answers are deterministic today; an LLM agent layer is staged behind re-certification, because certified answers state exactly what the system does.
 
-### Languages
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![R](https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white)
-
-</td>
-<td valign="top" width="33%">
-
-### Frontend
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
-![React Native](https://img.shields.io/badge/React_Native_(Vega_OS)-20232A?style=flat-square&logo=react&logoColor=61DAFB)
-![Tailwind](https://img.shields.io/badge/Tailwind-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
-
-</td>
-<td valign="top" width="33%">
-
-### Backend & Data
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
-
-</td>
-</tr>
-<tr>
-<td valign="top" width="33%">
-
-### AI & ML
-![LLM_API](https://img.shields.io/badge/LLM_API-191919?style=flat-square&logo=anthropic&logoColor=white)
-![MCP](https://img.shields.io/badge/MCP/FastMCP-191919?style=flat-square&logo=anthropic&logoColor=white)
-![LangChain](https://img.shields.io/badge/LangChain-121212?style=flat-square&logo=chainlink&logoColor=white)
-![Prompt_Engineering](https://img.shields.io/badge/Prompt_Engineering-4F46E5?style=flat-square&logoColor=white)
-![RAG](https://img.shields.io/badge/RAG-7C3AED?style=flat-square&logoColor=white)
-
-</td>
-<td valign="top" width="33%">
-
-### Infrastructure
-![Serverless](https://img.shields.io/badge/Serverless-FD5750?style=flat-square&logo=serverless&logoColor=white)
-![REST_API](https://img.shields.io/badge/REST_API-009688?style=flat-square&logoColor=white)
-![Webhooks](https://img.shields.io/badge/Webhooks-1A73E8?style=flat-square&logoColor=white)
-![Telegram](https://img.shields.io/badge/Telegram-26A5E4?style=flat-square&logo=telegram&logoColor=white)
-
-</td>
-<td valign="top" width="33%">
-
-### Tools
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=white)
-
-</td>
-</tr>
-</table>
+**Stack:** `FastAPI` `PostgreSQL` `Railway` `300+ tests` `GitHub Actions`. Private repository.
 
 ---
 
-## Let's Connect
+## World Cup bracket tracker
+**Scheduled agent automation with no servers**
 
-I'm always open to collaborating on projects together so feel free to reach out!
+A twice-daily auto-updating tracker for an AgentMail World Cup 2026 bracket: a GitHub Action pulls results through the AgentMail API, recomputes standings, and commits the refreshed page. Small on purpose: a compact, readable example of cron-style agent automation that runs entirely on GitHub infrastructure.
+
+**Source:** [worldcup_agentcup-tracker](https://github.com/ChristianVerdin/worldcup_agentcup-tracker) · `Python` `GitHub Actions` `AgentMail`
+
+---
+
+## How I build
+
+- **Production first.** Every flagship project has real users or a real platform review behind it; a demo is the starting line.
+- **Measure before optimizing.** I build the tracing and evaluation layer first and let the evidence pick the re-architecture.
+- **Safety as architecture.** Metadata-only scopes, least-privilege grants, copy-on-write test branches, and rollback paths are design inputs, not afterthoughts.
+- **Agent-first surfaces.** Anything I build for people also gets an MCP or WebMCP surface so other agents can use it.
+- **Documentation that survives handoff.** Every repo carries a `CLAUDE.md`/`CONTEXT.md` with verified state, constraints, and gotchas, written for the next engineer and for AI coding agents alike.
+
+---
+
+## Technical skills
+
+**Agentic AI & LLM systems:** multi-agent supervisor/router architectures, parallel fan-out and answer composition, text-to-SQL and retrieval-grounded agents, MCP server development (cloud-deployed and local stdio), WebMCP, tool design for long-running agent operations, LLM document intelligence, prompt engineering and agent steering · Claude · GPT-4/5 · Gemini · Amazon Bedrock · Mosaic AI · LangChain/LangGraph
+
+**LLMOps, observability & evaluation:** MLflow 3 tracing and evaluation, Langfuse, trace ETL and span/session/token analysis, ground-truth success metrics, LLM-as-judge, source-attribution checks, token cost and latency optimization, human-feedback instrumentation
+
+**Machine learning & statistics:** LightGBM, XGBoost, CatBoost, NLP and sentiment classification, time-series forecasting, A/B testing and experimental design, causal inference, survival analysis, model calibration
+
+**Data & platform:** Databricks (Apps, Genie, Mosaic AI agents, Unity Catalog, Lakebase, Delta Lake, serverless jobs, Asset Bundles), Spark/PySpark, PostgreSQL, Supabase, Redis, SQLite/FTS5, streaming and medallion pipelines
+
+**Engineering & release:** Python, TypeScript/JavaScript, SQL, R, Swift/SwiftUI · React, Node/Express, FastAPI, Next.js · AWS (Bedrock, SageMaker, S3, Lambda), Cloudflare (DNS, R2), Vercel, Railway, Docker, GitHub Actions · service-principal and OAuth auth, least-privilege grant design, copy-on-write DB branching, deploy-source verification, feature-flag rollback · App Store and Ring Appstore certification
+
+---
+
+## Let's connect
+
+Always open to collaborating and/or connecting. Chicago-based; remote or relocation welcome.
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/christian-verdin/"><img src='https://img.icons8.com/color/2x/linkedin.png' alt='linkedin' height='40'></a>
-  <a href="https://github.com/ChristianVerdin"><img src='https://img.icons8.com/material-outlined/24/000000/github.png' alt='github' height='40'></a>
-  <a href="https://medium.com/@cver123/about"><img src='https://img.icons8.com/color/2x/medium-logo.png' alt='Medium' height='40'></a>
-</p>
-
-<p align="center">
-  <i>Building AI-powered products across real estate, local commerce, sports analytics, and connected TV.</i>
-</p>
-
-<p align="center">
-  <a href="mailto:christiandverdin@gmail.com">christiandverdin@gmail.com</a>
+  <a href="https://www.linkedin.com/in/christian-verdin/">LinkedIn</a> · <a href="mailto:christiandverdin@gmail.com">christiandverdin@gmail.com</a> · <a href="https://medium.com/@cver123/about">Medium</a>
 </p>
