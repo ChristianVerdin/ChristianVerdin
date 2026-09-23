@@ -4,7 +4,6 @@
 
 Eight years of production ML at Fortune 500 scale. By day I lead production AI for a Fortune 500 data science team: a multi-agent analytics platform on Databricks used by hundreds of business users, the evaluation and observability layer behind it, and the MCP surface that lets other AI clients call it. By night I ship the projects below: production-deployed, written outside work hours, built end to end by me, and run through real platform reviews (Apple App Store, Amazon Ring Appstore).
 
-**Looking at:** AI Engineer · Forward Deployed Engineer · Solutions Architect (AI/Data) · Senior Data Scientist (GenAI). Chicago, remote, or relocation.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-christian--verdin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/christian-verdin/)
 [![Email](https://img.shields.io/badge/Email-christiandverdin%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:christiandverdin@gmail.com)
