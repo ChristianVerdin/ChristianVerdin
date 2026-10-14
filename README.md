@@ -25,7 +25,7 @@ Eight years of production ML at Fortune 500 scale. By day I lead production AI f
 ### Where to start reading
 
 - **[312deals-webmcp](https://github.com/ChristianVerdin/312deals-webmcp)**: how a data platform exposes itself to browser-native agents. 17 tools on `document.modelContext`, a "Tonight" planner a person and their agent build together, write-with-consent tips routed to human review. Start at `docs/04-WEBMCP-ARCHITECTURE.md`.
-- **[cfb-gameday-board](https://github.com/ChristianVerdin/cfb-gameday-board)**: the cleanest end-to-end example. Zero-dependency Python server and snapshot builder, vanilla JS client, SwiftUI shell, scripted App Store Connect release pipeline, self-healing GitHub Action that rebuilds the slate five times a week. Start at `docs/ARCHITECTURE.md`, then `ios/APP_STORE.md`.
+- **[cfb-gameday-board](https://github.com/ChristianVerdin/cfb-gameday-board)**: the cleanest end-to-end example. Zero-dependency Python server and snapshot builder, vanilla JS client, SwiftUI shell, scripted App Store Connect release pipeline, self-healing GitHub Action that rebuilds the slate six times a week. Start at `docs/ARCHITECTURE.md`, then `ios/APP_STORE.md`.
 
 ---
 
@@ -62,9 +62,9 @@ A production platform aggregating **90,000+ active deals** across **12,500+ venu
 ---
 
 ## CFB GameDay Board: College Football Slate on Web and iOS
-**One screen for every FBS Saturday | Live on the web and the App Store | Public, MIT**
+**One screen for every FBS Saturday | Live on the web and the App Store for iPhone, iPad, and Mac | Public, MIT**
 
-Venue, kickoff-hour stadium weather, TV and streaming, publicly posted spread and total with implied scores, then live score, clock, down and distance, and cover/total state once games kick, refreshed every 30 seconds while games run. Tap any live or final game for a game sheet with the scoring summary, box score, leaders, drives, and ESPN win probability. Built with a deliberately small footprint: a standard-library Python server and snapshot builder, a vanilla JavaScript client with no framework and no build step, and a native SwiftUI shell that passed App Review on the first full submission. Built, deployed to the web, and submitted to App Review in a single day. Rated 4+, free, no ads, no account, and Apple's privacy label reads **Data Not Collected**.
+Venue, kickoff-hour stadium weather, TV and streaming, publicly posted spread and total with implied scores, then live score, clock, down and distance, and cover/total state once games kick, refreshed every 30 seconds while games run. Tap any live or final game for a game sheet with the scoring summary, box score, leaders, drives, and ESPN win probability. Built with a deliberately small footprint: a standard-library Python server and snapshot builder, a vanilla JavaScript client with no framework and no build step, and a native SwiftUI shell that passed App Review on the first full submission. Built, deployed to the web, and submitted to App Review in a single day. Rated 17+ because it shows posted lines, free, no ads, no account, and Apple's privacy label reads **Data Not Collected**.
 
 **Live:** [cfbgameday.app](https://cfbgameday.app) · [App Store](https://apps.apple.com/us/app/cfb-gameday-board/id6809035228) · **Source:** [cfb-gameday-board](https://github.com/ChristianVerdin/cfb-gameday-board)
 
