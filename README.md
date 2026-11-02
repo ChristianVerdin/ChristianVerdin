@@ -71,7 +71,7 @@ Venue, kickoff-hour stadium weather, and TV and streaming for every FBS game, th
 
 **Version 1.1** (on the App Store since October 22, 2026) adds a **Today's Games widget** for the Home Screen and Lock Screen in small, medium, and large sizes, set to all games, the Top 25, or rivalry games. **Universal links** open cfbgameday.app links straight in the app. Long-press the icon for quick actions, including **Rivalry Games**, and six **in-app events** on the App Store cover rivalry Saturdays, Rivalry Week, and the postseason. The same app runs on **iPhone, iPad, and Mac**, where the window resizes.
 
-**Live:** [cfbgameday.app](https://cfbgameday.app) · [App Store](https://apps.apple.com/us/app/cfb-gameday-board/id6809035228) · **Source:** [cfb-gameday-board](https://github.com/ChristianVerdin/cfb-gameday-board)
+**Live:** [cfbgameday.app](https://cfbgameday.app) · [App Store](https://apps.apple.com/us/app/cfb-gameday-board/id6809035228) · **Source:** [cfb-gameday-board](https://github.com/ChristianVerdin/cfb-gameday-board) · **Read:** [five-minute case study](https://github.com/ChristianVerdin/cfb-gameday-board/blob/main/docs/CASE_STUDY.md)
 
 <p align="center">
   <img src="./images/cfb_gameday/2026-10-28_week9-saturday-desktop.png" width="800" alt="CFB GameDay Board, Week 9 Saturday on desktop: a rivalry desk with five trophy games, including Notre Dame vs Navy and Florida vs Georgia, above the weather and travel desk">
