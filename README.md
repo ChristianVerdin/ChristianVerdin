@@ -41,7 +41,7 @@ I build data products end to end and test them the way I'd want them tested: hel
 ## College basketball analytics
 **13 case studies · public data · Public, MIT**
 
-Each study asks one question about men's college basketball, answers it with a number and its uncertainty, and shows the checks behind it. The questions range from how much home court is worth, and whether it's shrinking, to whether winning close games is a skill. Everything runs on public ESPN data and can be rerun.
+Each study asks one question about men's college basketball, answers it with a number and its uncertainty, and shows the checks behind it. The questions range from how much home court is worth, and whether it's shrinking, to whether winning close games is a skill. Most studies run on public ESPN data and can be rerun; the few that use licensed ratings publish only summary results.
 
 <p align="center">
   <img src="./images/ncaab/home-court-by-season.png" width="800" alt="Home-court advantage fell from 4.3 to 3.2 points over 25 seasons of men's college basketball, with 95% bootstrap intervals; 2020-21, when most arenas were empty, sits lowest">
