@@ -1,8 +1,8 @@
 # Christian Verdin
 
-**AI engineer and senior data scientist who ships agentic systems to production and keeps them running.**
+**Data scientist and AI engineer: statistics, data pipelines and LLM systems, measured before they ship.**
 
-Eight years of production ML at Fortune 500 scale. By day I lead production AI for a Fortune 500 data science team: a multi-agent analytics platform on Databricks used by hundreds of business users, the evaluation and observability layer behind it, and the MCP surface that lets other AI clients call it. By night I ship the projects below: production-deployed, written outside work hours, built end to end by me, and run through real platform reviews (Apple App Store).
+I build data products end to end and test them the way I'd want them tested: held-out evaluations for LLM changes, proper scoring rules and calibration checks for models, natural experiments where the data allows one, and null results reported next to the wins. Everything below was built outside work hours, deployed, and kept running, including an iOS app that went through Apple's App Store review.
 
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-christian--verdin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/christian-verdin/)
@@ -16,6 +16,7 @@ Eight years of production ML at Fortune 500 scale. By day I lead production AI f
 
 | Project | What it does | Status | Stack | Code |
 | --- | --- | --- | --- | --- |
+| [**College basketball analytics**](#college-basketball-analytics-13-case-studies) | 13 case studies, each answering one question with a number and its uncertainty: an audit that found away favorites given 71% won 61%, Brier scores against KenPom, home court and rest as natural experiments, 41 years of March by simulation, and an MCP text-to-SQL interface scored on held-out questions (9 to 18 of 19, p = 0.004) | **Public** | R · Python · hoopR · MCP | [ncaab-analytics-case-studies](https://github.com/ChristianVerdin/ncaab-analytics-case-studies) · MIT |
 | [**LLM extraction eval**](#llm-extraction-eval-measuring-a-prompt-change-before-shipping-it) | The evaluation behind 312Deals' move to a smaller model: hand-labeled gold and held-out sets, paired McNemar tests, cost read from reported usage. Cost per page fell 84% and the held-out pass rate rose from 0.43 to 0.70 (p = 0.0078) | **Public** | Python · Anthropic API · statistics | [llm-extraction-evals](https://github.com/ChristianVerdin/llm-extraction-evals) · MIT |
 | [**312Deals**](#312deals-chicago-food--drink-deals) | Chicago food & drink deals: 75,000+ active deals across 12,000+ venues and 149 neighborhoods from 20,000+ tracked sources, ingested by an LLM extraction pipeline. Agent-first surface: REST API · 11-tool MCP server · 18 WebMCP tools · custom GPT · in-app chat | **Live** | Next.js · FastAPI · SQLite on Cloudflare R2 · MCP | [312deals-webmcp](https://github.com/ChristianVerdin/312deals-webmcp) · MIT (WebMCP Challenge entry) |
 | [**CFB GameDay Board**](#cfb-gameday-board-college-football-slate-on-web-and-ios) | Every FBS game on one screen: kickoff-hour stadium weather, TV, and rivalry trophies, then live scores and a game sheet with drives, box score, and win probability. Version 1.1 adds a Today's Games widget and universal links. Stdlib Python, vanilla JS, zero dependencies, SwiftUI app for iPhone, iPad, and Mac | **Live · App Store** | Python · JavaScript · SwiftUI · Vercel | [cfb-gameday-board](https://github.com/ChristianVerdin/cfb-gameday-board) · MIT |
@@ -24,11 +25,21 @@ Eight years of production ML at Fortune 500 scale. By day I lead production AI f
 
 ### Where to start reading
 
+- **[ncaab-analytics-case-studies](https://github.com/ChristianVerdin/ncaab-analytics-case-studies)**: statistics first. Its README maps the studies to data science, analytics, AI engineering and management roles. Start with 01 (auditing an inherited model) and 02 (scoring a model's probabilities with proper rules).
 - **[llm-extraction-evals](https://github.com/ChristianVerdin/llm-extraction-evals)**: how I decide whether an LLM change ships. A 20-page labeled set that couldn't settle the question (p = 0.80), a 10-page held-out set that could, why the longer prompt was cheaper, and the production bug the eval missed. Start at the README; it is the whole write-up.
 - **[312deals-webmcp](https://github.com/ChristianVerdin/312deals-webmcp)**: how a data platform exposes itself to browser-native agents. 17 tools on `document.modelContext`, a "Tonight" planner a person and their agent build together, write-with-consent tips routed to human review. Start at `docs/04-WEBMCP-ARCHITECTURE.md`.
 - **[cfb-gameday-board](https://github.com/ChristianVerdin/cfb-gameday-board)**: the cleanest end-to-end example. Zero-dependency Python server and snapshot builder, vanilla JS client, SwiftUI app and WidgetKit widget, scripted App Store Connect release pipeline, self-healing GitHub Action that rebuilds the slate seven times a week. Start at `docs/ARCHITECTURE.md`, then `ios/APP_STORE.md`.
 
 **In progress:** a pre-registered entry for the NFL Big Data Bowl 2027 on Kaggle. The analysis plan was committed before any game-side outcome was computed; results follow the January 2027 deadline.
+
+---
+
+## College basketball analytics: 13 case studies
+**Public data, reproducible, every answer with its uncertainty | Public, MIT**
+
+Each study asks one question about men's college basketball, answers it with a number and an interval, and shows the checks behind it. They run on 25 seasons of public ESPN data (about 142,000 games and 2 million player box scores) through one shared data layer and one ratings model that cannot see the future. An audit of last season's model found seven defects, including away favorites given 71% that won 61%, invisible in the season-wide average. The rebuilt model matches KenPom's own game probabilities on Brier score over 5,751 games. Playing the day before costs about 1.5 points (95% CI 0.9 to 2.1), measured as a natural experiment and replicated independently. Close-game records don't carry over from one half-season to the next (r = 0.01, against 0.52 for point margin). An MCP server answers plain-English questions about the season, 18 of 19 correct on held-out questions after tuning on a separate set. A publish check runs before every push: no data files, no licensed ratings, no secrets.
+
+**Source:** [ncaab-analytics-case-studies](https://github.com/ChristianVerdin/ncaab-analytics-case-studies) · `R` `Python` `hoopR` `ridge regression` `bootstrap` `natural experiments` `MCP`
 
 ---
 
@@ -129,7 +140,7 @@ An auto-updating tracker for an AgentMail World Cup 2026 bracket: twice a day th
 
 - **Production first.** Every flagship project has real users or a real platform review behind it. A demo is the starting line.
 - **Measure before optimizing.** I build the tracing and evaluation layer first and let the evidence pick the re-architecture.
-- **Safety as architecture.** Metadata-only scopes, least-privilege grants, copy-on-write test branches, and rollback paths are design inputs, not afterthoughts.
+- **Safety as architecture.** Least-privilege access, publish checks and rollback paths are design inputs, not afterthoughts.
 - **Agent-first surfaces.** Anything I build for people also gets an MCP or WebMCP surface so other agents can use it.
 - **Documentation that survives handoff.** Every repo carries a `CLAUDE.md`/`CONTEXT.md` with verified state, constraints, and gotchas, written for the next engineer and for AI coding agents alike.
 
@@ -137,15 +148,13 @@ An auto-updating tracker for an AgentMail World Cup 2026 bracket: twice a day th
 
 ## Technical skills
 
-**Agentic AI & LLM systems:** multi-agent supervisor/router architectures, parallel fan-out and answer composition, text-to-SQL and retrieval-grounded agents, MCP server development (cloud-deployed and local stdio), WebMCP, tool design for long-running agent operations, LLM document intelligence, prompt engineering and agent steering · Claude · GPT-4/5 · Gemini · Amazon Bedrock · Mosaic AI · LangChain/LangGraph
+**Statistics:** calibration and proper scoring rules (Brier, log loss, reliability diagrams), walk-forward and held-out evaluation, bootstrap intervals, McNemar, permutation and Holm-corrected tests, natural experiments and fixed effects, ridge regression, Monte Carlo simulation, pre-registration
 
-**LLMOps, observability & evaluation:** MLflow 3 tracing and evaluation, Langfuse, trace ETL and span/session/token analysis, ground-truth success metrics, LLM-as-judge, source-attribution checks, token cost and latency optimization, human-feedback instrumentation
+**Machine learning:** LightGBM, XGBoost, isotonic calibration, clustering with stability checks, NLP and LLM extraction
 
-**Machine learning & statistics:** LightGBM, XGBoost, CatBoost, NLP and sentiment classification, time-series forecasting, A/B testing and experimental design, causal inference, survival analysis, model calibration
+**LLM systems:** Claude API, prompt caching, eval harnesses with labeled and held-out sets, cost metering from reported usage, MCP and WebMCP servers, text-to-SQL, multi-agent work with guardrails
 
-**Data & platform:** Databricks (Apps, Genie, Mosaic AI agents, Unity Catalog, Lakebase, Delta Lake, serverless jobs, Asset Bundles), Spark/PySpark, PostgreSQL, Supabase, Redis, SQLite/FTS5, streaming and medallion pipelines
-
-**Engineering & release:** Python, TypeScript/JavaScript, SQL, R, Swift/SwiftUI · React, Node/Express, FastAPI, Next.js · AWS (Bedrock, SageMaker, S3, Lambda), Cloudflare (DNS, R2), Vercel, Railway, Docker, GitHub Actions · service-principal and OAuth auth, least-privilege grant design, copy-on-write DB branching, deploy-source verification, feature-flag rollback · App Store release and review
+**Data & engineering:** Python, R, SQL, TypeScript/JavaScript, Swift/SwiftUI · SQLite/FTS5, PostgreSQL · FastAPI, Next.js · Cloudflare (Workers, R2, D1), Vercel, Railway, GitHub Actions, Playwright · App Store release and review
 
 ---
 
