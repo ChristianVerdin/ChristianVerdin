@@ -18,6 +18,7 @@ I build data products end to end and test them the way I'd want them tested: hel
 | --- | --- | --- | --- | --- |
 | [**College basketball analytics**](#college-basketball-analytics-13-case-studies) | 13 case studies, each answering one question with a number and its uncertainty: an audit that found away favorites given 71% won 61%, Brier scores against KenPom, home court and rest as natural experiments, 41 years of March by simulation, and an MCP text-to-SQL interface scored on held-out questions (9 to 18 of 19, p = 0.004) | **Public** | R · Python · hoopR · MCP | [ncaab-analytics-case-studies](https://github.com/ChristianVerdin/ncaab-analytics-case-studies) · MIT |
 | [**LLM extraction eval**](#llm-extraction-eval-measuring-a-prompt-change-before-shipping-it) | The evaluation behind 312Deals' move to a smaller model: hand-labeled gold and held-out sets, paired McNemar tests, cost read from reported usage. Cost per page fell 84% and the held-out pass rate rose from 0.43 to 0.70 (p = 0.0078) | **Public** | Python · Anthropic API · statistics | [llm-extraction-evals](https://github.com/ChristianVerdin/llm-extraction-evals) · MIT |
+| [**MLB probability calibration**](#mlb-probability-calibration-a-transfer-check-and-a-test-that-said-no) | Calibrating baseball player-event probabilities: isotonic maps, a transfer check that showed 2.49M historical pairs didn't carry to the live season, the market as a benchmark it didn't beat, and a point-in-time walk-forward test that rejected a planned change | **Public** · write-up | Python · scikit-learn · statistics | [mlb-probability-calibration](https://github.com/ChristianVerdin/mlb-probability-calibration) · MIT |
 | [**312Deals**](#312deals-chicago-food--drink-deals) | Chicago food & drink deals: 75,000+ active deals across 12,000+ venues and 149 neighborhoods from 20,000+ tracked sources, ingested by an LLM extraction pipeline. Agent-first surface: REST API · 11-tool MCP server · 18 WebMCP tools · custom GPT · in-app chat | **Live** | Next.js · FastAPI · SQLite on Cloudflare R2 · MCP | [312deals-webmcp](https://github.com/ChristianVerdin/312deals-webmcp) · MIT (WebMCP Challenge entry) |
 | [**CFB GameDay Board**](#cfb-gameday-board-college-football-slate-on-web-and-ios) | Every FBS game on one screen: kickoff-hour stadium weather, TV, and rivalry trophies, then live scores and a game sheet with drives, box score, and win probability. Version 1.1 adds a Today's Games widget and universal links. Stdlib Python, vanilla JS, zero dependencies, SwiftUI app for iPhone, iPad, and Mac | **Live · App Store** | Python · JavaScript · SwiftUI · Vercel | [cfb-gameday-board](https://github.com/ChristianVerdin/cfb-gameday-board) · MIT |
 | [**Page Grabber**](#page-grabber-web-capture-pipeline-with-an-mcp-server) | Captures any web page, including JavaScript-built and lazily loaded ones, as clean Markdown into a searchable archive that Claude reads through a 6-tool MCP server. Safari and Chrome extension, Playwright batch CLI, Cloudflare R2 and D1 inbox | Daily use · private | JavaScript · Python · SQLite FTS5 · MCP · Cloudflare | private |
@@ -51,6 +52,15 @@ Each study asks one question about men's college basketball, answers it with a n
 The write-up also covers what the eval missed: a rule that made the model return null instead of an empty list passed the eval and crashed the production parser, so output-shape changes now ship with a storage test.
 
 **Source:** [llm-extraction-evals](https://github.com/ChristianVerdin/llm-extraction-evals) · `Python` `Anthropic API` `McNemar tests` `prompt caching`
+
+---
+
+## MLB probability calibration: a transfer check and a test that said no
+**Write-up | Public, MIT**
+
+In 2026 a daily pipeline of mine put probabilities on baseball player events: a hit, two total bases, a walk. The raw numbers were badly overconfident (walks averaged 29.6% against 15.3% observed). Isotonic maps fit on 2.49 million historical pairs improved held-out log loss, but a transfer check on the live season showed they barely helped there, and for walks they hurt (calibration error 0.057 to 0.177). Maps refit on about ten thousand in-season rows brought it to 0.012. Even calibrated, the market's probabilities scored better on Brier than mine, and a point-in-time walk-forward test over 31 dates showed my model's value was in its ordering, so I rejected a planned change to rank by a market blend. The write-up states its limits: one season, no intervals on the ranking comparison, and no price-only control.
+
+**Read:** [mlb-probability-calibration](https://github.com/ChristianVerdin/mlb-probability-calibration) · `isotonic regression` `Brier and log loss` `walk-forward evaluation`
 
 ---
 
