@@ -16,10 +16,10 @@ Eight years of production ML at Fortune 500 scale. By day I lead production AI f
 
 | Project | What it does | Status | Stack | Code |
 | --- | --- | --- | --- | --- |
-| [**312Deals**](#312deals-chicago-food--drink-deals) | Chicago food & drink deals: 83,000+ active deals across 12,000+ venues and 149 neighborhoods from 20,000+ tracked sources, ingested by an LLM extraction pipeline. Agent-first surface: REST API · 11-tool MCP server · 18 WebMCP tools · custom GPT · in-app chat | **Live** | Next.js · FastAPI · SQLite on Cloudflare R2 · MCP | [312deals-webmcp](https://github.com/ChristianVerdin/312deals-webmcp) · MIT (WebMCP Challenge entry) |
+| [**312Deals**](#312deals-chicago-food--drink-deals) | Chicago food & drink deals: 75,000+ active deals across 12,000+ venues and 149 neighborhoods from 20,000+ tracked sources, ingested by an LLM extraction pipeline. Agent-first surface: REST API · 11-tool MCP server · 18 WebMCP tools · custom GPT · in-app chat | **Live** | Next.js · FastAPI · SQLite on Cloudflare R2 · MCP | [312deals-webmcp](https://github.com/ChristianVerdin/312deals-webmcp) · MIT (WebMCP Challenge entry) |
 | [**CFB GameDay Board**](#cfb-gameday-board-college-football-slate-on-web-and-ios) | Every FBS game on one screen: kickoff-hour stadium weather, TV, and rivalry trophies, then live scores and a game sheet with drives, box score, and win probability. Version 1.1 adds a Today's Games widget and universal links. Stdlib Python, vanilla JS, zero dependencies, SwiftUI app for iPhone, iPad, and Mac | **Live · App Store** | Python · JavaScript · SwiftUI · Vercel | [cfb-gameday-board](https://github.com/ChristianVerdin/cfb-gameday-board) · MIT |
-| [**Camera Recall**](#camera-recall-natural-language-qa-over-smart-camera-events) | Private Ring app for personal use: natural-language Q&A over my own camera event history. Deliberately metadata-only (no video, clip, or snapshot scopes). Passed Ring Appstore certification on first submission | Certified · personal | FastAPI · Postgres · Railway · 300+ tests | private |
-| [**World Cup bracket tracker**](#world-cup-bracket-tracker) | Twice-daily auto-updating tracker for an AgentMail World Cup 2026 bracket. GitHub Actions + AgentMail API, no servers | Complete | Python · GitHub Actions | [worldcup_agentcup-tracker](https://github.com/ChristianVerdin/worldcup_agentcup-tracker) · MIT |
+| [**Camera Recall**](#camera-recall-natural-language-qa-over-smart-camera-events) | Private Ring app for personal use: natural-language Q&A over my own camera event history. Metadata-only by design: no code path requests video, clips, or snapshots. Passed Ring Appstore certification in October 2026 | Certified · personal | FastAPI · Postgres · Railway · 1,000+ tests | private |
+| [**World Cup bracket tracker**](#world-cup-bracket-tracker) | Auto-updating tracker for an AgentMail World Cup 2026 bracket, refreshed twice daily through the tournament. GitHub Actions + AgentMail API, no servers | Complete | Python · GitHub Actions | [worldcup_agentcup-tracker](https://github.com/ChristianVerdin/worldcup_agentcup-tracker) · MIT |
 
 ### Where to start reading
 
@@ -31,16 +31,15 @@ Eight years of production ML at Fortune 500 scale. By day I lead production AI f
 ## 312Deals: Chicago Food & Drink Deals
 **LLM extraction pipeline + agent-first distribution for local commerce**
 
-A production platform aggregating **83,000+ active deals** across **12,000+ venues** and **149 neighborhoods** across Chicagoland, read from **20,000+ tracked sources**. The pipeline runs venue web pages, newsletters, and submissions through LLM extraction with schema validation, content hashing, adaptive scheduling with exponential backoff, and automated 0 to 100 quality scoring, at **under a cent of Claude spend per extracted deal**. Distribution is agent-first: an 18-endpoint REST API, an 11-tool MCP server, 18 in-page WebMCP tools (entered in OpenAI's WebMCP Challenge, Sept 2026), a custom GPT, in-app chat, and a machine-readable `llms.txt` scoring **96/100 on Mintlify's Agent Score**. Programmatic SEO (100+ landing pages) took organic search from an average position of about 24 at launch to page one by June. Since the February 2026 launch: **39,000+ visitors, 9,800+ in the last 28 days**, with no paid traffic. Search Console shows **26,000+ clicks and 2.3M+ impressions at an average position of 7.0**. Traffic figures run through October 27, 2026.
+A production platform aggregating **75,000+ active deals** across **12,000+ venues** and **149 neighborhoods** across Chicagoland, read from **20,000+ tracked sources**. The pipeline runs venue web pages, newsletters, and submissions through LLM extraction with schema validation, content hashing, adaptive scheduling with exponential backoff, and automated 0 to 100 quality scoring, at **under a cent of Claude spend per extracted deal**. Distribution is agent-first: an 18-endpoint REST API, an 11-tool MCP server, 18 in-page WebMCP tools (entered in OpenAI's WebMCP Challenge, Sept 2026), a custom GPT, in-app chat, and a machine-readable `llms.txt` scoring **96/100 on Mintlify's Agent Score**. Programmatic SEO (100+ landing pages) took organic search from an average position of about 24 at launch to page one by June. Since the February 2026 launch: **39,000+ visitors, 9,800+ in the last 28 days**, with no paid traffic. Search Console shows **26,000+ clicks and 2.3M+ impressions at an average position of 7.0**. Traffic figures run through October 27, 2026.
 
 **Live:** [312deals.com](https://312deals.com) · **Public code:** [312deals-webmcp](https://github.com/ChristianVerdin/312deals-webmcp)
 
 <p align="center">
-  <img src="./images/312deals/2026-10-28_homepage-desktop.png" width="800" alt="312Deals homepage, October 28, 2026: search with day and neighborhood filters, Active Now, AI prompt chips, and 12,000+ venues, 83,000+ deals, 149 neighborhoods">
+  <img src="./images/312deals/2026-11-05_homepage-desktop.png" width="800" alt="312Deals homepage, November 5, 2026: search with day and neighborhood filters, Active Now, AI prompt chips, and 12,000+ venues, 75,000+ deals, 149 neighborhoods">
 </p>
 <p align="center">
-  <img src="./images/312deals/2026-10-28_map.png" width="400" alt="312Deals map, October 28, 2026: deal pins across Chicago and the suburbs, 33 active now, with the deal list beside it">
-  <img src="./images/312deals/2026-10-28_ai-chat.png" width="400" alt="312Deals AI Guide, October 28, 2026: asked what happy hours are in Wicker Park tonight, it answers with four venues, their hours and their prices">
+  <img src="./images/312deals/2026-10-28_ai-chat.png" width="600" alt="312Deals AI Guide, October 28, 2026: asked what happy hours are in Wicker Park tonight, it answers with four venues, their hours and their prices">
 </p>
 
 <details>
@@ -74,10 +73,11 @@ Venue, kickoff-hour stadium weather, and TV and streaming for every FBS game, th
 **Live:** [cfbgameday.app](https://cfbgameday.app) · [App Store](https://apps.apple.com/us/app/cfb-gameday-board/id6809035228) · **Source:** [cfb-gameday-board](https://github.com/ChristianVerdin/cfb-gameday-board) · **Read:** [five-minute case study](https://github.com/ChristianVerdin/cfb-gameday-board/blob/main/docs/CASE_STUDY.md)
 
 <p align="center">
-  <img src="./images/cfb_gameday/2026-10-28_week9-saturday-desktop.png" width="800" alt="CFB GameDay Board, Week 9 Saturday on desktop: a rivalry desk with five trophy games, including Notre Dame vs Navy and Florida vs Georgia, above the weather and travel desk">
+  <img src="./images/cfb_gameday/2026-10-28_game-sheet-desktop.png" width="700" alt="CFB GameDay Board game sheet on desktop, October 28, 2026: Delaware 35, Western Kentucky 21, final, with the line score by quarter and every scoring play">
 </p>
 <p align="center">
   <img src="./images/cfb_gameday/2026-10-21_iphone-widget.png" width="300" alt="CFB GameDay Board's large Today's Games widget on the iPhone Home Screen: Saturday's Top 25 games with weather, kickoff time and network">
+  <img src="./images/cfb_gameday/game_sheet_drives.png" width="300" alt="CFB GameDay Board game sheet on a phone, Week 5: North Texas 45, Tulsa 44 in overtime, with the ESPN win probability chart and the drive list">
 </p>
 
 **What's interesting technically**
@@ -93,16 +93,16 @@ Venue, kickoff-hour stadium weather, and TV and streaming for every FBS game, th
 ## Camera Recall: Natural-Language Q&A over Smart-Camera Events
 **Certified on the Amazon Ring Appstore | metadata-only by design**
 
-A private Ring app I built for personal use: it answers questions like "did the dog walker come today, and how long did they stay?" over my own camera event history. The architecture deliberately holds **no live-video, clip, or snapshot scopes**, so it never touches footage. **Passed Ring Appstore certification on the first submission** (Aug 2026) and a second re-validation round (Sept 2026), with a published architecture page, a reviewer demo environment, and a versioned privacy-and-legal questionnaire. Production answers are deterministic today. An LLM agent layer is staged behind re-certification, because certified answers state exactly what the system does.
+A private Ring app I built for personal use: it answers questions like "was there any motion at the front door while I was out?" or "when was the last doorbell press?" over my own camera event history. It is metadata-only by design: **no code path requests video, clips, or snapshots**, and Ring's own per-event audit trail shows no media accessed. **Passed Ring Appstore certification in October 2026** after several review rounds that began in August, with every reviewer finding fixed, a published architecture page, a reviewer demo environment, and a versioned privacy-and-legal questionnaire. A missed-event backtest before release found 2.08% of events arrived only through reconciliation (bar: 3%), webhook lateness p99 of 10.7 s, and 0 false absence alerts in 719 replayed windows. Production answers are deterministic today. An LLM agent layer is staged behind re-certification, because certified answers state exactly what the system does.
 
-**Stack:** `FastAPI` `PostgreSQL` `Railway` `300+ tests` `GitHub Actions`. Private repository.
+**Stack:** `FastAPI` `PostgreSQL` `Railway` `1,000+ tests` `GitHub Actions`. Private repository.
 
 ---
 
 ## World Cup bracket tracker
 **Scheduled agent automation with no servers**
 
-A twice-daily auto-updating tracker for an AgentMail World Cup 2026 bracket: a GitHub Action pulls results through the AgentMail API, recomputes standings, and commits the refreshed page. Small on purpose: a compact, readable example of cron-style agent automation that runs entirely on GitHub infrastructure.
+An auto-updating tracker for an AgentMail World Cup 2026 bracket: twice a day through the tournament, a GitHub Action pulled results through the AgentMail API, recomputed standings, and committed the refreshed page. Small on purpose: a compact, readable example of cron-style agent automation that runs entirely on GitHub infrastructure.
 
 **Source:** [worldcup_agentcup-tracker](https://github.com/ChristianVerdin/worldcup_agentcup-tracker) · `Python` `GitHub Actions` `AgentMail`
 
