@@ -173,5 +173,5 @@ An auto-updating tracker for an AgentMail World Cup 2026 bracket: twice a day th
 Always open to collaborating and/or connecting. Chicago-based, remote or relocation welcome.
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/christian-verdin/">LinkedIn</a> · <a href="mailto:christiandverdin@gmail.com">christiandverdin@gmail.com</a> · <a href="https://medium.com/@cver123/about">Medium</a>
+  <a href="https://www.linkedin.com/in/christian-verdin/">LinkedIn</a> · <a href="mailto:christiandverdin@gmail.com">christiandverdin@gmail.com</a>
 </p>
