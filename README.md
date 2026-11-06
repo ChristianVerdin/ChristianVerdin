@@ -2,7 +2,7 @@
 
 **AI engineer and senior data scientist who ships agentic systems to production and keeps them running.**
 
-Eight years of production ML at Fortune 500 scale. By day I lead production AI for a Fortune 500 data science team: a multi-agent analytics platform on Databricks used by hundreds of business users, the evaluation and observability layer behind it, and the MCP surface that lets other AI clients call it. By night I ship the projects below: production-deployed, written outside work hours, built end to end by me, and run through real platform reviews (Apple App Store, Amazon Ring Appstore).
+Eight years of production ML at Fortune 500 scale. By day I lead production AI for a Fortune 500 data science team: a multi-agent analytics platform on Databricks used by hundreds of business users, the evaluation and observability layer behind it, and the MCP surface that lets other AI clients call it. By night I ship the projects below: production-deployed, written outside work hours, built end to end by me, and run through real platform reviews (Apple App Store).
 
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-christian--verdin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/christian-verdin/)
@@ -19,7 +19,6 @@ Eight years of production ML at Fortune 500 scale. By day I lead production AI f
 | [**LLM extraction eval**](#llm-extraction-eval-measuring-a-prompt-change-before-shipping-it) | The evaluation behind 312Deals' move to a smaller model: hand-labeled gold and held-out sets, paired McNemar tests, cost read from reported usage. Cost per page fell 84% and the held-out pass rate rose from 0.43 to 0.70 (p = 0.0078) | **Public** | Python · Anthropic API · statistics | [llm-extraction-evals](https://github.com/ChristianVerdin/llm-extraction-evals) · MIT |
 | [**312Deals**](#312deals-chicago-food--drink-deals) | Chicago food & drink deals: 75,000+ active deals across 12,000+ venues and 149 neighborhoods from 20,000+ tracked sources, ingested by an LLM extraction pipeline. Agent-first surface: REST API · 11-tool MCP server · 18 WebMCP tools · custom GPT · in-app chat | **Live** | Next.js · FastAPI · SQLite on Cloudflare R2 · MCP | [312deals-webmcp](https://github.com/ChristianVerdin/312deals-webmcp) · MIT (WebMCP Challenge entry) |
 | [**CFB GameDay Board**](#cfb-gameday-board-college-football-slate-on-web-and-ios) | Every FBS game on one screen: kickoff-hour stadium weather, TV, and rivalry trophies, then live scores and a game sheet with drives, box score, and win probability. Version 1.1 adds a Today's Games widget and universal links. Stdlib Python, vanilla JS, zero dependencies, SwiftUI app for iPhone, iPad, and Mac | **Live · App Store** | Python · JavaScript · SwiftUI · Vercel | [cfb-gameday-board](https://github.com/ChristianVerdin/cfb-gameday-board) · MIT |
-| [**Camera Recall**](#camera-recall-natural-language-qa-over-smart-camera-events) | Private Ring app for personal use: natural-language Q&A over my own camera event history. Metadata-only by design: no code path requests video, clips, or snapshots. Passed Ring Appstore certification in October 2026 | Certified · personal | FastAPI · Postgres · Railway · 1,000+ tests | private |
 | [**Page Grabber**](#page-grabber-web-capture-pipeline-with-an-mcp-server) | Captures any web page, including JavaScript-built and lazily loaded ones, as clean Markdown into a searchable archive that Claude reads through a 6-tool MCP server. Safari and Chrome extension, Playwright batch CLI, Cloudflare R2 and D1 inbox | Daily use · private | JavaScript · Python · SQLite FTS5 · MCP · Cloudflare | private |
 | [**World Cup bracket tracker**](#world-cup-bracket-tracker) | Auto-updating tracker for an AgentMail World Cup 2026 bracket, refreshed twice daily through the tournament. GitHub Actions + AgentMail API, no servers | Complete | Python · GitHub Actions | [worldcup_agentcup-tracker](https://github.com/ChristianVerdin/worldcup_agentcup-tracker) · MIT |
 
@@ -106,15 +105,6 @@ Venue, kickoff-hour stadium weather, and TV and streaming for every FBS game, th
 
 ---
 
-## Camera Recall: Natural-Language Q&A over Smart-Camera Events
-**Certified on the Amazon Ring Appstore | metadata-only by design**
-
-A private Ring app I built for personal use: it answers questions like "was there any motion at the front door while I was out?" or "when was the last doorbell press?" over my own camera event history. It is metadata-only by design: **no code path requests video, clips, or snapshots**. **Passed Ring Appstore certification in October 2026** after several review rounds that began in August, with every reviewer finding fixed, a published architecture page, a reviewer demo environment, and a versioned privacy-and-legal questionnaire. A missed-event backtest before release found 2.08% of events arrived only through reconciliation (bar: 3%), webhook lateness p99 of 10.7 s, and 0 false absence alerts in 719 replayed windows. Production answers are deterministic today. An LLM agent layer is staged behind re-certification, because certified answers state exactly what the system does.
-
-**Stack:** `FastAPI` `PostgreSQL` `Railway` `1,000+ tests` `GitHub Actions`. Private repository.
-
----
-
 ## Page Grabber: Web Capture Pipeline with an MCP Server
 **A tool I use every day | private repository**
 
@@ -155,7 +145,7 @@ An auto-updating tracker for an AgentMail World Cup 2026 bracket: twice a day th
 
 **Data & platform:** Databricks (Apps, Genie, Mosaic AI agents, Unity Catalog, Lakebase, Delta Lake, serverless jobs, Asset Bundles), Spark/PySpark, PostgreSQL, Supabase, Redis, SQLite/FTS5, streaming and medallion pipelines
 
-**Engineering & release:** Python, TypeScript/JavaScript, SQL, R, Swift/SwiftUI · React, Node/Express, FastAPI, Next.js · AWS (Bedrock, SageMaker, S3, Lambda), Cloudflare (DNS, R2), Vercel, Railway, Docker, GitHub Actions · service-principal and OAuth auth, least-privilege grant design, copy-on-write DB branching, deploy-source verification, feature-flag rollback · App Store and Ring Appstore certification
+**Engineering & release:** Python, TypeScript/JavaScript, SQL, R, Swift/SwiftUI · React, Node/Express, FastAPI, Next.js · AWS (Bedrock, SageMaker, S3, Lambda), Cloudflare (DNS, R2), Vercel, Railway, Docker, GitHub Actions · service-principal and OAuth auth, least-privilege grant design, copy-on-write DB branching, deploy-source verification, feature-flag rollback · App Store release and review
 
 ---
 
