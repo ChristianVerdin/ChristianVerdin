@@ -17,8 +17,6 @@ I build data products end to end and test them the way I'd want them tested: hel
 | Project | What it does | Status | Stack | Code |
 | --- | --- | --- | --- | --- |
 | [**College basketball analytics**](#college-basketball-analytics-13-case-studies) | 13 case studies, each answering one question with a number and its uncertainty: an audit that found away favorites given 71% won 61%, Brier scores against KenPom, home court and rest as natural experiments, 41 years of March by simulation, and an MCP text-to-SQL interface scored on held-out questions (9 to 18 of 19, p = 0.004) | **Public** | R · Python · hoopR · MCP | [ncaab-analytics-case-studies](https://github.com/ChristianVerdin/ncaab-analytics-case-studies) · MIT |
-| [**LLM extraction eval**](#llm-extraction-eval-measuring-a-prompt-change-before-shipping-it) | The evaluation behind 312Deals' move to a smaller model: hand-labeled gold and held-out sets, paired McNemar tests, cost read from reported usage. Cost per page fell 84% and the held-out pass rate rose from 0.43 to 0.70 (p = 0.0078) | **Public** | Python · Anthropic API · statistics | [llm-extraction-evals](https://github.com/ChristianVerdin/llm-extraction-evals) · MIT |
-| [**MLB probability calibration**](#mlb-probability-calibration-a-transfer-check-and-a-test-that-said-no) | Calibrating baseball player-event probabilities: isotonic maps, a transfer check that showed 2.49M historical pairs didn't carry to the live season, the market as a benchmark it didn't beat, and a point-in-time walk-forward test that rejected a planned change | **Public** · write-up | Python · scikit-learn · statistics | [mlb-probability-calibration](https://github.com/ChristianVerdin/mlb-probability-calibration) · MIT |
 | [**312Deals**](#312deals-chicago-food--drink-deals) | Chicago food & drink deals: 75,000+ active deals across 12,000+ venues and 149 neighborhoods from 20,000+ tracked sources, ingested by an LLM extraction pipeline. Agent-first surface: REST API · 11-tool MCP server · 18 WebMCP tools · custom GPT · in-app chat | **Live** | Next.js · FastAPI · SQLite on Cloudflare R2 · MCP | [312deals-webmcp](https://github.com/ChristianVerdin/312deals-webmcp) · MIT (WebMCP Challenge entry) |
 | [**CFB GameDay Board**](#cfb-gameday-board-college-football-slate-on-web-and-ios) | Every FBS game on one screen: kickoff-hour stadium weather, TV, and rivalry trophies, then live scores and a game sheet with drives, box score, and win probability. Version 1.1 adds a Today's Games widget and universal links. Stdlib Python, vanilla JS, zero dependencies, SwiftUI app for iPhone, iPad, and Mac | **Live · App Store** | Python · JavaScript · SwiftUI · Vercel | [cfb-gameday-board](https://github.com/ChristianVerdin/cfb-gameday-board) · MIT |
 | [**Page Grabber**](#page-grabber-web-capture-pipeline-with-an-mcp-server) | Captures any web page, including JavaScript-built and lazily loaded ones, as clean Markdown into a searchable archive that Claude reads through a 6-tool MCP server. Safari and Chrome extension, Playwright batch CLI, Cloudflare R2 and D1 inbox | Daily use · private | JavaScript · Python · SQLite FTS5 · MCP · Cloudflare | private |
@@ -27,7 +25,6 @@ I build data products end to end and test them the way I'd want them tested: hel
 ### Where to start reading
 
 - **[ncaab-analytics-case-studies](https://github.com/ChristianVerdin/ncaab-analytics-case-studies)**: statistics first. Its README maps the studies to data science, analytics, AI engineering and management roles. Start with 01 (auditing an inherited model) and 02 (scoring a model's probabilities with proper rules).
-- **[llm-extraction-evals](https://github.com/ChristianVerdin/llm-extraction-evals)**: how I decide whether an LLM change ships. A 20-page labeled set that couldn't settle the question (p = 0.80), a 10-page held-out set that could, why the longer prompt was cheaper, and the production bug the eval missed. Start at the README; it is the whole write-up.
 - **[312deals-webmcp](https://github.com/ChristianVerdin/312deals-webmcp)**: how a data platform exposes itself to browser-native agents. 17 tools on `document.modelContext`, a "Tonight" planner a person and their agent build together, write-with-consent tips routed to human review. Start at `docs/04-WEBMCP-ARCHITECTURE.md`.
 - **[cfb-gameday-board](https://github.com/ChristianVerdin/cfb-gameday-board)**: the cleanest end-to-end example. Zero-dependency Python server and snapshot builder, vanilla JS client, SwiftUI app and WidgetKit widget, scripted App Store Connect release pipeline, self-healing GitHub Action that rebuilds the slate seven times a week. Start at `docs/ARCHITECTURE.md`, then `ios/APP_STORE.md`.
 
@@ -41,26 +38,6 @@ I build data products end to end and test them the way I'd want them tested: hel
 Each study asks one question about men's college basketball, answers it with a number and an interval, and shows the checks behind it. They run on 25 seasons of public ESPN data (about 142,000 games and 2 million player box scores) through one shared data layer and one ratings model that cannot see the future. An audit of last season's model found seven defects, including away favorites given 71% that won 61%, invisible in the season-wide average. The rebuilt model matches KenPom's own game probabilities on Brier score over 5,751 games. Playing the day before costs about 1.5 points (95% CI 0.9 to 2.1), measured as a natural experiment and replicated independently. Close-game records don't carry over from one half-season to the next (r = 0.01, against 0.52 for point margin). An MCP server answers plain-English questions about the season, 18 of 19 correct on held-out questions after tuning on a separate set. A publish check runs before every push: no data files, no licensed ratings, no secrets.
 
 **Source:** [ncaab-analytics-case-studies](https://github.com/ChristianVerdin/ncaab-analytics-case-studies) · `R` `Python` `hoopR` `ridge regression` `bootstrap` `natural experiments` `MCP`
-
----
-
-## LLM extraction eval: measuring a prompt change before shipping it
-**Hand-labeled sets, paired tests, and cost read from usage | Public, MIT**
-
-312Deals turns messy restaurant pages into structured deals with an LLM. In September 2026 I moved that step from Sonnet to Haiku with a rewritten, cached prompt, and tested the change before shipping it. On a 20-page gold set the new prompt found more deals, but the page-level pass rate barely moved (0.42 to 0.44, paired McNemar p = 0.80), so I built a 10-page held-out set the prompt had never seen. There, deal recall rose from 0.958 to 1.000 and the pass rate from 0.43 to 0.70, with no page-trial getting worse (exact p = 0.0078). Cost per page fell 84%, from $0.01297 to $0.00206, measured from a ledger that prices every call from the usage the API reports. The longer prompt was cheaper because it crossed Haiku's cache minimum: cache hits went from 0 to 29 of 30.
-
-The write-up also covers what the eval missed: a rule that made the model return null instead of an empty list passed the eval and crashed the production parser, so output-shape changes now ship with a storage test.
-
-**Source:** [llm-extraction-evals](https://github.com/ChristianVerdin/llm-extraction-evals) · `Python` `Anthropic API` `McNemar tests` `prompt caching`
-
----
-
-## MLB probability calibration: a transfer check and a test that said no
-**Write-up | Public, MIT**
-
-In 2026 a daily pipeline of mine put probabilities on baseball player events: a hit, two total bases, a walk. The raw numbers were badly overconfident (walks averaged 29.6% against 15.3% observed). Isotonic maps fit on 2.49 million historical pairs improved held-out log loss, but a transfer check on the live season showed they barely helped there, and for walks they hurt (calibration error 0.057 to 0.177). Maps refit on about ten thousand in-season rows brought it to 0.012. Even calibrated, the market's probabilities scored better on Brier than mine, and a point-in-time walk-forward test over 31 dates showed my model's value was in its ordering, so I rejected a planned change to rank by a market blend. The write-up states its limits: one season, no intervals on the ranking comparison, and no price-only control.
-
-**Read:** [mlb-probability-calibration](https://github.com/ChristianVerdin/mlb-probability-calibration) · `isotonic regression` `Brier and log loss` `walk-forward evaluation`
 
 ---
 
@@ -91,7 +68,7 @@ A production platform aggregating **75,000+ active deals** across **12,000+ venu
 **What's interesting technically**
 - **Agent surface as a first-class product:** the same tool definitions serve the MCP server, the WebMCP registration, and the custom GPT, so a person, a browser agent, and a desktop agent get identical capabilities.
 - **Extraction economics:** content hashing and adaptive scheduling turned an LLM-per-page pipeline into something that costs under a cent of Claude spend per extracted deal.
-- **Eval before edit:** the extraction prompt has a hand-labeled test set and a held-out set, and changes ship only when they hold on pages the prompt has never seen. That's how a cheaper model got in without a quality loss ([write-up and harness](https://github.com/ChristianVerdin/llm-extraction-evals)).
+- **Eval before edit:** the extraction prompt has a hand-labeled test set and a held-out set, and changes ship only when they hold on pages the prompt has never seen. That's how a cheaper model got in without a quality loss.
 - **Data as a distributed artifact:** SQLite with WAL and FTS5, distributed through Cloudflare R2 with If-Match ETag guards, so the read path never blocks on the write path.
 - **Quality loop:** automated 0 to 100 scoring plus a user-driven review queue, and public venue payloads are sanitized through an explicit allow-list.
 
