@@ -20,6 +20,7 @@ Eight years of production ML at Fortune 500 scale. By day I lead production AI f
 | [**312Deals**](#312deals-chicago-food--drink-deals) | Chicago food & drink deals: 75,000+ active deals across 12,000+ venues and 149 neighborhoods from 20,000+ tracked sources, ingested by an LLM extraction pipeline. Agent-first surface: REST API · 11-tool MCP server · 18 WebMCP tools · custom GPT · in-app chat | **Live** | Next.js · FastAPI · SQLite on Cloudflare R2 · MCP | [312deals-webmcp](https://github.com/ChristianVerdin/312deals-webmcp) · MIT (WebMCP Challenge entry) |
 | [**CFB GameDay Board**](#cfb-gameday-board-college-football-slate-on-web-and-ios) | Every FBS game on one screen: kickoff-hour stadium weather, TV, and rivalry trophies, then live scores and a game sheet with drives, box score, and win probability. Version 1.1 adds a Today's Games widget and universal links. Stdlib Python, vanilla JS, zero dependencies, SwiftUI app for iPhone, iPad, and Mac | **Live · App Store** | Python · JavaScript · SwiftUI · Vercel | [cfb-gameday-board](https://github.com/ChristianVerdin/cfb-gameday-board) · MIT |
 | [**Camera Recall**](#camera-recall-natural-language-qa-over-smart-camera-events) | Private Ring app for personal use: natural-language Q&A over my own camera event history. Metadata-only by design: no code path requests video, clips, or snapshots. Passed Ring Appstore certification in October 2026 | Certified · personal | FastAPI · Postgres · Railway · 1,000+ tests | private |
+| [**Page Grabber**](#page-grabber-web-capture-pipeline-with-an-mcp-server) | Captures any web page, including JavaScript-built and lazily loaded ones, as clean Markdown into a searchable archive that Claude reads through a 6-tool MCP server. Safari and Chrome extension, Playwright batch CLI, Cloudflare R2 and D1 inbox | Daily use · private | JavaScript · Python · SQLite FTS5 · MCP · Cloudflare | private |
 | [**World Cup bracket tracker**](#world-cup-bracket-tracker) | Auto-updating tracker for an AgentMail World Cup 2026 bracket, refreshed twice daily through the tournament. GitHub Actions + AgentMail API, no servers | Complete | Python · GitHub Actions | [worldcup_agentcup-tracker](https://github.com/ChristianVerdin/worldcup_agentcup-tracker) · MIT |
 
 ### Where to start reading
@@ -111,6 +112,15 @@ Venue, kickoff-hour stadium weather, and TV and streaming for every FBS game, th
 A private Ring app I built for personal use: it answers questions like "was there any motion at the front door while I was out?" or "when was the last doorbell press?" over my own camera event history. It is metadata-only by design: **no code path requests video, clips, or snapshots**, and Ring's own per-event audit trail shows no media accessed. **Passed Ring Appstore certification in October 2026** after several review rounds that began in August, with every reviewer finding fixed, a published architecture page, a reviewer demo environment, and a versioned privacy-and-legal questionnaire. A missed-event backtest before release found 2.08% of events arrived only through reconciliation (bar: 3%), webhook lateness p99 of 10.7 s, and 0 false absence alerts in 719 replayed windows. Production answers are deterministic today. An LLM agent layer is staged behind re-certification, because certified answers state exactly what the system does.
 
 **Stack:** `FastAPI` `PostgreSQL` `Railway` `1,000+ tests` `GitHub Actions`. Private repository.
+
+---
+
+## Page Grabber: Web Capture Pipeline with an MCP Server
+**A tool I use every day | private repository**
+
+Many pages hand a server-side fetch nothing but "Please enable JavaScript": the content is built in the browser and loads as you scroll. Page Grabber captures the full text from inside the browser after the page renders, scrolling for you, following virtualized lists and inner scroll panels, and turning the result into clean Markdown. One capture engine is shared by a Safari and Chrome extension, a Playwright command-line tool for batches of URLs, and the test suite. Captures land in a local archive with SQLite FTS5 search, a Cloudflare Worker (R2 storage, D1 index) takes captures from other devices, and a 6-tool MCP server lets Claude search, read and annotate the archive. SwiftUI apps for iPhone, iPad and Mac build in the simulator and have not been submitted to the App Store yet.
+
+**Stack:** `JavaScript (MV3 extension)` `Python (stdlib)` `SQLite FTS5` `MCP` `Cloudflare Workers, R2, D1` `Playwright` `SwiftUI`. About 310 automated checks across four suites. Private repository.
 
 ---
 
