@@ -16,6 +16,7 @@ Eight years of production ML at Fortune 500 scale. By day I lead production AI f
 
 | Project | What it does | Status | Stack | Code |
 | --- | --- | --- | --- | --- |
+| [**LLM extraction eval**](#llm-extraction-eval-measuring-a-prompt-change-before-shipping-it) | The evaluation behind 312Deals' move to a smaller model: hand-labeled gold and held-out sets, paired McNemar tests, cost read from reported usage. Cost per page fell 84% and the held-out pass rate rose from 0.43 to 0.70 (p = 0.0078) | **Public** | Python · Anthropic API · statistics | [llm-extraction-evals](https://github.com/ChristianVerdin/llm-extraction-evals) · MIT |
 | [**312Deals**](#312deals-chicago-food--drink-deals) | Chicago food & drink deals: 75,000+ active deals across 12,000+ venues and 149 neighborhoods from 20,000+ tracked sources, ingested by an LLM extraction pipeline. Agent-first surface: REST API · 11-tool MCP server · 18 WebMCP tools · custom GPT · in-app chat | **Live** | Next.js · FastAPI · SQLite on Cloudflare R2 · MCP | [312deals-webmcp](https://github.com/ChristianVerdin/312deals-webmcp) · MIT (WebMCP Challenge entry) |
 | [**CFB GameDay Board**](#cfb-gameday-board-college-football-slate-on-web-and-ios) | Every FBS game on one screen: kickoff-hour stadium weather, TV, and rivalry trophies, then live scores and a game sheet with drives, box score, and win probability. Version 1.1 adds a Today's Games widget and universal links. Stdlib Python, vanilla JS, zero dependencies, SwiftUI app for iPhone, iPad, and Mac | **Live · App Store** | Python · JavaScript · SwiftUI · Vercel | [cfb-gameday-board](https://github.com/ChristianVerdin/cfb-gameday-board) · MIT |
 | [**Camera Recall**](#camera-recall-natural-language-qa-over-smart-camera-events) | Private Ring app for personal use: natural-language Q&A over my own camera event history. Metadata-only by design: no code path requests video, clips, or snapshots. Passed Ring Appstore certification in October 2026 | Certified · personal | FastAPI · Postgres · Railway · 1,000+ tests | private |
@@ -23,8 +24,22 @@ Eight years of production ML at Fortune 500 scale. By day I lead production AI f
 
 ### Where to start reading
 
+- **[llm-extraction-evals](https://github.com/ChristianVerdin/llm-extraction-evals)**: how I decide whether an LLM change ships. A 20-page labeled set that couldn't settle the question (p = 0.80), a 10-page held-out set that could, why the longer prompt was cheaper, and the production bug the eval missed. Start at the README; it is the whole write-up.
 - **[312deals-webmcp](https://github.com/ChristianVerdin/312deals-webmcp)**: how a data platform exposes itself to browser-native agents. 17 tools on `document.modelContext`, a "Tonight" planner a person and their agent build together, write-with-consent tips routed to human review. Start at `docs/04-WEBMCP-ARCHITECTURE.md`.
 - **[cfb-gameday-board](https://github.com/ChristianVerdin/cfb-gameday-board)**: the cleanest end-to-end example. Zero-dependency Python server and snapshot builder, vanilla JS client, SwiftUI app and WidgetKit widget, scripted App Store Connect release pipeline, self-healing GitHub Action that rebuilds the slate seven times a week. Start at `docs/ARCHITECTURE.md`, then `ios/APP_STORE.md`.
+
+**In progress:** a pre-registered entry for the NFL Big Data Bowl 2027 on Kaggle. The analysis plan was committed before any game-side outcome was computed; results follow the January 2027 deadline.
+
+---
+
+## LLM extraction eval: measuring a prompt change before shipping it
+**Hand-labeled sets, paired tests, and cost read from usage | Public, MIT**
+
+312Deals turns messy restaurant pages into structured deals with an LLM. In September 2026 I moved that step from Sonnet to Haiku with a rewritten, cached prompt, and tested the change before shipping it. On a 20-page gold set the new prompt found more deals, but the page-level pass rate barely moved (0.42 to 0.44, paired McNemar p = 0.80), so I built a 10-page held-out set the prompt had never seen. There, deal recall rose from 0.958 to 1.000 and the pass rate from 0.43 to 0.70, with no page-trial getting worse (exact p = 0.0078). Cost per page fell 84%, from $0.01297 to $0.00206, measured from a ledger that prices every call from the usage the API reports. The longer prompt was cheaper because it crossed Haiku's cache minimum: cache hits went from 0 to 29 of 30.
+
+The write-up also covers what the eval missed: a rule that made the model return null instead of an empty list passed the eval and crashed the production parser, so output-shape changes now ship with a storage test.
+
+**Source:** [llm-extraction-evals](https://github.com/ChristianVerdin/llm-extraction-evals) · `Python` `Anthropic API` `McNemar tests` `prompt caching`
 
 ---
 
@@ -55,7 +70,7 @@ A production platform aggregating **75,000+ active deals** across **12,000+ venu
 **What's interesting technically**
 - **Agent surface as a first-class product:** the same tool definitions serve the MCP server, the WebMCP registration, and the custom GPT, so a person, a browser agent, and a desktop agent get identical capabilities.
 - **Extraction economics:** content hashing and adaptive scheduling turned an LLM-per-page pipeline into something that costs under a cent of Claude spend per extracted deal.
-- **Eval before edit:** the extraction prompt has a hand-labeled test set and a held-out set, and changes ship only when they hold on pages the prompt has never seen. That's how a cheaper model got in without a quality loss.
+- **Eval before edit:** the extraction prompt has a hand-labeled test set and a held-out set, and changes ship only when they hold on pages the prompt has never seen. That's how a cheaper model got in without a quality loss ([write-up and harness](https://github.com/ChristianVerdin/llm-extraction-evals)).
 - **Data as a distributed artifact:** SQLite with WAL and FTS5, distributed through Cloudflare R2 with If-Match ETag guards, so the read path never blocks on the write path.
 - **Quality loop:** automated 0 to 100 scoring plus a user-driven review queue, and public venue payloads are sanitized through an explicit allow-list.
 
