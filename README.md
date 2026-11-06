@@ -6,7 +6,6 @@ I build data products end to end and test them the way I'd want them tested: hel
 
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-christian--verdin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/christian-verdin/)
-[![Email](https://img.shields.io/badge/Email-christiandverdin%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:christiandverdin@gmail.com)
 [![Live](https://img.shields.io/badge/Live-312deals.com-0F6E6E?style=for-the-badge&logo=google-chrome&logoColor=white)](https://312deals.com)
 [![App Store](https://img.shields.io/badge/App_Store-CFB_GameDay_Board-0D96F6?style=for-the-badge&logo=apple&logoColor=white)](https://apps.apple.com/us/app/cfb-gameday-board/id6809035228)
 
@@ -138,5 +137,5 @@ A small tracker for an AgentMail World Cup 2026 bracket. Twice a day through the
 Always open to collaborating and/or connecting. Chicago-based, remote or relocation welcome.
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/christian-verdin/">LinkedIn</a> · <a href="mailto:christiandverdin@gmail.com">christiandverdin@gmail.com</a>
+  <a href="https://www.linkedin.com/in/christian-verdin/">LinkedIn</a>
 </p>
