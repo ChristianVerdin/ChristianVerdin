@@ -52,11 +52,11 @@ A free site that collects Chicago food and drink deals, 75,000+ across 12,000+ v
   <img src="./images/312deals/2026-10-28_ai-chat.png" width="600" alt="312Deals AI Guide: asked what happy hours are in Wicker Park tonight, it answers with four venues, their hours and their prices">
 </p>
 
-Since launch in February 2026: **45.8k unique visitors** (Plausible) and **30.5K Google Search clicks from 2.56M impressions** (Search Console), as of November 10, 2026.
+Since the February 2026 launch: **45,000+ visitors** and **30,000+ Google clicks from 2.5M+ impressions**, as of November 2026.
 
 <p align="center">
-  <img src="./images/312deals/plausible-since-launch-2026-11-10.png" width="49%" alt="Plausible, all time: 45.8k unique visitors, 47.7k visits, 85.3k pageviews, daily visitors climbing from February to November 2026">
-  <img src="./images/312deals/search-console-since-launch-2026-11-10.png" width="49%" alt="Google Search Console, 16 months: 30.5K clicks, 2.56M impressions, 1.2% CTR, average position 7.2">
+  <img src="./images/312deals/plausible-since-launch-2026-11-10.png" width="49%" alt="Plausible, all time: daily visitors climbing from February to November 2026, 45,000+ visitors in total">
+  <img src="./images/312deals/search-console-since-launch-2026-11-10.png" width="49%" alt="Google Search Console since launch: 30,000+ clicks from 2.5M+ impressions">
 </p>
 
 **Live:** [312deals.com](https://312deals.com) · **Public code:** [312deals-webmcp](https://github.com/ChristianVerdin/312deals-webmcp) · `Next.js` `FastAPI` `Python` `SQLite` `MCP` `WebMCP`
