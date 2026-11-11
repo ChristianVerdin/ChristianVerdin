@@ -48,9 +48,6 @@ A free site that collects Chicago food and drink deals, 75,000+ across 12,000+ v
 <p align="center">
   <img src="./images/312deals/2026-11-05_homepage-desktop.png" width="800" alt="312Deals homepage, November 5, 2026: search with day and neighborhood filters, Active Now, AI prompt chips, and 12,000+ venues, 75,000+ deals, 149 neighborhoods">
 </p>
-<p align="center">
-  <img src="./images/312deals/2026-10-28_ai-chat.png" width="600" alt="312Deals AI Guide: asked what happy hours are in Wicker Park tonight, it answers with four venues, their hours and their prices">
-</p>
 
 Since the February 2026 launch: **45,000+ visitors** and **30,000+ Google clicks from 2.5M+ impressions**, as of November 2026.
 
@@ -58,6 +55,22 @@ Since the February 2026 launch: **45,000+ visitors** and **30,000+ Google clicks
   <img src="./images/312deals/plausible-since-launch-2026-11-10.png" width="49%" alt="Plausible, all time: daily visitors climbing from February to November 2026, 45,000+ visitors in total">
   <img src="./images/312deals/search-console-since-launch-2026-11-10.png" width="49%" alt="Google Search Console since launch: 30,000+ clicks from 2.5M+ impressions">
 </p>
+
+<details>
+<summary><b>More screenshots</b></summary>
+<br>
+<p align="center">
+  <img src="./images/312deals/2026-10-28_ai-chat.png" width="700" alt="312Deals AI Guide: asked what happy hours are in Wicker Park tonight, it answers with four venues, their hours and their prices">
+</p>
+<p align="center">
+  <img src="./images/312deals/2026-11-10_guide-black-friday.png" width="49%" alt="312Deals guide to Black Friday in Chicago 2026: Thanksgiving dinners, turkey to go and deals near the malls, built from the deal data">
+  <img src="./images/312deals/2026-11-10_neighborhoods.jpg" width="49%" alt="312Deals neighborhoods page: Chicago neighborhoods with photos, deal counts and how many deals are active now">
+</p>
+<p align="center">
+  <img src="./images/312deals/plausible-last-30-days-2026-11-10.png" width="47%" alt="Plausible, last 30 days to November 10, 2026: 12k unique visitors, up 10%">
+  <img src="./images/312deals/search-console-last-28-days-2026-11-10.png" width="51%" alt="Google Search Console, last 28 days to November 8, 2026: 7,500+ clicks from 420,000+ impressions">
+</p>
+</details>
 
 **Live:** [312deals.com](https://312deals.com) · **Public code:** [312deals-webmcp](https://github.com/ChristianVerdin/312deals-webmcp) · `Next.js` `FastAPI` `Python` `SQLite` `MCP` `WebMCP`
 
@@ -71,6 +84,24 @@ Charts meant to be read in five seconds: the title states the finding, team logo
 <p align="center">
   <img src="./images/nfl/caleb-williams-epa-rank.png" width="800" alt="Caleb Williams went from 30th to 14th to 6th in EPA per dropback over three seasons">
 </p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ChristianVerdin/nfl-advanced-metrics/main/out/P2_touchdown_regression.png" width="53%" alt="Touchdown luck doesn't carry over from the first half of a season to the second, but touchdown opportunity does: running backs, receivers and tight ends, 2018-2025">
+  <img src="https://raw.githubusercontent.com/ChristianVerdin/nfl-advanced-metrics/main/out/P3_early_weeks_vs_rest.png" width="45%" alt="Three weeks of football explain only 18% of how a team plays the rest of the season: net EPA per play, Weeks 1-3 vs Weeks 4-18, 2018-2025">
+</p>
+
+<details>
+<summary><b>More charts</b></summary>
+<br>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ChristianVerdin/nfl-advanced-metrics/main/out/P1_kickoff_rule_field_position.png" width="54%" alt="Average starting field position after a kickoff, 2018-2026: drives start at the 30 under the new kickoff rule, up from the 25">
+  <img src="https://raw.githubusercontent.com/ChristianVerdin/nfl-advanced-metrics/main/out/T4_rank_bump_chart.png" width="44%" alt="Net EPA per play rank in three stretches of the 2026 season for the biggest risers and fallers, with team logos">
+</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ChristianVerdin/nfl-advanced-metrics/main/out/01_team_epa_landscape.png" width="57%" alt="Every team's 2026 EPA per play on offense and allowed on defense, plotted with team logos">
+  <img src="https://raw.githubusercontent.com/ChristianVerdin/nfl-advanced-metrics/main/out/08_qb_air_yards_ridges.png" width="41%" alt="Air yards on every attempt for the 16 busiest quarterbacks of 2026, as ridgelines with headshots">
+</p>
+<p align="center"><sub>All 32 charts are in <a href="https://github.com/ChristianVerdin/nfl-advanced-metrics/tree/main/out">out/</a>.</sub></p>
+</details>
 
 **Read:** [nfl-advanced-metrics](https://github.com/ChristianVerdin/nfl-advanced-metrics) · `R` `ggplot2` `nflverse` `gt`
 
@@ -88,6 +119,15 @@ Every FBS game of the week on one screen: venue, kickoff-hour weather and TV, th
   <img src="./images/cfb_gameday/2026-10-21_iphone-widget.png" width="300" alt="CFB GameDay Board's large Today's Games widget on the iPhone Home Screen: Saturday's Top 25 games with weather, kickoff time and network">
   <img src="./images/cfb_gameday/game_sheet_drives.png" width="300" alt="CFB GameDay Board game sheet on a phone: North Texas 45, Tulsa 44 in overtime, with the win probability chart and the drive list">
 </p>
+
+<details>
+<summary><b>More screenshots</b></summary>
+<br>
+<p align="center">
+  <img src="./images/cfb_gameday/app-store_game-sheet-iphone.png" width="28%" alt="App Store screenshot, iPhone: every score, drive and stat, shown on the game sheet's scoring tab for Southern Miss 34, Troy 55">
+  <img src="./images/cfb_gameday/app-store_game-sheet-ipad.png" width="46%" alt="App Store screenshot, iPad: the same game sheet open over the board">
+</p>
+</details>
 
 **Live:** [cfbgameday.app](https://cfbgameday.app) · [App Store](https://apps.apple.com/us/app/cfb-gameday-board/id6809035228) · **Source:** [cfb-gameday-board](https://github.com/ChristianVerdin/cfb-gameday-board) · **Read:** [five-minute case study](https://github.com/ChristianVerdin/cfb-gameday-board/blob/main/docs/CASE_STUDY.md) · `Python` `JavaScript` `SwiftUI` `WidgetKit`
 
@@ -126,6 +166,19 @@ Each study asks one question about men's college basketball, answers it with a n
 <p align="center">
   <img src="./images/ncaab/home-court-by-season.png" width="800" alt="Home-court advantage fell from 4.3 to 3.2 points over 25 seasons of men's college basketball, with 95% bootstrap intervals; 2020-21, when most arenas were empty, sits lowest">
 </p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ChristianVerdin/ncaab-analytics-case-studies/main/studies/08-luck-and-regression-to-the-mean/figures/01_regression_to_the_mean.png" width="49%" alt="The luckiest tenth of teams won 2.0 games more than expected in the first half of a season, then 0.1 more in the second half">
+  <img src="https://raw.githubusercontent.com/ChristianVerdin/ncaab-analytics-case-studies/main/studies/12-ask-the-season/figures/01_accuracy.png" width="49%" alt="Claude Haiku 4.5 turning questions about the season into SQL: column notes and rules lifted held-out accuracy from 47% to 95%, with 95% Wilson intervals">
+</p>
+
+<details>
+<summary><b>More charts</b></summary>
+<br>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ChristianVerdin/ncaab-analytics-case-studies/main/studies/06-forty-one-years-of-march/figures/03_champion_seeds.png" width="58%" alt="Champions and Final Four teams by seed, 1985-2026: 27 of 41 champions were 1 seeds, and none was seeded worse than 8">
+  <img src="https://raw.githubusercontent.com/ChristianVerdin/ncaab-analytics-case-studies/main/studies/07-team-archetypes/figures/04_style_map.png" width="40%" alt="Team styles, 2007-08 to 2025-26: four archetypes that are regions of one continuous cloud, not separate clusters">
+</p>
+</details>
 
 **Read:** [ncaab-analytics-case-studies](https://github.com/ChristianVerdin/ncaab-analytics-case-studies) · `R` `Python` `hoopR`
 
